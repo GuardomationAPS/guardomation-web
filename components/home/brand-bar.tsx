@@ -1,4 +1,6 @@
-// Full list from scrape of guardomation.com /line-cards/
+// Rolling marquee of authorized brand partners.
+// Source list pulled from guardomation.com /line-cards/ scrape.
+
 const PARTNERS = [
   "Lazer Safe",
   "Banner Engineering",
@@ -31,26 +33,38 @@ const PARTNERS = [
 ];
 
 export default function BrandBar() {
+  // Duplicate so the marquee seamlessly loops
+  const items = [...PARTNERS, ...PARTNERS];
+
   return (
-    <section className="relative overflow-hidden border-y border-brand-grey/20 bg-white py-14">
+    <section className="relative overflow-hidden border-y border-brand-grey/20 bg-white py-12">
       {/* Yellow accent lines top + bottom — laser motif */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-amber to-transparent" aria-hidden />
       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-amber to-transparent" aria-hidden />
 
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mb-8 flex items-center justify-center gap-3">
+      <div className="mx-auto mb-8 max-w-7xl px-4 lg:px-8">
+        <div className="flex items-center justify-center gap-3">
           <span className="h-3 w-1 bg-brand-red" aria-hidden />
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/70">
             Authorized distributor for {PARTNERS.length} industry-leading brands
           </p>
           <span className="h-3 w-1 bg-brand-red" aria-hidden />
         </div>
+      </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 lg:gap-x-12">
-          {PARTNERS.map((name) => (
+      {/* Marquee — fade edges for polish */}
+      <div
+        className="relative"
+        style={{
+          maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+        }}
+      >
+        <div className="animate-marquee flex w-max items-center gap-x-12 lg:gap-x-16">
+          {items.map((name, idx) => (
             <span
-              key={name}
-              className="font-display text-sm font-semibold text-brand-charcoal/40 transition-colors hover:text-brand-red lg:text-base"
+              key={`${name}-${idx}`}
+              className="font-display whitespace-nowrap text-base font-semibold text-brand-charcoal/50 transition-colors hover:text-brand-red lg:text-lg"
             >
               {name}
             </span>

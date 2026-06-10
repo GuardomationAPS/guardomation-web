@@ -36,6 +36,18 @@
   }
 }
 
+/* Marquee animation for rolling brand banner */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
