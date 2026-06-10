@@ -4,19 +4,20 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-charcoal">
-      {/* Background photo of LazerSafe Sentinel Plus install */}
+      {/* Background photo of Lazer Safe install — transmitter positioned in upper portion to stay visible above cards */}
       <div className="absolute inset-0">
         <Image
-          src="/photos/sentinel-plus-hero.jpg"
+          src="/photos/sentinel-plus-hmi.jpg"
           alt=""
           fill
           priority
           quality={85}
-          className="object-cover object-center opacity-30"
+          className="object-cover opacity-30"
+          style={{ objectPosition: "right 25%" }}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-charcoal/60 to-brand-charcoal" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-charcoal/55 to-brand-charcoal" />
       </div>
 
       {/* Subtle yellow laser-curtain beams */}
@@ -75,20 +76,21 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* DUAL CARDS — LazerSafe leads (left), Machine Guarding extends (right) */}
-        <div className="mt-20 grid gap-6 lg:grid-cols-5 lg:gap-8">
-          {/* LAZERSAFE — leads, larger (3/5) */}
+        {/* DUAL CARDS — LazerSafe + Machine Guarding, equal width */}
+        <div className="mt-20 grid gap-6 lg:grid-cols-2 lg:gap-8">
+          {/* LAZERSAFE */}
           <Link
             href="/press-brake-safety"
-            className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70 lg:col-span-3"
+            className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70"
           >
             <div className="absolute inset-x-0 top-0 h-1" style={{ background: "linear-gradient(90deg, #812866 0%, #BA0C2F 50%, #CF732E 100%)" }} aria-hidden />
 
-            <div className="relative h-56 overflow-hidden lg:h-72">
+            <div className="relative h-72 overflow-hidden">
               <img
-                src="/photos/sentinel-plus-detail.jpg"
-                alt="Lazer Safe Sentinel sensor module mounted on a press brake"
+                src="/photos/sentinel-plus-hero.jpg"
+                alt="Lazer Safe Sentinel transmitter sensor module mounted on a press brake"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{ objectPosition: "75% center" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/40 to-transparent" />
               <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
@@ -119,21 +121,32 @@ export default function Hero() {
             </div>
           </Link>
 
-          {/* MACHINE GUARDING — the expansion (2/5) */}
+          {/* MACHINE GUARDING — equal size; uses 2 real photos for visual parity */}
           <Link
             href="/search"
-            className="group relative overflow-hidden rounded-xl border border-white/10 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-amber/60 lg:col-span-2"
+            className="group relative overflow-hidden rounded-xl border border-white/10 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-amber/60"
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-brand-amber" aria-hidden />
 
-            {/* Real Guardomation guarding install — yellow scissor gate + perimeter fence */}
-            <div className="relative h-56 overflow-hidden bg-brand-charcoal-dark lg:h-72">
-              <img
-                src="/photos/guarding-mg-02.jpg"
-                alt="Yellow scissor gate and perimeter fencing on a shop machine"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-brand-charcoal-dark/40" />
+            {/* Two real Guardomation guarding installs side-by-side for visual richness */}
+            <div className="relative h-72 overflow-hidden bg-brand-charcoal-dark">
+              <div className="absolute inset-0 grid grid-cols-2 gap-0.5">
+                <div className="relative overflow-hidden">
+                  <img
+                    src="/photos/guarding-mg-02.jpg"
+                    alt="Yellow scissor gate and perimeter fencing"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src="/photos/guarding-mg-03.jpg"
+                    alt="Turret press with bright yellow safety mat"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-transparent" />
               <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-brand-amber px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
                 Whole-Shop Coverage
@@ -151,9 +164,15 @@ export default function Hero() {
                 Guardomation
               </p>
               <h3 className="text-2xl font-bold text-white lg:text-3xl">Machine Guarding</h3>
-              <p className="mt-4 text-sm leading-relaxed text-brand-grey">
-                From shears and turret presses to robot cells and conveyors — fencing, light curtains, mats, interlocks, e-stops, and our GS-series anti-restart controls. 28 brand partners, one team installing the whole shop.
+              <p className="mt-4 text-base leading-relaxed text-brand-grey">
+                From shears and turret presses to robot cells, conveyors, and drill presses — custom fencing, light curtains, safety mats, interlocks, e-stops, and our GS-series anti-restart controls. 28 brand partners and three decades installing the whole shop.
               </p>
+              <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-white/85">
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Custom fencing &amp; gates</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Light curtains &amp; mats</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />E-stops &amp; interlocks</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />GS anti-restart controls</li>
+              </ul>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-amber transition-all group-hover:gap-3">
                 Shop machine guarding
                 <span aria-hidden>→</span>
