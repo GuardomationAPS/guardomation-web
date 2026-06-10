@@ -32,13 +32,13 @@ export default function PressBrakeSafetyPage() {
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-brand-red px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
-              Exclusive U.S. Master Distributor for Lazer Safe
+              Appointed U.S. Master Distributor for Lazer Safe
             </p>
             <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
-              The world&rsquo;s #1 press brake retrofit solution.
+              Press brake retrofits, done right.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-brand-grey lg:text-xl">
-              Camera-based AOPD safety mounted beneath the punch. Operators hold the work piece as tools close at high speed — no fixed guards in the way, no compromise on production.
+              Lazer Safe AOPD safety mounted beneath the punch. Operators hold the work piece as tools close at high speed — no fixed guards in the way, no compromise on production. We&rsquo;ve been supplying and installing these systems for over a decade.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -89,7 +89,7 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Proven"
               title="Lazer Safe Sentinel"
-              tagline="The original AOPD retrofit. The world's #1 press brake guarding solution."
+              tagline="The original AOPD retrofit — billed by Lazer Safe as the world's #1 press brake guarding solution."
               img="/photos/press-brake-diamond.jpg"
               features={[
                 "Continuous dual laser field below the punch tip",
@@ -172,37 +172,40 @@ export default function PressBrakeSafetyPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mb-14 max-w-2xl">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-              Why Guardomation
+              How we work
             </p>
             <h2 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
-              Exclusive Lazer Safe rights. Decades of guarding.
+              In service of your operators and your production.
             </h2>
+            <p className="mt-4 text-base text-brand-charcoal/70">
+              We&rsquo;ve been supplying and installing Lazer Safe retrofit systems on a wide range of press brake makes and models for over a decade. Here&rsquo;s what comes with that.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <ValueCard
-              title="U.S. Master Distributor"
-              desc="The only company with full Lazer Safe distribution and retrofit rights in the United States."
+              title="Appointed Master Distributor"
+              desc="Authorized to distribute and service Lazer Safe systems across the United States."
             />
             <ValueCard
-              title="Local stock + spare parts"
-              desc="Systems and common spare parts stocked stateside so you&rsquo;re not waiting on overseas freight."
+              title="Stocked stateside"
+              desc="Systems and common spare parts kept locally so you&rsquo;re not waiting on overseas freight when you need them."
             />
             <ValueCard
-              title="Turn-key pricing"
-              desc="Complete packages including system, interface, consumables, installation, training, and travel. No hidden extras."
+              title="Complete project packages"
+              desc="One quote covers system, interface equipment, consumables, installation, operator training, and travel — no hidden extras."
             />
             <ValueCard
-              title="Field engineers"
-              desc="Experienced installers who travel the country. They handle virtually any press brake application."
+              title="Experienced field engineers"
+              desc="Our installers travel the country outfitted for nearly any press brake application. Many years on the road behind them."
             />
             <ValueCard
-              title="Operator training"
-              desc="Every install includes operator training on all modes plus sign-off documentation for your safety records."
+              title="Operator training, every time"
+              desc="Hands-on training on Normal, Tray, Field-Muted, Faulting, and Tooling Set Up modes with signed documentation for your safety records."
             />
             <ValueCard
               title="Phone tech support"
-              desc="Dedicated phone support during business hours. Field engineers a call away when you need them."
+              desc="A direct call to experienced technicians during business hours. We&rsquo;ll diagnose what we can over the phone."
             />
           </div>
         </div>

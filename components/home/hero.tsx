@@ -55,7 +55,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-relaxed text-brand-grey lg:text-xl">
-            The only U.S. company with full Lazer Safe distribution and retrofit rights — and three decades of guarding expertise that doesn&rsquo;t stop with press brakes.
+            Appointed Master Distributor for Lazer Safe in the United States, with three decades of machine guarding service across press brakes, shears, turret presses, and beyond.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-6 text-sm text-brand-grey">
