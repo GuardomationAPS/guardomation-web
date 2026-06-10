@@ -36,12 +36,12 @@ export default function SupportPage() {
                 desc: "Every Lazer Safe install includes operator training on Normal, Tray, Field-Muted, Faulting, and Tooling Set Up modes. Sign-off sheets included.",
               },
               {
-                title: "Spare parts — local stock",
-                desc: "Systems and spare parts stocked in U.S. with overnight shipping to most locations. No waiting on freight from overseas.",
+                title: "Spare parts — U.S. stock",
+                desc: "Lazer Safe systems and common spare parts stocked stateside, so you&rsquo;re not waiting on overseas freight when you need them.",
               },
               {
                 title: "Phone troubleshooting",
-                desc: "Call (281) 265-2832 during business hours. We&rsquo;ll help diagnose over the phone, ship parts same-day, or schedule a service visit.",
+                desc: "Call (281) 265-2832 during business hours. We&rsquo;ll help diagnose over the phone, ship parts when available, or schedule a service visit.",
               },
               {
                 title: "Safety assessments",

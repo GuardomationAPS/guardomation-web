@@ -89,7 +89,7 @@ export default function PressBrakeSafetyPage() {
               tag="Proven"
               title="Lazer Safe Sentinel"
               tagline="The original AOPD retrofit. Trusted on thousands of brakes worldwide."
-              img="/photos/sentinel-plus-hmi.jpg"
+              img="/photos/press-brake-diamond.jpg"
               features={[
                 "Single-laser AOPD safety field below the punch",
                 "Compatible with a wide range of press brakes",
@@ -101,10 +101,10 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Complement"
               title="Rear Guarding Systems"
-              tagline="Engineered scissor gates, light curtains, and mesh guards for press brake back."
-              img="/photos/guarding-mg-02.jpg"
+              tagline="Engineered scissor gates, light curtains, and mesh guards for the press brake back."
+              img="/photos/press-brake-rear-guarding.jpg"
               features={[
-                "Custom-sized for any brake footprint",
+                "Custom-sized to brake footprint",
                 "Powder-coated steel construction",
                 "Optional interlocks + e-stops",
                 "Designed and installed in-house",
@@ -138,7 +138,7 @@ export default function PressBrakeSafetyPage() {
               {
                 num: "02",
                 title: "PO & order",
-                desc: "We pull from local U.S. stock. Most retrofits ship in 1–2 weeks. Spare parts overnight to most locations.",
+                desc: "We pull from U.S. stock when available. Lead time depends on the system and brake — we&rsquo;ll tell you upfront.",
               },
               {
                 num: "03",
@@ -148,7 +148,7 @@ export default function PressBrakeSafetyPage() {
               {
                 num: "04",
                 title: "Train & sign off",
-                desc: "Operators trained on the new system, sign-off sheet completed, machine back in production same day.",
+                desc: "Operators trained on the new system. Sign-off sheet completed. Brake back in production once everything checks out.",
               },
             ].map((step) => (
               <div
