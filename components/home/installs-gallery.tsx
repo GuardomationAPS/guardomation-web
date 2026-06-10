@@ -44,7 +44,7 @@ export default function InstallsGallery() {
               Field work
             </p>
             <h2 className="text-balance text-4xl font-bold text-white lg:text-5xl">
-              Real installs. Real fabricators.
+              Real installs. Real shops.
             </h2>
             <p className="mt-4 text-lg text-brand-grey">
               Every retrofit done in person, on your shop floor, with operator training included.

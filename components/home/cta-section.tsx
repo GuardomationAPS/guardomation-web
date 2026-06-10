@@ -11,7 +11,7 @@ export default function CTASection() {
               Talk to a machine guarding specialist.
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-brand-grey">
-              Whether it&rsquo;s a press brake retrofit, a custom fence, or a full plant safeguarding assessment — we&rsquo;ve installed it before. Tell us about your application and we&rsquo;ll come back with a quote within one business day.
+              Whether it&rsquo;s a Lazer Safe retrofit, a custom fence, or a full plant safeguarding assessment — we&rsquo;ve installed it before. Tell us about your application. Simple quotes can come back same week; complex installs may need a site visit before we scope.
             </p>
           </div>
           <div className="flex flex-col gap-4 lg:items-end">
@@ -40,7 +40,7 @@ export default function CTASection() {
                 info@guardomation.com
               </span>
               <span className="mt-1 text-sm text-brand-grey">
-                Response within 1 business day
+                We reply with next steps quickly
               </span>
             </a>
           </div>

@@ -29,7 +29,7 @@ export const metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "LazerSafe-certified press brake retrofits and complete machine guarding solutions — trusted by industrial fabricators for over 30 years.",
+    "U.S. Master Distributor for Lazer Safe. Press brake retrofits, light curtains, fencing, e-stops, anti-restart controls — three decades of machine safeguarding for every machine in your shop.",
   robots: {
     follow: true,
     index: true,
