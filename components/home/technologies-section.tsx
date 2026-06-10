@@ -97,7 +97,7 @@ export default function TechnologiesSection() {
             </ul>
           </div>
 
-          {/* LAZERSAFE VISUAL */}
+          {/* LAZERSAFE VISUAL — real product photo */}
           <div className="group relative overflow-hidden rounded-xl bg-brand-charcoal p-8 lg:p-10">
             <div
               className="absolute inset-x-0 top-0 h-1"
@@ -107,57 +107,14 @@ export default function TechnologiesSection() {
               aria-hidden
             />
 
-            <svg
-              className="mb-8 h-44 w-full"
-              viewBox="0 0 400 180"
-              fill="none"
-              aria-hidden
-            >
-              <defs>
-                <linearGradient id="lsBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#BA0C2F" stopOpacity="0.2" />
-                  <stop offset="50%" stopColor="#BA0C2F" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#BA0C2F" stopOpacity="0.2" />
-                </linearGradient>
-                <filter id="lsGlow">
-                  <feGaussianBlur stdDeviation="2" />
-                </filter>
-              </defs>
-              {/* Press brake silhouette */}
-              <rect x="80" y="20" width="240" height="50" rx="4" fill="#25282A" stroke="#A7A8AA" strokeWidth="1" />
-              <text x="200" y="50" textAnchor="middle" fill="#A7A8AA" fontSize="10" fontFamily="sans-serif">UPPER BEAM</text>
-              {/* Punch (tool) */}
-              <polygon points="180,70 220,70 200,110" fill="#A7A8AA" />
-              {/* Lower die */}
-              <rect x="100" y="140" width="200" height="20" rx="2" fill="#25282A" stroke="#A7A8AA" strokeWidth="1" />
-              <path d="M 180,140 L 200,150 L 220,140" fill="#101111" />
-              {/* LazerSafe red laser line under punch */}
-              <line
-                x1="60"
-                x2="340"
-                y1="118"
-                y2="118"
-                stroke="url(#lsBeam)"
-                strokeWidth="2"
-                filter="url(#lsGlow)"
-              >
-                <animate
-                  attributeName="stroke-width"
-                  values="2;3.5;2"
-                  dur="2.5s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values="0.7;1;0.7"
-                  dur="2.5s"
-                  repeatCount="indefinite"
-                />
-              </line>
-              {/* Emitter / receiver */}
-              <circle cx="60" cy="118" r="3.5" fill="#BA0C2F" />
-              <circle cx="340" cy="118" r="3.5" fill="#BA0C2F" />
-            </svg>
+            <div className="relative mb-8 h-44 overflow-hidden rounded-lg">
+              <img
+                src="/photos/sentinel-plus-detail.jpg"
+                alt="LazerSafe Sentinel sensor module mounted on a press brake"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent" />
+            </div>
 
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
               LazerSafe partnership

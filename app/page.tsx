@@ -4,6 +4,7 @@ import Footer from "components/layout/footer";
 import Hero from "components/home/hero";
 import SplitSection from "components/home/split-section";
 import TechnologiesSection from "components/home/technologies-section";
+import InstallsGallery from "components/home/installs-gallery";
 import BrandBar from "components/home/brand-bar";
 import EquipmentGrid from "components/home/equipment-grid";
 import CTASection from "components/home/cta-section";
@@ -21,6 +22,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TechnologiesSection />
+      <InstallsGallery />
       <SplitSection />
       <BrandBar />
       <EquipmentGrid />

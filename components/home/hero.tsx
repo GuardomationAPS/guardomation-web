@@ -1,10 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-charcoal">
-      {/* Light curtain — animated yellow horizontal beams */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.45]" aria-hidden>
+      {/* Background photo of LazerSafe Sentinel Plus install, heavy dark overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/photos/sentinel-plus-hero.jpg"
+          alt=""
+          fill
+          priority
+          quality={85}
+          className="object-cover object-center opacity-30"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal to-transparent" />
+      </div>
+
+      {/* Animated laser-curtain SVG over photo */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden>
         <svg
           className="absolute inset-0 h-full w-full"
           viewBox="0 0 1440 800"
@@ -13,8 +29,8 @@ export default function Hero() {
           <defs>
             <linearGradient id="beamY" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#FFB500" stopOpacity="0" />
-              <stop offset="20%" stopColor="#FFB500" stopOpacity="0.9" />
-              <stop offset="80%" stopColor="#FFB500" stopOpacity="0.9" />
+              <stop offset="30%" stopColor="#FFB500" stopOpacity="0.7" />
+              <stop offset="70%" stopColor="#FFB500" stopOpacity="0.7" />
               <stop offset="100%" stopColor="#FFB500" stopOpacity="0" />
             </linearGradient>
             <linearGradient id="beamR" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -23,95 +39,54 @@ export default function Hero() {
               <stop offset="100%" stopColor="#812866" stopOpacity="0" />
             </linearGradient>
             <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="b" />
+              <feGaussianBlur stdDeviation="2.5" result="b" />
               <feMerge>
                 <feMergeNode in="b" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
           </defs>
-
-          {/* Light-curtain beam array (Guardomation heritage) — horizontal yellow */}
-          {Array.from({ length: 14 }).map((_, i) => (
+          {Array.from({ length: 10 }).map((_, i) => (
             <line
               key={i}
               x1="0"
               x2="1440"
-              y1={120 + i * 45}
-              y2={120 + i * 45}
+              y1={150 + i * 60}
+              y2={150 + i * 60}
               stroke="url(#beamY)"
-              strokeWidth="0.75"
+              strokeWidth="0.6"
               filter="url(#glow)"
             >
               <animate
-                attributeName="stroke-width"
-                values="0.5;1.5;0.5"
-                dur={`${3 + (i % 3)}s`}
-                repeatCount="indefinite"
-                begin={`${i * 0.15}s`}
-              />
-              <animate
                 attributeName="opacity"
-                values="0.4;1;0.4"
+                values="0.5;1;0.5"
                 dur={`${3 + (i % 3)}s`}
                 repeatCount="indefinite"
                 begin={`${i * 0.15}s`}
               />
             </line>
           ))}
-
-          {/* LazerSafe diagonal red laser line — single, sharp */}
           <line
             x1="-100"
             x2="1540"
-            y1="160"
-            y2="640"
+            y1="180"
+            y2="620"
             stroke="url(#beamR)"
-            strokeWidth="2"
+            strokeWidth="1.5"
             filter="url(#glow)"
           >
             <animate
               attributeName="stroke-width"
-              values="1.5;3;1.5"
+              values="1;2.5;1"
               dur="4s"
               repeatCount="indefinite"
             />
           </line>
-
-          {/* Detection-zone dots where beams converge */}
-          {[200, 500, 800, 1100].map((cx, i) => (
-            <circle key={cx} cx={cx} cy={160 + (cx / 1440) * 480} r="3" fill="#FFB500">
-              <animate
-                attributeName="r"
-                values="2;5;2"
-                dur="2.5s"
-                repeatCount="indefinite"
-                begin={`${i * 0.3}s`}
-              />
-              <animate
-                attributeName="opacity"
-                values="0.4;1;0.4"
-                dur="2.5s"
-                repeatCount="indefinite"
-                begin={`${i * 0.3}s`}
-              />
-            </circle>
-          ))}
         </svg>
       </div>
 
-      {/* Soft radial glow on right */}
-      <div
-        className="pointer-events-none absolute -right-40 -top-40 h-[700px] w-[700px] rounded-full opacity-30 blur-3xl"
-        style={{
-          background: "radial-gradient(circle, #BA0C2F 0%, #812866 50%, transparent 100%)",
-        }}
-        aria-hidden
-      />
-
       <div className="relative mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
-        <div className="max-w-4xl">
-          {/* Yellow-bracketed pill, echoing Guardomation logo brackets */}
+        <div className="max-w-3xl">
           <p className="mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
             <span className="inline-block h-3 w-1 bg-brand-amber" />
             LazerSafe Authorized Master Distributor
@@ -152,7 +127,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Stats with yellow accent numbers */}
           <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-white/10 pt-8 text-sm text-brand-grey">
             <div className="flex items-center gap-3">
               <span className="h-10 w-1 bg-brand-amber" aria-hidden />
