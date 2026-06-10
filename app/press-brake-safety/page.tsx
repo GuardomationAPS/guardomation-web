@@ -75,7 +75,7 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Flagship"
               title="Sentinel Plus"
-              tagline="The most advanced press brake guarding system ever designed for retrofit. Camera-based, optimized for high-speed."
+              tagline="Lazer Safe's flagship press brake retrofit. Camera-based AOPD optimized for high-speed performance machines."
               img="/photos/sentinel-plus-detail.jpg"
               features={[
                 "Rapid Bend Plus — close at high speed down to 2mm above material",

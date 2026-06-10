@@ -51,7 +51,7 @@ export default function LineCardsPage() {
             {PARTNERS.length} brands. One installation team.
           </h1>
           <p className="mt-4 max-w-2xl text-base text-brand-charcoal/70 lg:text-lg">
-            Guardomation is an authorized distributor and service partner for the industry&rsquo;s leading machine safety brands. We source, install, and stand behind the work — across press brakes, light curtains, fencing, interlocks, sensors, and controls.
+            Guardomation is an authorized distributor and service partner for established machine safety manufacturers. We source, install, and stand behind the work — across press brakes, light curtains, fencing, interlocks, sensors, and controls.
           </p>
         </div>
       </section>

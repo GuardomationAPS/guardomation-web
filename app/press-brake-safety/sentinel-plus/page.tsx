@@ -40,7 +40,7 @@ export default function SentinelPlusPage() {
               Sentinel Plus.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey lg:text-xl">
-              Lazer Safe&rsquo;s most advanced press brake guarding system designed for retrofit applications. Camera-based, optimized for high-speed performance machines.
+              Lazer Safe&rsquo;s flagship press brake guarding system, designed for retrofit applications. Camera-based AOPD optimized for high-speed performance machines.
             </p>
           </div>
         </div>

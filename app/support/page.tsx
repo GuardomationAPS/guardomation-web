@@ -21,7 +21,10 @@ export default function SupportPage() {
               Support that doesn&rsquo;t end at install day.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-              Lazer Safe systems and our own GS-series controls are stocked locally with overnight shipping to most U.S. locations. Operator training, spare parts, troubleshooting — we&rsquo;re a phone call away.
+              Lazer Safe systems and our GS-series controls are stocked stateside. Operator training, spare parts, troubleshooting — we&rsquo;re a phone call away.
+            </p>
+            <p className="mt-3 text-sm text-brand-amber">
+              <span className="font-semibold">Phone support:</span> Mon–Fri 8a–5p Central Time · (281) 265-2832
             </p>
           </div>
 
