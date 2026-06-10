@@ -1,6 +1,17 @@
 import Footer from "components/layout/footer";
 import Image from "next/image";
 import Link from "next/link";
+import PhotoCarousel from "components/photo-carousel";
+
+const INSTALL_PHOTOS = [
+  { src: "/photos/sentinel-plus-hero.jpg", alt: "Lazer Safe Sentinel sensor module on a press brake", caption: "Sentinel sensor mounted beneath the upper beam" },
+  { src: "/photos/install-img9141.jpg", alt: "Lazer Safe active detection on a press brake during forming", caption: "Active camera detection during a live forming operation" },
+  { src: "/photos/press-brake-diamond.jpg", alt: "Diamond DA8525 press brake with Lazer Safe retrofit", caption: "Diamond DA8525 retrofit, completed" },
+  { src: "/photos/press-brake-rear-guarding.jpg", alt: "Accurpress with Lazer Safe sensors and yellow rear guarding", caption: "Accurpress with Sentinel Plus + integrated rear guarding" },
+  { src: "/photos/install-161a0335.jpg", alt: "Lazer Safe sensor installed on a press brake with full tooling array", caption: "Heavy-tonnage press brake with Sentinel installed" },
+  { src: "/photos/install-161a0426.jpg", alt: "Operator hands working at a press brake with Lazer Safe", caption: "Operator working close to the tool — safely" },
+  { src: "/photos/install-161a0614.jpg", alt: "Sentinel HMI touchscreen mounted on press brake", caption: "Sentinel Plus HMI panel — live status and mode selection" },
+];
 
 export const metadata = {
   title: "Press Brake Safety · Lazer Safe Retrofits",
@@ -54,6 +65,70 @@ export default function PressBrakeSafetyPage() {
               >
                 Call (281) 265-2832
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SENTINEL PLUS AUTOMATIC — NEW flagship tier */}
+      <section className="bg-brand-charcoal py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="overflow-hidden rounded-2xl border border-brand-red/30 bg-gradient-to-br from-brand-charcoal-dark via-brand-charcoal to-brand-charcoal-dark">
+            <div className="grid gap-0 lg:grid-cols-2">
+              {/* Video / image side */}
+              <div className="relative aspect-video bg-brand-charcoal-dark lg:aspect-auto lg:min-h-[480px]">
+                <Image
+                  src="/photos/sentinel-plus-detail.jpg"
+                  alt="Lazer Safe Sentinel Plus Automatic with auto brackets on a press brake"
+                  fill
+                  className="object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-charcoal/40" />
+                {/* Play icon placeholder for video */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-red/90 text-3xl text-white shadow-2xl">
+                    ▶
+                  </div>
+                </div>
+                <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-brand-amber px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
+                  Looping demo video — coming soon
+                </div>
+              </div>
+
+              {/* Copy side */}
+              <div className="p-8 lg:p-12">
+                <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
+                  New flagship tier
+                </p>
+                <h2 className="text-balance text-4xl font-bold leading-tight text-white lg:text-5xl">
+                  Sentinel Plus <span className="text-brand-amber">Automatic</span>
+                </h2>
+                <p className="mt-5 text-base leading-relaxed text-brand-grey lg:text-lg">
+                  Everything in Sentinel Plus, plus <strong className="text-white">automatic brackets</strong> that handle the transmitter/receiver positioning during tool changes. Mount the system once, change tools as fast as you ever did, and let the system re-align itself.
+                </p>
+                <ul className="mt-6 space-y-2 text-sm text-white/85 lg:text-base">
+                  <li className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Auto-positioning brackets — no manual realignment</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Tool changes in seconds, not minutes</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />All Sentinel Plus features included (Rapid Bend Plus, multiple modes, GUI panel)</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />The upgrade operators ask for after the demo</li>
+                </ul>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/contact?topic=press-brake-retrofit"
+                    className="inline-flex items-center justify-center gap-2 bg-brand-red px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-red-dark"
+                  >
+                    Get a quote
+                    <span aria-hidden>→</span>
+                  </Link>
+                  <Link
+                    href="/press-brake-safety/sentinel-plus"
+                    className="inline-flex items-center justify-center gap-2 border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-brand-amber hover:text-brand-amber"
+                  >
+                    Learn about Sentinel Plus base
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -115,6 +190,22 @@ export default function PressBrakeSafetyPage() {
               ]}
             />
           </div>
+        </div>
+      </section>
+
+      {/* GALLERY — rotating real installs */}
+      <section className="bg-brand-cream py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mb-10 max-w-2xl">
+            <p className="mb-2 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
+              <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+              Real installs
+            </p>
+            <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
+              Press brake retrofits, done in U.S. shops.
+            </h2>
+          </div>
+          <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={5000} />
         </div>
       </section>
 

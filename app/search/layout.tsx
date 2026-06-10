@@ -1,5 +1,6 @@
 import Footer from "components/layout/footer";
 import CategoryFilter from "components/layout/search/category-filter";
+import MachineFilter from "components/layout/search/machine-filter";
 import FilterList from "components/layout/search/filter";
 import Link from "next/link";
 import { sorting } from "lib/constants";
@@ -33,9 +34,14 @@ export default function SearchLayout({
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 text-brand-charcoal md:flex-row lg:px-8">
         <aside className="order-first w-full flex-none md:w-[220px]">
           <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/60">
-            Categories
+            By product type
           </h2>
           <CategoryFilter />
+
+          <h2 className="mt-8 mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/60">
+            By machine
+          </h2>
+          <MachineFilter />
 
           {/* Custom guarding callout */}
           <div className="mt-8 rounded-xl border border-brand-red/30 bg-brand-red/5 p-5">
