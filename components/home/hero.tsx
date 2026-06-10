@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/photos/sentinel-plus-hero.jpg"
-          alt=""
+          alt="Lazer Safe Sentinel sensor module installed beneath the punch on a press brake"
           fill
           priority
           quality={85}
@@ -80,7 +80,7 @@ export default function Hero() {
         <div className="mt-20 grid gap-6 lg:grid-cols-2 lg:gap-8">
           {/* LAZERSAFE */}
           <Link
-            href="/press-brake-safety"
+            href="/contact?topic=press-brake-retrofit"
             className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70"
           >
             <div className="absolute inset-x-0 top-0 h-1" style={{ background: "linear-gradient(90deg, #812866 0%, #BA0C2F 50%, #CF732E 100%)" }} aria-hidden />
@@ -109,7 +109,7 @@ export default function Hero() {
                 Camera-based AOPD safety mounted beneath the punch. Operators hold the work piece as the tools close at high speed — no fixed guards in the way, no compromise on production.
               </p>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-red transition-all group-hover:gap-3">
-                Explore Lazer Safe systems
+                Get a Lazer Safe quote
                 <span aria-hidden>→</span>
               </span>
             </div>
@@ -118,7 +118,7 @@ export default function Hero() {
           {/* MACHINE GUARDING — equal size; uses 2 real photos for visual parity */}
           <Link
             href="/search"
-            className="group relative overflow-hidden rounded-xl border border-white/10 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-amber/60"
+            className="group relative overflow-hidden rounded-xl border border-brand-amber/20 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-amber/60"
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-brand-amber" aria-hidden />
 
@@ -161,10 +161,15 @@ export default function Hero() {
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
                 Shears, turret presses, robot cells, drill presses — fencing, light curtains, mats, interlocks, e-stops, and our GS-series controls. 30+ brand partners. Three decades on shop floors.
               </p>
-              <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-amber transition-all group-hover:gap-3">
-                Shop machine guarding
-                <span aria-hidden>→</span>
-              </span>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <span className="inline-flex items-center gap-2 text-base font-semibold text-brand-amber transition-all group-hover:gap-3">
+                  Shop the catalog
+                  <span aria-hidden>→</span>
+                </span>
+                <span className="text-xs text-brand-grey">
+                  · Custom guarding? <span className="underline">Request a quote</span>
+                </span>
+              </div>
             </div>
           </Link>
         </div>

@@ -34,7 +34,7 @@ export default function RearGuardingPage() {
         <div className="absolute inset-0">
           <Image
             src="/photos/press-brake-rear-guarding.jpg"
-            alt=""
+            alt="Accurpress press brake with Lazer Safe sensors and yellow rear guarding installed"
             fill
             priority
             quality={85}

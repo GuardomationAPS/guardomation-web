@@ -16,7 +16,7 @@ export default function PressBrakeSafetyPage() {
         <div className="absolute inset-0">
           <Image
             src="/photos/sentinel-plus-hero.jpg"
-            alt=""
+            alt="Lazer Safe Sentinel sensor module on a press brake"
             fill
             priority
             quality={85}

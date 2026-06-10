@@ -1,6 +1,7 @@
 import Footer from "components/layout/footer";
-import Collections from "components/layout/search/collections";
+import CategoryFilter from "components/layout/search/category-filter";
 import FilterList from "components/layout/search/filter";
+import Link from "next/link";
 import { sorting } from "lib/constants";
 import ChildrenWrapper from "./children-wrapper";
 import { Suspense } from "react";
@@ -30,11 +31,26 @@ export default function SearchLayout({
 
       {/* Catalog body */}
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 text-brand-charcoal md:flex-row lg:px-8">
-        <aside className="order-first w-full flex-none md:w-[180px]">
+        <aside className="order-first w-full flex-none md:w-[220px]">
           <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/60">
             Categories
           </h2>
-          <Collections />
+          <CategoryFilter />
+
+          {/* Custom guarding callout */}
+          <div className="mt-8 rounded-xl border border-brand-red/30 bg-brand-red/5 p-5">
+            <p className="text-sm font-bold text-brand-charcoal">Don&rsquo;t see what you need?</p>
+            <p className="mt-2 text-xs leading-relaxed text-brand-charcoal/70">
+              Custom guarding, fencing, or full plant assessments often need a quote or a site visit.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-brand-red hover:underline"
+            >
+              Request a quote
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
         </aside>
         <div className="order-last min-h-screen w-full md:order-none">
           <Suspense fallback={null}>

@@ -15,7 +15,7 @@ export default function SentinelPlusPage() {
         <div className="absolute inset-0">
           <Image
             src="/photos/sentinel-plus-hero.jpg"
-            alt=""
+            alt="Lazer Safe Sentinel Plus camera sensor on a press brake"
             fill
             priority
             quality={85}
