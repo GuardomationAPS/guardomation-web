@@ -45,7 +45,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <p className="mb-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
             <span className="inline-block h-3 w-1 bg-brand-amber" />
-            U.S. Master Distributor for Lazer Safe
+            Appointed U.S. Master Distributor for Lazer Safe
           </p>
 
           <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-7xl">
@@ -106,7 +106,7 @@ export default function Hero() {
               </p>
               <h3 className="text-2xl font-bold text-white lg:text-3xl">Press Brake Retrofit Systems</h3>
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
-                The world&rsquo;s #1 press brake retrofit solution. Camera-based AOPD safety mounted beneath the punch — speed, alignment, and protection without compromise.
+                Camera-based AOPD safety mounted beneath the punch. Operators hold the work piece as the tools close at high speed — no fixed guards in the way, no compromise on production.
               </p>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-red transition-all group-hover:gap-3">
                 Explore Lazer Safe systems
