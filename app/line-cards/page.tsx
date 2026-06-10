@@ -1,0 +1,124 @@
+import Footer from "components/layout/footer";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Authorized Brand Partners",
+  description:
+    "Guardomation is an authorized distributor for 28 industry-leading machine safety brands — Lazer Safe, Banner, OMRON/STI, IDEM, Pinnacle, Saf-T-Block, and more.",
+};
+
+const PARTNERS = [
+  { name: "Lazer Safe", focus: "Press brake retrofit safety (Sentinel, Sentinel Plus)", featured: true },
+  { name: "Banner Engineering", focus: "Light curtains, safety relays, sensors" },
+  { name: "OMRON / STI", focus: "Safety controllers, light curtains, e-stops" },
+  { name: "IDEM Safety", focus: "Interlock switches, e-stops, safety locks" },
+  { name: "Pinnacle Systems", focus: "Press brake and machine controls" },
+  { name: "Triad", focus: "Press automation and safety controls" },
+  { name: "Pressroom Electronics", focus: "Light curtains and press controls" },
+  { name: "Ferndale", focus: "Safety mats and presence-sensing devices" },
+  { name: "HERION", focus: "Safety valves and pneumatic controls" },
+  { name: "EUCHNER", focus: "Safety switches and access systems" },
+  { name: "Nolatron", focus: "Anti-restart and motor control" },
+  { name: "Toledo", focus: "Press components and safety" },
+  { name: "GEMCO", focus: "Stop-time meters and machine instruments" },
+  { name: "KAMCO", focus: "Light curtains and press safety" },
+  { name: "ROSS", focus: "Safety-rated pneumatic valves" },
+  { name: "REES", focus: "Foot switches and operator controls" },
+  { name: "Saf-T-Block", focus: "Press brake safety blocks" },
+  { name: "FLEXBAR", focus: "Machine guards (lathe, drill press, band saw)" },
+  { name: "DANRAY", focus: "Drill press guards and accessories" },
+  { name: "WIRECRAFTERS", focus: "Custom mesh enclosures and fencing" },
+  { name: "Metal Form", focus: "Press tooling and accessories" },
+  { name: "NASP", focus: "Press safety controls" },
+  { name: "ATS Safety", focus: "Drill press guards (DPG series)" },
+  { name: "MAKESAFE", focus: "Lockout/tagout equipment" },
+  { name: "SICK", focus: "Industrial safety sensors and scanners" },
+  { name: "Pilz", focus: "Safety relays and controllers" },
+  { name: "Schmersal", focus: "Safety switches and interlocks" },
+  { name: "Allen-Bradley", focus: "Safety PLCs and controls" },
+];
+
+export default function LineCardsPage() {
+  return (
+    <>
+      <section className="bg-brand-cream py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+            <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+            Authorized partners
+          </p>
+          <h1 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
+            {PARTNERS.length} brands. One installation team.
+          </h1>
+          <p className="mt-4 max-w-2xl text-base text-brand-charcoal/70 lg:text-lg">
+            Guardomation is an authorized distributor and service partner for the industry&rsquo;s leading machine safety brands. We source, install, and stand behind the work — across press brakes, light curtains, fencing, interlocks, sensors, and controls.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white py-12 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          {/* Featured: Lazer Safe */}
+          <div className="mb-12">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+              Master Distributorship
+            </p>
+            <Link
+              href="/press-brake-safety"
+              className="group block rounded-xl border-2 border-brand-red bg-brand-charcoal p-8 transition-all hover:bg-brand-charcoal-dark lg:p-10"
+            >
+              <div className="flex items-start justify-between gap-6">
+                <div className="max-w-2xl">
+                  <h2 className="text-3xl font-bold text-white lg:text-4xl">Lazer Safe</h2>
+                  <p className="mt-3 text-base text-brand-grey">
+                    Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel, Sentinel Plus with Rapid Bend Plus, and full spare-parts support.
+                  </p>
+                </div>
+                <span className="hidden text-sm font-semibold text-brand-amber transition-all group-hover:gap-3 lg:inline-flex lg:items-center lg:gap-2">
+                  Explore systems
+                  <span aria-hidden>→</span>
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          {/* All partners grid */}
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/60">
+            Distributor partners
+          </p>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {PARTNERS.filter((p) => !p.featured).map((p) => (
+              <div
+                key={p.name}
+                className="rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-sm"
+              >
+                <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
+                <p className="mt-1 text-sm text-brand-charcoal/60">{p.focus}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-charcoal py-16 lg:py-20">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center lg:px-8">
+          <h2 className="text-balance text-3xl font-bold text-white lg:text-4xl">
+            Looking for a brand we don&rsquo;t list?
+          </h2>
+          <p className="max-w-xl text-base text-brand-grey">
+            We work with most major machine safety manufacturers. Tell us what you&rsquo;re trying to source — we can usually get it.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
+          >
+            Ask about a brand
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
