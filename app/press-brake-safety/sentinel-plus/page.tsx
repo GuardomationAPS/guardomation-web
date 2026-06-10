@@ -94,6 +94,30 @@ export default function SentinelPlusPage() {
         </div>
       </section>
 
+      <section className="border-y border-brand-grey/20 bg-brand-cream py-12">
+        <div className="mx-auto max-w-5xl px-4 lg:px-8">
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+            <div>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+                Want the full technical spec?
+              </p>
+              <p className="text-base text-brand-charcoal">
+                Detailed manuals, specs, brochures, and demo videos live on Lazer Safe&rsquo;s site.
+              </p>
+            </div>
+            <a
+              href="https://www.lazersafe.com/solutions/retrofit/sentinel-plus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-none items-center gap-2 border border-brand-charcoal bg-white px-6 py-3 text-sm font-semibold text-brand-charcoal transition-all hover:bg-brand-charcoal hover:text-white"
+            >
+              Learn more at lazersafe.com
+              <span aria-hidden>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-brand-charcoal-dark py-16 lg:py-20">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center lg:px-8">
           <h2 className="text-balance text-4xl font-bold text-white lg:text-5xl">
@@ -104,7 +128,7 @@ export default function SentinelPlusPage() {
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact"
+              href="/contact?topic=press-brake-retrofit"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
               Request a quote
