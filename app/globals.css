@@ -3,6 +3,22 @@
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
 
+@theme {
+  /* Guardomation brand palette — refined for professional polish + LazerSafe alignment */
+  --color-brand-red: #ba0c2f;        /* LazerSafe Pantone 200 — primary red, also Guardomation accent */
+  --color-brand-red-dark: #8d0823;
+  --color-brand-amber: #ffb500;       /* LazerSafe Pantone 7549 — premium amber (not bright lemon) */
+  --color-brand-charcoal: #25282a;    /* LazerSafe Pantone 426 — sophisticated near-black */
+  --color-brand-charcoal-dark: #101111;
+  --color-brand-grey: #a7a8aa;        /* LazerSafe Cool Gray 6 */
+  --color-brand-grey-light: #f4f4f5;
+  --color-brand-cream: #fafaf9;       /* Warm off-white background */
+
+  /* Typography — Manrope (headings, sharp geometric, TWK Everett substitute) + Inter (body) */
+  --font-display: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   *,
   ::after,
@@ -10,6 +26,13 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+  html {
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 
@@ -28,5 +51,5 @@
 a,
 input,
 button {
-  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-900;
+  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-white;
 }

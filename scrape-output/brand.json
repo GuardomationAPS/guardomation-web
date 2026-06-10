@@ -1,0 +1,141 @@
+{
+  "name": "Guardomation",
+  "legalName": "Guardomation, Inc.",
+  "tagline": "Machine Guarding Solutions",
+  "established": 1999,
+  "siteDescription": "Trusted Machine Guarding Solutions - Guardomation",
+  "longTagline": "Providing Machine Guarding Products, Sales, Service, Machine Safeguarding Assessments, Components, & More",
+  "heroHeadlinePrimary": "Trusted machine guarding and",
+  "heroHeadlineSecondary": "device distributors",
+  "heroSubheadline": "Machine Guarding Solutions",
+  "logo": {
+    "url": "https://guardomation.com/wp-content/uploads/2021/09/Logo.jpg",
+    "width": 440,
+    "height": 100,
+    "altText": "Guardomation",
+    "srcset": [
+      { "url": "https://guardomation.com/wp-content/uploads/2021/09/Logo.jpg", "width": 440 },
+      { "url": "https://guardomation.com/wp-content/uploads/2021/09/Logo-300x68.jpg", "width": 300 },
+      { "url": "https://guardomation.com/wp-content/uploads/2021/09/Logo-64x15.jpg", "width": 64 }
+    ]
+  },
+  "heroImage": {
+    "url": "https://guardomation.com/wp-content/uploads/2021/09/Hero.jpg",
+    "width": 1440,
+    "height": 680,
+    "altText": "Machine Guarding Component"
+  },
+  "scrollHintImage": "https://guardomation.com/wp-content/uploads/2021/09/Mouse.png",
+  "colors": {
+    "notes": "Site uses Beaver Builder, white background with sparingly used red accent. Most dominant colors from CSS:",
+    "primary": "#d42222",
+    "primaryNote": "Red accent (links / button hovers); used in CSS color presets",
+    "neutralBlack": "#000000",
+    "neutralDark": "#363636",
+    "neutralMid": "#0a0a0a",
+    "neutralOffwhite": "#f1f1f1",
+    "neutralWhite": "#ffffff",
+    "linkBlue": "#428bca",
+    "warmAccent": "#e7bf70",
+    "navy": "#121212",
+    "fullPaletteFromCss": [
+      "#ffffff (26x)",
+      "#d42222 (18x)",
+      "#000000 (13x)",
+      "#363636 (11x)",
+      "#428bca (10x)",
+      "#e7bf70 (9x)",
+      "#0a0a0a (9x)",
+      "#f1f1f1 (6x)",
+      "#121212 (3x)",
+      "#ffd411 (2x)"
+    ],
+    "redesignSuggestion": {
+      "navigationBg": "#0a1729",
+      "primaryAccent": "#d42222",
+      "ctaButton": "#d42222",
+      "bodyText": "#1a1a1a",
+      "pageBg": "#ffffff",
+      "subtleGray": "#f5f5f5"
+    }
+  },
+  "typography": {
+    "googleFonts": "https://fonts.googleapis.com/css?family=Open+Sans:600,300,400,700|Anton:400",
+    "fontFamilies": ["Open Sans", "Anton"],
+    "primaryFont": "Open Sans",
+    "displayFont": "Anton",
+    "weights": [300, 400, 600, 700]
+  },
+  "wordpressStack": {
+    "theme": "bb-theme (Beaver Builder)",
+    "pageBuilder": "Beaver Builder + Ultimate Addons (uabb) + PowerPack (pp)",
+    "navigation": "Mega Menu plugin",
+    "ecommerce": "WooCommerce 10.8.1",
+    "seo": "Yoast SEO",
+    "forms": "Gravity Forms",
+    "cms": "WordPress"
+  },
+  "header": {
+    "logoLeftAligned": true,
+    "menuStyle": "horizontal mega menu",
+    "topLevelItems": [
+      { "label": "Home", "url": "/" },
+      { "label": "Machine Safety Services", "url": "/machine-safety-services/" },
+      { "label": "Line Cards", "url": "/line-cards/" },
+      {
+        "label": "Solutions",
+        "url": "/solutions/",
+        "children": [
+          { "label": "Solutions By Equipment Type", "url": "/solutions-by-equipment-type/" },
+          { "label": "Solutions by Manufacturer", "url": "/solutions-by-manufacturer/" }
+        ]
+      },
+      { "label": "Store", "url": "/shop/" },
+      { "label": "Contact", "url": "/contact/" },
+      { "label": "Terms of Services", "url": "/terms-of-services/" },
+      { "label": "Privacy Policy", "url": "/privacy/" }
+    ]
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "Mailing List",
+        "type": "subscribe-form",
+        "fields": ["Name", "Email Address"],
+        "buttonText": "Subscribe!"
+      },
+      {
+        "type": "logo-block",
+        "logoUrl": "https://guardomation.com/wp-content/uploads/2021/09/Logo.jpg"
+      },
+      {
+        "type": "contact-info",
+        "items": [
+          { "label": "Phone", "value": "(281) 265-2832", "tel": "tel:2812652832" },
+          { "label": "Cell", "value": "(281) 384-6607", "tel": "tel:2813846607" },
+          { "label": "Fax", "value": "(281) 265-1276" },
+          { "label": "Email", "value": "info@guardomation.com", "mailto": "mailto:info@guardomation.com" }
+        ]
+      },
+      {
+        "type": "footer-menu",
+        "matchesMainNav": true
+      },
+      {
+        "type": "copyright",
+        "text": "© 2026, Guardomation. All Rights Reserved."
+      }
+    ]
+  },
+  "contact": {
+    "phone": "(281) 265-2832",
+    "cell": "(281) 384-6607",
+    "fax": "(281) 265-1276",
+    "email": "info@guardomation.com",
+    "physicalAddress": null,
+    "physicalAddressNote": "No street address published on contact page"
+  },
+  "social": {
+    "notes": "No social media links found on home page or footer"
+  }
+}

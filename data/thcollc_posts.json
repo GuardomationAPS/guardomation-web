@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Hello world!",
+    "slug": "hello-world",
+    "link": "https://thcollc.com/hello-world/",
+    "status": "publish",
+    "content_len": 85,
+    "content": "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+    "excerpt": "",
+    "categories": [
+      {
+        "domain": "category",
+        "slug": "uncategorized",
+        "name": "Uncategorized"
+      }
+    ],
+    "meta": {}
+  }
+]

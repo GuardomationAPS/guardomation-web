@@ -1,0 +1,253 @@
+[
+  {
+    "slug": "home",
+    "title": "Trusted Machine Guarding Solutions - Guardomation",
+    "url": "https://guardomation.com/",
+    "hero": {
+      "image": "https://guardomation.com/wp-content/uploads/2021/09/Hero.jpg",
+      "title": "Machine Guarding Solutions",
+      "subtitle": "Providing Machine Guarding Products, Sales, Service, Machine Safeguarding Assessments, Components, & More",
+      "cta": { "label": "Shop Now", "url": "/shop" }
+    },
+    "h1": "Trusted machine guarding and device distributors",
+    "intro": "Guardomation, Inc. was established in 1999 with one goal in mind – to help make the manufacturing environment a safer workplace.\n\nOver the years, we have assisted thousands of customers with their machine safety/machine guarding efforts. We specialize in the proper specification and selection of machine guards, guarding devices and safety control systems for your machinery. We represent the top tier manufacturers of machine guards, guarding devices and controllers and apply a customized guarding approach that best fits the needs of our customers.",
+    "interactiveBanners": [
+      { "title": "Machine Safety Services", "image": "https://guardomation.com/wp-content/uploads/2021/09/1.jpg", "linkUrl": "https://guardomation.com/machine-safety-services/", "linkLabel": "Read More" },
+      { "title": "Solutions", "image": "https://guardomation.com/wp-content/uploads/2021/09/3.jpg", "linkUrl": "https://guardomation.com/solutions/", "linkLabel": "Read More" }
+    ]
+  },
+  {
+    "slug": "machine-safety-services",
+    "title": "Machine Safety Services",
+    "url": "https://guardomation.com/machine-safety-services/",
+    "h1": "Machine Safety Guarding Services Offered by Guardomation",
+    "sections": [
+      {
+        "h2": "Proposals",
+        "body": "Guardomation can provide written proposals for any machine guarding application or safety system service for your specific machinery and processes. Our team will assess your needs and respond with a customized proposal."
+      },
+      {
+        "h2": "Custom Machine Safety Guarding Solutions",
+        "body": "Guardomation can customize, build and install barrier guarding for all types of machinery and hazardous areas. We can also specify and implement presence sensing and/or fixed and interlock barrier guarding solutions on your factory floor."
+      },
+      {
+        "h2": "Stop Time / Safe Distance Analysis for Proper Presence Sensing Device Placement",
+        "body": "Determining the safe mounting distance of optoelectronics guarding systems such as light safety curtains can be complex. Our experienced staff has been providing stop-time reporting services to its valued customers for over 24 years. Utilizing the Semelex II Safetimer, our staff can perform stop-time analysis tests on many processes, including those with linear and rotational motions."
+      },
+      {
+        "h2": "Seminars for Training & Safety",
+        "body": "Guardomation can schedule employee training and safety seminars customized to fit your needs."
+      }
+    ],
+    "imageReferences": [
+      "https://guardomation.com/wp-content/uploads/2022/04/1999-series-safetimeter_210x225.jpg"
+    ]
+  },
+  {
+    "slug": "line-cards",
+    "title": "Line Cards",
+    "url": "https://guardomation.com/line-cards/",
+    "h1": "Line Cards",
+    "subtitle": "Machine Guarding Products, Equipment & Systems Solutions Manufacturers Represented by Guardomation",
+    "body": "See taxonomy.json lineCardBrands for the 28 manufacturers represented (OMRON, IDEM, PINNACLE, Triad, Pressroom Electronics, Ferndale, HERION, PC Controls, SSC Controls, EUCHNER, Nolatron, Toledo Integrated Systems, GEMCO, KAMCO, ROSS, Panelbar, REES, Saf-T-Block, FLEXBAR, DK Controls, DANRAY, WIRECRAFTERS, BANNER, METAL FORM, NASP, ATS, MAKESAFE, SICK)."
+  },
+  {
+    "slug": "solutions",
+    "title": "Solutions",
+    "url": "https://guardomation.com/solutions/",
+    "h1": "Solutions",
+    "body": "Index page that splits into Solutions By Equipment Type and Solutions by Manufacturer (see taxonomy.json)."
+  },
+  {
+    "slug": "solutions-by-equipment-type",
+    "title": "Solutions By Equipment Type",
+    "url": "https://guardomation.com/solutions-by-equipment-type/",
+    "body": "Catalog of 38 equipment-type solution pages (see taxonomy.json solutionsByEquipmentType)."
+  },
+  {
+    "slug": "solutions-by-manufacturer",
+    "title": "Solutions By Manufacturer",
+    "url": "https://guardomation.com/solutions-by-manufacturer/",
+    "body": "Catalog of 38 manufacturer-specific solution pages (see taxonomy.json solutionsByManufacturer)."
+  },
+  {
+    "slug": "shop",
+    "title": "Store",
+    "url": "https://guardomation.com/shop/",
+    "body": "WooCommerce-powered store with 29 products across 8 categories (see products.json and taxonomy.json wooCommerceProductCategories)."
+  },
+  {
+    "slug": "contact",
+    "title": "Get in Touch: Contact Information - Guardomation",
+    "url": "https://guardomation.com/contact/",
+    "metaDescription": "Get in touch with us for any inquiries. We're here to assist you! Contact us today for quick support.",
+    "h1": "Contact Us",
+    "sections": [
+      { "h2": "Contact Information" },
+      { "h2": "Send Us a Message", "formProvider": "Gravity Forms (form id=1)", "fields": ["Name (Required)", "Phone Number (Required)", "Email (Required)", "Message"] }
+    ],
+    "contact": {
+      "phone": "(281) 265-2832",
+      "cell": "(281) 384-6607",
+      "fax": "(281) 265-1276",
+      "email": "info@guardomation.com",
+      "physicalAddress": null
+    }
+  },
+  {
+    "slug": "terms-of-services",
+    "title": "Terms of Services",
+    "url": "https://guardomation.com/terms-of-services/",
+    "note": "Legal page (terms). Full body in raw/pages/terms.html."
+  },
+  {
+    "slug": "privacy",
+    "title": "Privacy Policy",
+    "url": "https://guardomation.com/privacy/",
+    "note": "Legal page (privacy). Full body in raw/pages/privacy.html. There is also a /privacy-policy/ URL that is a default WP page."
+  },
+  {
+    "slug": "aluminum-machine-perimeter-guards",
+    "title": "Aluminum Machine & Perimeter Guards",
+    "url": "https://guardomation.com/aluminum-machine-perimeter-guards/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "anti-tie-down-controls-from-nolatron",
+    "title": "Anti-Tie Down Controls from Nolatron",
+    "url": "https://guardomation.com/anti-tie-down-controls-from-nolatron/",
+    "type": "solution-manufacturer-nolatron"
+  },
+  {
+    "slug": "brake-monitor-time-based",
+    "title": "Brake Monitor Time Based (Pressroom Electronics)",
+    "url": "https://guardomation.com/brake-monitor-time-based/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "ergonomic-palm-buttons-and-pinnacle-safety-control-systems",
+    "title": "Ergonomic Palm Buttons & Pinnacle Safety Control Systems",
+    "url": "https://guardomation.com/ergonomic-palm-buttons-and-pinnacle-safety-control-systems/",
+    "type": "solution-manufacturer-pinnacle"
+  },
+  {
+    "slug": "faztek-machine-bases-workbenches",
+    "title": "Faztek Machine Bases & Workbenches",
+    "url": "https://guardomation.com/faztek-machine-bases-workbenches/",
+    "type": "solution-manufacturer-faztek"
+  },
+  {
+    "slug": "faztek-modular-t-slotted-aluminum-framing",
+    "title": "Faztek Modular T-Slotted Aluminum Framing",
+    "url": "https://guardomation.com/faztek-modular-t-slotted-aluminum-framing/",
+    "type": "solution-manufacturer-faztek"
+  },
+  {
+    "slug": "light-curtain-systems-triad-controls",
+    "title": "Light Curtain Systems (Triad Controls)",
+    "url": "https://guardomation.com/light-curtain-systems-triad-controls/",
+    "type": "solution-manufacturer-triad"
+  },
+  {
+    "slug": "triad-light-curtains",
+    "title": "Triad Light Curtains",
+    "url": "https://guardomation.com/triad-light-curtains/",
+    "type": "solution-manufacturer-triad"
+  },
+  {
+    "slug": "light-curtains-sti-omron",
+    "title": "Light Curtains (STI / Omron)",
+    "url": "https://guardomation.com/light-curtains-sti-omron/",
+    "type": "solution-manufacturer-omron"
+  },
+  {
+    "slug": "load-cells-monitors-die-protection",
+    "title": "Load Cells, Monitors, Die Protection",
+    "url": "https://guardomation.com/load-cells-monitors-die-protection/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "machine-bases-workbench-framing",
+    "title": "Machine Bases / Workbench Framing",
+    "url": "https://guardomation.com/machine-bases-workbench-framing/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "machine-shields-from-danray",
+    "title": "Machine Shields from Danray",
+    "url": "https://guardomation.com/machine-shields-from-danray/",
+    "type": "solution-manufacturer-danray"
+  },
+  {
+    "slug": "machine-stop-time-safe-distance-analysis-for-presence-sensing-devices",
+    "title": "Machine Stop Time / Safe Distance Analysis for Presence Sensing Devices",
+    "url": "https://guardomation.com/machine-stop-time-safe-distance-analysis-for-presence-sensing-devices/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "machinery-anti-restart-and-motor-braking-options",
+    "title": "Machinery Anti-Restart and Motor Braking Options",
+    "url": "https://guardomation.com/machinery-anti-restart-and-motor-braking-options/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "metal-form-products-die-blocks-ram-blocks",
+    "title": "Metal Form Products Die Blocks / Ram Blocks",
+    "url": "https://guardomation.com/metal-form-products-die-blocks-ram-blocks/",
+    "type": "solution-manufacturer-metalform"
+  },
+  {
+    "slug": "palm-buttons-two-hand-safety",
+    "title": "Palm Buttons / Two-Hand Safety",
+    "url": "https://guardomation.com/palm-buttons-two-hand-safety/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "press-control-systems-safety-equipment",
+    "title": "Press Control Systems / Safety Equipment",
+    "url": "https://guardomation.com/press-control-systems-safety-equipment/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "press-controls-and-tonnage-monitoring-toledo-integrated-systems",
+    "title": "Press Controls and Tonnage Monitoring (Toledo Integrated Systems)",
+    "url": "https://guardomation.com/press-controls-and-tonnage-monitoring-toledo-integrated-systems/",
+    "type": "solution-manufacturer-toledo"
+  },
+  {
+    "slug": "press-safety-blocks-die-safety-blocks-from-saf-t-block",
+    "title": "Press Safety Blocks / Die Safety Blocks from Saf-T-Block",
+    "url": "https://guardomation.com/press-safety-blocks-die-safety-blocks-from-saf-t-block/",
+    "type": "solution-manufacturer-saftblock"
+  },
+  {
+    "slug": "safety-interlock-switches-guard-locking-switches-rope-pull-switches-emergency-stops-safety-relays-from-idem-safety-switches",
+    "title": "Safety Interlock Switches, Guard Locking, Rope Pulls, Emergency Stops, Safety Relays from IDEM Safety Switches",
+    "url": "https://guardomation.com/safety-interlock-switches-guard-locking-switches-rope-pull-switches-emergency-stops-safety-relays-from-idem-safety-switches/",
+    "type": "solution-manufacturer-idem"
+  },
+  {
+    "slug": "safety-light-curtain-from-pinnacle-systems",
+    "title": "Safety Light Curtain from Pinnacle Systems",
+    "url": "https://guardomation.com/safety-light-curtain-from-pinnacle-systems/",
+    "type": "solution-manufacturer-pinnacle"
+  },
+  {
+    "slug": "safety-mat-switches-and-safety-edges-and-bumpers",
+    "title": "Safety Mat Switches, Safety Edges, Bumpers",
+    "url": "https://guardomation.com/safety-mat-switches-and-safety-edges-and-bumpers/",
+    "type": "solution-equipment-type"
+  },
+  {
+    "slug": "safety-mats-from-pinnacle-systems",
+    "title": "Safety Mats from Pinnacle Systems",
+    "url": "https://guardomation.com/safety-mats-from-pinnacle-systems/",
+    "type": "solution-manufacturer-pinnacle"
+  },
+  {
+    "slug": "safety-switches-and-safety-relays-from-omron",
+    "title": "Safety Switches and Safety Relays from Omron",
+    "url": "https://guardomation.com/safety-switches-and-safety-relays-from-omron/",
+    "type": "solution-manufacturer-omron"
+  }
+]
