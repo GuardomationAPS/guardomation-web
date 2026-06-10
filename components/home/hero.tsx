@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
             <div className="h-12 w-px bg-white/15" />
             <div>
-              <div className="font-display text-3xl font-bold text-brand-amber">28</div>
+              <div className="font-display text-3xl font-bold text-brand-amber">30+</div>
               <div className="mt-1 text-xs uppercase tracking-[0.15em]">Brand partners</div>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function Hero() {
               </p>
               <h3 className="text-2xl font-bold text-white lg:text-3xl">Machine Guarding</h3>
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
-                Shears, turret presses, robot cells, drill presses — fencing, light curtains, mats, interlocks, e-stops, and our GS-series controls. 28 brand partners. Three decades on shop floors.
+                Shears, turret presses, robot cells, drill presses — fencing, light curtains, mats, interlocks, e-stops, and our GS-series controls. 30+ brand partners. Three decades on shop floors.
               </p>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-amber transition-all group-hover:gap-3">
                 Shop machine guarding

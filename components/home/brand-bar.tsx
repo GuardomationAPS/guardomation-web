@@ -30,6 +30,8 @@ const PARTNERS = [
   "Pilz",
   "Schmersal",
   "Allen-Bradley",
+  "Odiz Safety",
+  "Cascade Coil",
 ];
 
 export default function BrandBar() {
@@ -46,7 +48,7 @@ export default function BrandBar() {
         <div className="flex items-center justify-center gap-3">
           <span className="h-3 w-1 bg-brand-red" aria-hidden />
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/70">
-            Authorized distributor for {PARTNERS.length} industry-leading brands
+            Authorized distributor for {PARTNERS.length}+ established safety brands
           </p>
           <span className="h-3 w-1 bg-brand-red" aria-hidden />
         </div>

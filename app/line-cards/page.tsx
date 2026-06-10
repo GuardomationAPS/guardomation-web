@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Authorized Brand Partners",
   description:
-    "Guardomation is an authorized distributor for 28 industry-leading machine safety brands — Lazer Safe, Banner, OMRON/STI, IDEM, Pinnacle, Saf-T-Block, and more.",
+    "Guardomation is an authorized distributor for 30+ established machine safety brands — Lazer Safe, Banner, OMRON/STI, IDEM, Pinnacle, Saf-T-Block, and more.",
 };
 
 const PARTNERS = [
@@ -36,6 +36,8 @@ const PARTNERS = [
   { name: "Pilz", focus: "Safety relays and controllers" },
   { name: "Schmersal", focus: "Safety switches and interlocks" },
   { name: "Allen-Bradley", focus: "Safety PLCs and controls" },
+  { name: "Odiz Safety", focus: "Machine safety controls and accessories" },
+  { name: "Cascade Coil", focus: "Coiled safety barriers and woven mesh" },
 ];
 
 export default function LineCardsPage() {
@@ -48,7 +50,7 @@ export default function LineCardsPage() {
             Authorized partners
           </p>
           <h1 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
-            {PARTNERS.length} brands. One installation team.
+            {PARTNERS.length}+ brands. One installation team.
           </h1>
           <p className="mt-4 max-w-2xl text-base text-brand-charcoal/70 lg:text-lg">
             Guardomation is an authorized distributor and service partner for established machine safety manufacturers. We source, install, and stand behind the work — across press brakes, light curtains, fencing, interlocks, sensors, and controls.
