@@ -3,6 +3,7 @@ import { ThreeItemGrid } from "components/grid/three-items";
 import Footer from "components/layout/footer";
 import Hero from "components/home/hero";
 import SplitSection from "components/home/split-section";
+import TechnologiesSection from "components/home/technologies-section";
 import BrandBar from "components/home/brand-bar";
 import EquipmentGrid from "components/home/equipment-grid";
 import CTASection from "components/home/cta-section";
@@ -19,6 +20,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <TechnologiesSection />
       <SplitSection />
       <BrandBar />
       <EquipmentGrid />

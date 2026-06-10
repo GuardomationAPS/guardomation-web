@@ -15,8 +15,8 @@ export async function Navbar() {
     { title: "Press Brake Safety", path: "/press-brake-safety" },
     { title: "Machine Guarding", path: "/search" },
     { title: "Shop", path: "/search" },
-    { title: "Services", path: "/services" },
-    { title: "About", path: "/about" },
+    { title: "Support", path: "/support" },
+    { title: "Contact", path: "/contact" },
   ];
   const navItems = menu.length ? menu : defaultMenu;
 
