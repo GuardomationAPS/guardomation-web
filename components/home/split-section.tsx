@@ -78,30 +78,46 @@ export default function SplitSection() {
             <div className="absolute inset-x-0 top-0 h-1 bg-brand-red" aria-hidden />
             <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-red">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
-              30+ Brand Partners
+              28 Brand Partners · House-brand GS Series
             </p>
             <h3 className="mb-4 text-3xl font-bold text-brand-charcoal lg:text-4xl">
               Machine Guarding
             </h3>
             <p className="mb-8 max-w-md text-base leading-relaxed text-brand-charcoal/70">
-              Light curtains, safety mats, e-stops, interlocks, anti-restart controls, custom fencing, and complete safeguarding assessments for every machine in your shop.
+              Custom safety fencing, light curtains, safety mats, e-stops, interlocks, palm buttons, anti-restart controls, motor braking, and complete safeguarding assessments for every machine in your shop.
             </p>
-            <ul className="mb-10 space-y-3 text-sm text-brand-charcoal/90">
+            <ul className="mb-10 grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-brand-charcoal/90">
+              <li className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
+                Fencing &amp; gates
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
+                Light curtains
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
+                Safety mats
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
+                E-stops &amp; relays
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
+                Interlock switches
+              </li>
               <li className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
                 Anti-restart controls
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
-                Light curtains &amp; safety mats
+                Motor braking
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
-                E-stops &amp; safety relays
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 flex-none rounded-full bg-brand-charcoal" />
-                Safeguarding assessments
+                Safety assessments
               </li>
             </ul>
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-charcoal transition-all group-hover:gap-3 group-hover:text-brand-red">
