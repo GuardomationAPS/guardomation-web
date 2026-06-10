@@ -38,7 +38,7 @@ export default function PressBrakeSafetyPage() {
               Press brake retrofits done right.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-brand-grey lg:text-xl">
-              Sentinel Plus is the world&rsquo;s #1 retrofit solution for press brake guarding. We&rsquo;ve installed it on every make and tonnage in U.S. shops for over a decade.
+              Sentinel Plus is the world&rsquo;s #1 retrofit solution for press brake guarding. We&rsquo;ve installed thousands across U.S. shops over the past decade — across a wide range of makes, models, and tonnages.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -92,7 +92,7 @@ export default function PressBrakeSafetyPage() {
               img="/photos/sentinel-plus-hmi.jpg"
               features={[
                 "Single-laser AOPD safety field below the punch",
-                "Fits every make and model of press brake",
+                "Compatible with a wide range of press brakes",
                 "Mute point + speed monitoring",
                 "Light curtain option available",
                 "Local stock + overnight shipping",

@@ -4,20 +4,20 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-charcoal">
-      {/* Background photo of Lazer Safe install — transmitter positioned in upper portion to stay visible above cards */}
+      {/* Background photo: Lazer Safe sensor + press brake tooling, focal point upper-right above cards */}
       <div className="absolute inset-0">
         <Image
-          src="/photos/sentinel-plus-hmi.jpg"
+          src="/photos/sentinel-plus-hero.jpg"
           alt=""
           fill
           priority
           quality={85}
           className="object-cover opacity-30"
-          style={{ objectPosition: "right 25%" }}
+          style={{ objectPosition: "65% 30%" }}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-charcoal/55 to-brand-charcoal" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/90 to-brand-charcoal/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-charcoal/50 to-brand-charcoal" />
       </div>
 
       {/* Subtle yellow laser-curtain beams */}
@@ -106,14 +106,8 @@ export default function Hero() {
               </p>
               <h3 className="text-2xl font-bold text-white lg:text-3xl">Press Brake Retrofit Systems</h3>
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
-                Sentinel Plus is the world&rsquo;s #1 retrofit solution for press brake guarding. Camera-based AOPD safety that mounts beneath the punch — speed, alignment, and protection without compromising production. We&rsquo;ve installed Lazer Safe systems on every make and model of press brake in U.S. shops.
+                The world&rsquo;s #1 press brake retrofit solution. Camera-based AOPD safety mounted beneath the punch — speed, alignment, and protection without compromise.
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-white/85">
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-red" />Sentinel Plus retrofits</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-red" />Automatic alignment</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-red" />Rear guarding systems</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-red" />On-site install &amp; training</li>
-              </ul>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-red transition-all group-hover:gap-3">
                 Explore Lazer Safe systems
                 <span aria-hidden>→</span>
@@ -165,14 +159,8 @@ export default function Hero() {
               </p>
               <h3 className="text-2xl font-bold text-white lg:text-3xl">Machine Guarding</h3>
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
-                From shears and turret presses to robot cells, conveyors, and drill presses — custom fencing, light curtains, safety mats, interlocks, e-stops, and our GS-series anti-restart controls. 28 brand partners and three decades installing the whole shop.
+                Shears, turret presses, robot cells, drill presses — fencing, light curtains, mats, interlocks, e-stops, and our GS-series controls. 28 brand partners. Three decades on shop floors.
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-white/85">
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Custom fencing &amp; gates</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />Light curtains &amp; mats</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />E-stops &amp; interlocks</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-amber" />GS anti-restart controls</li>
-              </ul>
               <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-amber transition-all group-hover:gap-3">
                 Shop machine guarding
                 <span aria-hidden>→</span>
