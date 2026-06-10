@@ -8,36 +8,36 @@ export const metadata = {
 };
 
 const PARTNERS = [
-  { name: "Lazer Safe", focus: "Press brake retrofit safety (Sentinel, Sentinel Plus)", featured: true },
-  { name: "Banner Engineering", focus: "Light curtains, safety relays, sensors" },
-  { name: "OMRON / STI", focus: "Safety controllers, light curtains, e-stops" },
-  { name: "IDEM Safety", focus: "Interlock switches, e-stops, safety locks" },
-  { name: "Pinnacle Systems", focus: "Press brake and machine controls" },
-  { name: "Triad", focus: "Press automation and safety controls" },
-  { name: "Pressroom Electronics", focus: "Light curtains and press controls" },
-  { name: "Ferndale", focus: "Safety mats and presence-sensing devices" },
-  { name: "HERION", focus: "Safety valves and pneumatic controls" },
-  { name: "EUCHNER", focus: "Safety switches and access systems" },
-  { name: "Nolatron", focus: "Anti-restart and motor control" },
-  { name: "Toledo", focus: "Press components and safety" },
-  { name: "GEMCO", focus: "Stop-time meters and machine instruments" },
-  { name: "KAMCO", focus: "Light curtains and press safety" },
-  { name: "ROSS", focus: "Safety-rated pneumatic valves" },
-  { name: "REES", focus: "Foot switches and operator controls" },
-  { name: "Saf-T-Block", focus: "Press brake safety blocks" },
-  { name: "FLEXBAR", focus: "Machine guards (lathe, drill press, band saw)" },
-  { name: "DANRAY", focus: "Drill press guards and accessories" },
-  { name: "WIRECRAFTERS", focus: "Custom mesh enclosures and fencing" },
-  { name: "Metal Form", focus: "Press tooling and accessories" },
-  { name: "NASP", focus: "Press safety controls" },
-  { name: "ATS Safety", focus: "Drill press guards (DPG series)" },
-  { name: "MAKESAFE", focus: "Lockout/tagout equipment" },
-  { name: "SICK", focus: "Industrial safety sensors and scanners" },
-  { name: "Pilz", focus: "Safety relays and controllers" },
-  { name: "Schmersal", focus: "Safety switches and interlocks" },
-  { name: "Allen-Bradley", focus: "Safety PLCs and controls" },
-  { name: "Odiz Safety", focus: "Machine safety controls and accessories" },
-  { name: "Cascade Coil", focus: "Coiled safety barriers and woven mesh" },
+  { name: "Lazer Safe", focus: "Press brake retrofit safety (Sentinel, Sentinel Plus)", featured: true, url: "https://www.lazersafe.com" },
+  { name: "Banner Engineering", focus: "Light curtains, safety relays, sensors", url: "https://www.bannerengineering.com" },
+  { name: "OMRON / STI", focus: "Safety controllers, light curtains, e-stops", url: "https://www.omron.com" },
+  { name: "IDEM Safety", focus: "Interlock switches, e-stops, safety locks", url: "https://www.idemsafety.com" },
+  { name: "Pinnacle Systems", focus: "Press brake and machine controls", url: "https://www.pinnaclesystems.com" },
+  { name: "Triad", focus: "Press automation and safety controls", url: "https://www.triadcontrols.com" },
+  { name: "Pressroom Electronics", focus: "Light curtains and press controls", url: "https://www.pressroomelectronics.com" },
+  { name: "Ferndale", focus: "Safety mats and presence-sensing devices", url: "https://www.ferndalesafety.com" },
+  { name: "HERION", focus: "Safety valves and pneumatic controls", url: "https://www.herion-systemtechnik.com" },
+  { name: "EUCHNER", focus: "Safety switches and access systems", url: "https://www.euchner.com" },
+  { name: "Nolatron", focus: "Anti-restart and motor control", url: "https://www.nolatron.com" },
+  { name: "Toledo", focus: "Press components and safety", url: "https://www.toledointegratedsystems.com" },
+  { name: "GEMCO", focus: "Stop-time meters and machine instruments", url: "https://www.ametekapt.com" },
+  { name: "KAMCO", focus: "Light curtains and press safety", url: "https://www.kamcosafety.com" },
+  { name: "ROSS", focus: "Safety-rated pneumatic valves", url: "https://www.rosscontrols.com" },
+  { name: "REES", focus: "Foot switches and operator controls", url: "https://www.reesinc.com" },
+  { name: "Saf-T-Block", focus: "Press brake safety blocks", url: "https://www.safetyblocks.com" },
+  { name: "FLEXBAR", focus: "Machine guards (lathe, drill press, band saw)", url: "https://www.flexbar.com" },
+  { name: "DANRAY", focus: "Drill press guards and accessories", url: "https://www.danrayproducts.com" },
+  { name: "WIRECRAFTERS", focus: "Custom mesh enclosures and fencing", url: "https://www.wirecrafters.com" },
+  { name: "Metal Form", focus: "Press tooling and accessories", url: "https://www.metalformsafety.com" },
+  { name: "NASP", focus: "Press safety controls", url: "https://www.naspinc.com" },
+  { name: "ATS Safety", focus: "Drill press guards (DPG series)", url: "https://www.atssafety.com" },
+  { name: "MAKESAFE", focus: "Lockout/tagout equipment", url: "https://www.makesafetools.com" },
+  { name: "SICK", focus: "Industrial safety sensors and scanners", url: "https://www.sick.com" },
+  { name: "Pilz", focus: "Safety relays and controllers", url: "https://www.pilz.com" },
+  { name: "Schmersal", focus: "Safety switches and interlocks", url: "https://www.schmersal.com" },
+  { name: "Allen-Bradley", focus: "Safety PLCs and controls", url: "https://www.rockwellautomation.com" },
+  { name: "Odiz Safety", focus: "Machine safety controls and accessories", url: "https://www.odizsafety.com" },
+  { name: "Cascade Coil", focus: "Coiled safety barriers and woven mesh", url: "https://www.cascadecoil.com" },
 ];
 
 export default function LineCardsPage() {
@@ -75,6 +75,15 @@ export default function LineCardsPage() {
                   <p className="mt-3 text-base text-brand-grey">
                     Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel, Sentinel Plus with Rapid Bend Plus, and full spare-parts support.
                   </p>
+                  <a
+                    href="https://www.lazersafe.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-amber hover:underline"
+                  >
+                    lazersafe.com ↗
+                  </a>
                 </div>
                 <span className="hidden text-sm font-semibold text-brand-amber transition-all group-hover:gap-3 lg:inline-flex lg:items-center lg:gap-2">
                   Explore systems
@@ -90,15 +99,25 @@ export default function LineCardsPage() {
           </p>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {PARTNERS.filter((p) => !p.featured).map((p) => (
-              <div
+              <a
                 key={p.name}
-                className="rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-sm"
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-sm"
               >
-                <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
+                  <span className="text-xs text-brand-charcoal/40 group-hover:text-brand-red" aria-hidden>↗</span>
+                </div>
                 <p className="mt-1 text-sm text-brand-charcoal/60">{p.focus}</p>
-              </div>
+              </a>
             ))}
           </div>
+
+          <p className="mt-6 text-xs text-brand-charcoal/50">
+            Brand links open the manufacturer&rsquo;s official site in a new tab.
+          </p>
         </div>
       </section>
 

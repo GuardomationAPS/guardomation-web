@@ -10,7 +10,7 @@ const INSTALLS = [
   {
     src: "/photos/install-img9141.jpg",
     title: "Active Detection",
-    caption: "Red laser line scanning the punch zone during a live forming operation.",
+    caption: "Camera-based safety field scanning the punch zone during a live forming operation.",
     span: "",
   },
   {

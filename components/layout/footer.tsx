@@ -20,6 +20,7 @@ const FOOTER_NAV = {
   ],
   Company: [
     { label: "Support", href: "/support" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
     { label: "Authorized Partners", href: "/line-cards" },
     { label: "Privacy Policy", href: "/privacy" },
