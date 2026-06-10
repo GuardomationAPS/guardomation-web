@@ -65,32 +65,33 @@ export default function LineCardsPage() {
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
               Master Distributorship
             </p>
-            <Link
-              href="/press-brake-safety"
-              className="group block rounded-xl border-2 border-brand-red bg-brand-charcoal p-8 transition-all hover:bg-brand-charcoal-dark lg:p-10"
-            >
-              <div className="flex items-start justify-between gap-6">
+            <div className="rounded-xl border-2 border-brand-red bg-brand-charcoal p-8 lg:p-10">
+              <div className="flex flex-col items-start justify-between gap-6 lg:flex-row">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold text-white lg:text-4xl">Lazer Safe</h2>
                   <p className="mt-3 text-base text-brand-grey">
                     Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel, Sentinel Plus with Rapid Bend Plus, and full spare-parts support.
                   </p>
-                  <a
-                    href="https://www.lazersafe.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-amber hover:underline"
-                  >
-                    lazersafe.com ↗
-                  </a>
+                  <div className="mt-5 flex flex-wrap items-center gap-5">
+                    <Link
+                      href="/press-brake-safety"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-brand-amber hover:underline"
+                    >
+                      Explore systems
+                      <span aria-hidden>→</span>
+                    </Link>
+                    <a
+                      href="https://www.lazersafe.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-brand-grey hover:text-brand-amber"
+                    >
+                      lazersafe.com ↗
+                    </a>
+                  </div>
                 </div>
-                <span className="hidden text-sm font-semibold text-brand-amber transition-all group-hover:gap-3 lg:inline-flex lg:items-center lg:gap-2">
-                  Explore systems
-                  <span aria-hidden>→</span>
-                </span>
               </div>
-            </Link>
+            </div>
           </div>
 
           {/* All partners grid */}
