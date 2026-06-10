@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Press Brake Safety · Lazer Safe Retrofits",
   description:
-    "Guardomation is the U.S. Master Distributor for Lazer Safe — Sentinel Plus retrofits, rear guarding, automatic alignment, and on-site install for press brakes of every make and model.",
+    "Guardomation is the U.S. Master Distributor for Lazer Safe — Sentinel Plus with Rapid Bend Plus, Sentinel, and rear guarding for press brake retrofits. Turn-key packages, on-site installation, operator training.",
 };
 
 export default function PressBrakeSafetyPage() {
@@ -21,7 +21,7 @@ export default function PressBrakeSafetyPage() {
             priority
             quality={85}
             className="object-cover opacity-30"
-            style={{ objectPosition: "75% center" }}
+            style={{ objectPosition: "65% 30%" }}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/90 to-brand-charcoal/40" />
@@ -35,10 +35,10 @@ export default function PressBrakeSafetyPage() {
               Exclusive U.S. Master Distributor for Lazer Safe
             </p>
             <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
-              Press brake retrofits done right.
+              The world&rsquo;s #1 press brake retrofit solution.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-brand-grey lg:text-xl">
-              Sentinel Plus is the world&rsquo;s #1 retrofit solution for press brake guarding. We&rsquo;ve installed thousands across U.S. shops over the past decade — across a wide range of makes, models, and tonnages.
+              Camera-based AOPD safety mounted beneath the punch. Operators hold the work piece as tools close at high speed — no fixed guards in the way, no compromise on production.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -67,7 +67,7 @@ export default function PressBrakeSafetyPage() {
               Lazer Safe systems
             </p>
             <h2 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
-              Three retrofit solutions. One trusted installer.
+              Three solutions for press brake safety.
             </h2>
           </div>
 
@@ -75,40 +75,43 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Flagship"
               title="Sentinel Plus"
-              tagline="Camera-based AOPD for high-speed performance press brakes."
+              tagline="The most advanced press brake guarding system ever designed for retrofit. Camera-based, optimized for high-speed."
               img="/photos/sentinel-plus-detail.jpg"
               features={[
-                "Camera-based protection (no fixed guards in the way)",
-                "Automatic alignment — no manual setup between dies",
-                "Speed-dependent muting for production throughput",
-                "RapidBend Plus technology integration",
-                "ANSI B11.3 &amp; OSHA compliant",
+                "Rapid Bend Plus — close at high speed down to 2mm above material",
+                "Automatic tool alignment in seconds",
+                "Multiple operating modes (Normal, Tray, Field-Muted, etc.)",
+                "Graphical user interface with live status",
+                "Optional e-stop &amp; rear gate monitoring",
+                "Special Tools Mode for any size/profile",
               ]}
             />
             <ProductCard
               tag="Proven"
               title="Lazer Safe Sentinel"
-              tagline="The original AOPD retrofit. Trusted on thousands of brakes worldwide."
+              tagline="The original AOPD retrofit. The world's #1 press brake guarding solution."
               img="/photos/press-brake-diamond.jpg"
               features={[
-                "Single-laser AOPD safety field below the punch",
+                "Continuous dual laser field below the punch tip",
+                "Operator holds work piece during high-speed close",
                 "Compatible with a wide range of press brakes",
-                "Mute point + speed monitoring",
+                "Mute-point optically verified every cycle",
                 "Light curtain option available",
-                "Local stock + overnight shipping",
+                "Reduces operator fatigue vs. traditional curtains",
               ]}
             />
             <ProductCard
               tag="Complement"
-              title="Rear Guarding Systems"
-              tagline="Engineered scissor gates, light curtains, and mesh guards for the press brake back."
+              title="Rear Guarding"
+              tagline="Interlocked scissor gates protecting the rear access space on every press brake we touch."
               img="/photos/press-brake-rear-guarding.jpg"
               features={[
-                "Custom-sized to brake footprint",
-                "Powder-coated steel construction",
-                "Optional interlocks + e-stops",
-                "Designed and installed in-house",
-                "Photo gallery from real installs",
+                "Expandable aluminum barrier kit, safety yellow + black",
+                "Electrically interlocked",
+                "Opens completely for maintenance",
+                "Heights: 4ft, 5ft, 6ft · Widths: 76&quot;, 100&quot;, 124&quot;, 140&quot;",
+                "Stand-off options for back-gauge clearance",
+                "Includes mounting brackets",
               ]}
             />
           </div>
@@ -133,22 +136,22 @@ export default function PressBrakeSafetyPage() {
               {
                 num: "01",
                 title: "Spec & quote",
-                desc: "Send us your brake make/model, tonnage, and a few photos. We come back with a system spec and quote. Site visit if needed for complex installs.",
+                desc: "Send us your brake make/model, tonnage, and a few photos. We come back with a system spec and a turn-key package quote. Site visit if needed for complex installs.",
               },
               {
                 num: "02",
-                title: "PO & order",
-                desc: "We pull from U.S. stock when available. Lead time depends on the system and brake — we&rsquo;ll tell you upfront.",
+                title: "Turn-key package",
+                desc: "Quote includes the Lazer Safe system, interface equipment, consumables, installation, operator training, and travel costs. Multi-machine discounts when we can do them in the same visit.",
               },
               {
                 num: "03",
                 title: "On-site install",
-                desc: "Our crew flies in, removes any existing safety device, mounts and calibrates the Lazer Safe system on your brake.",
+                desc: "Our field engineers travel outfitted for virtually any application. They remove existing safety devices, mount and calibrate the Lazer Safe system, and clean the site when done.",
               },
               {
                 num: "04",
                 title: "Train & sign off",
-                desc: "Operators trained on the new system. Sign-off sheet completed. Brake back in production once everything checks out.",
+                desc: "Operators trained on Normal, Tray, Field-Muted, Faulting, and Tooling Set Up modes. Sign-off sheet completed. Brake back in production once everything checks out.",
               },
             ].map((step) => (
               <div
@@ -160,6 +163,47 @@ export default function PressBrakeSafetyPage() {
                 <p className="text-sm leading-relaxed text-brand-grey">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY GUARDOMATION */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mb-14 max-w-2xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
+              Why Guardomation
+            </p>
+            <h2 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
+              Exclusive Lazer Safe rights. Decades of guarding.
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <ValueCard
+              title="U.S. Master Distributor"
+              desc="The only company with full Lazer Safe distribution and retrofit rights in the United States."
+            />
+            <ValueCard
+              title="Local stock + spare parts"
+              desc="Systems and common spare parts stocked stateside so you&rsquo;re not waiting on overseas freight."
+            />
+            <ValueCard
+              title="Turn-key pricing"
+              desc="Complete packages including system, interface, consumables, installation, training, and travel. No hidden extras."
+            />
+            <ValueCard
+              title="Field engineers"
+              desc="Experienced installers who travel the country. They handle virtually any press brake application."
+            />
+            <ValueCard
+              title="Operator training"
+              desc="Every install includes operator training on all modes plus sign-off documentation for your safety records."
+            />
+            <ValueCard
+              title="Phone tech support"
+              desc="Dedicated phone support during business hours. Field engineers a call away when you need them."
+            />
           </div>
         </div>
       </section>
@@ -227,6 +271,18 @@ function ProductCard({
           ))}
         </ul>
       </div>
+    </div>
+  );
+}
+
+function ValueCard({ title, desc }: { title: string; desc: string }) {
+  return (
+    <div className="rounded-xl border border-brand-grey/30 bg-brand-cream p-7 transition-all hover:border-brand-amber hover:shadow-md">
+      <div className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+        <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+      </div>
+      <h3 className="text-xl font-bold text-brand-charcoal">{title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70" dangerouslySetInnerHTML={{ __html: desc }} />
     </div>
   );
 }
