@@ -2,7 +2,6 @@ import { Carousel } from "components/carousel";
 import { ThreeItemGrid } from "components/grid/three-items";
 import Footer from "components/layout/footer";
 import Hero from "components/home/hero";
-import SplitSection from "components/home/split-section";
 import InstallsGallery from "components/home/installs-gallery";
 import BrandBar from "components/home/brand-bar";
 import EquipmentGrid from "components/home/equipment-grid";
@@ -20,7 +19,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <SplitSection />
       <InstallsGallery />
       <BrandBar />
       <EquipmentGrid />
