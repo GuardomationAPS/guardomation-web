@@ -72,8 +72,8 @@ export default async function ProductPage(props: {
     },
   };
 
-  // Extract vendor + tags for context
-  const vendor = product.vendor || "Guardomation";
+  // Use first tag as a label hint (vendor isn't in default vercel/commerce GraphQL)
+  const labelTag = product.tags?.[0] || "Guardomation";
   const isQuoteOnly = parseFloat(product.priceRange.minVariantPrice.amount) === 0;
 
   return (
@@ -120,10 +120,10 @@ export default async function ProductPage(props: {
 
             {/* Description + CTA */}
             <div className="w-full lg:basis-2/5">
-              {/* Vendor badge */}
+              {/* Tag badge */}
               <p className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
                 <span className="h-3 w-1 bg-brand-amber" aria-hidden />
-                {vendor}
+                {labelTag}
               </p>
 
               <Suspense fallback={null}>
