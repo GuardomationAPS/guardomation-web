@@ -1,11 +1,10 @@
 import CartModal from "components/cart/modal";
-import LogoSquare from "components/logo-square";
 import { getMenu } from "lib/shopify";
 import { Menu } from "lib/shopify/types";
+import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
-import Search, { SearchSkeleton } from "./search";
 
 export async function Navbar() {
   const menu = await getMenu("next-js-frontend-header-menu");
@@ -21,46 +20,83 @@ export async function Navbar() {
   const navItems = menu.length ? menu : defaultMenu;
 
   return (
-    <nav className="sticky top-0 z-40 border-b border-brand-grey/20 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 lg:px-8">
-        <div className="block flex-none md:hidden">
-          <Suspense fallback={null}>
-            <MobileMenu menu={navItems} />
-          </Suspense>
+    <>
+      {/* Corner logo badge — sits in top-right, persists on scroll (LazerSafe-inspired) */}
+      <Link
+        href="/"
+        prefetch={true}
+        aria-label="Guardomation home"
+        className="group fixed top-0 right-0 z-40 hidden md:block"
+      >
+        <div
+          className="bg-white pl-12 pr-6 py-4 shadow-lg transition-shadow group-hover:shadow-xl"
+          style={{
+            clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%)",
+          }}
+        >
+          <Image
+            src="/brand/guardomation-logo.jpg"
+            alt="Guardomation — Machine Guarding Solutions"
+            width={160}
+            height={32}
+            priority
+            className="h-auto w-auto"
+            style={{ maxHeight: "32px" }}
+          />
         </div>
-        <div className="flex items-center gap-8">
-          <LogoSquare />
-          {navItems.length ? (
-            <ul className="hidden gap-7 text-sm font-medium tracking-tight md:flex md:items-center">
-              {navItems.map((item: Menu) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.path}
-                    prefetch={true}
-                    className="text-brand-charcoal transition-colors hover:text-brand-red"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+      </Link>
+
+      {/* Main nav bar */}
+      <nav className="sticky top-0 z-30 border-b border-brand-grey/20 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 lg:px-8">
+          {/* Left: hamburger + mobile logo */}
+          <div className="flex items-center gap-3">
+            <div className="block md:hidden">
+              <Suspense fallback={null}>
+                <MobileMenu menu={navItems} />
+              </Suspense>
+            </div>
+            {/* Mobile-only inline logo (since corner badge is hidden on mobile) */}
+            <Link href="/" prefetch={true} className="block md:hidden" aria-label="Guardomation home">
+              <Image
+                src="/brand/guardomation-logo.jpg"
+                alt="Guardomation"
+                width={140}
+                height={28}
+                priority
+                className="h-auto w-auto"
+                style={{ maxHeight: "28px" }}
+              />
+            </Link>
+          </div>
+
+          {/* Center: nav links (desktop) */}
+          <ul className="hidden gap-7 text-sm font-medium tracking-tight md:flex md:items-center">
+            {navItems.map((item: Menu) => (
+              <li key={item.title}>
+                <Link
+                  href={item.path}
+                  prefetch={true}
+                  className="text-brand-charcoal transition-colors hover:text-brand-red"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Right: phone + cart (reserves space for the corner badge) */}
+          <div className="flex items-center gap-4 md:pr-[220px]">
+            <a
+              href="tel:+12812652832"
+              className="hidden text-sm font-semibold text-brand-charcoal hover:text-brand-red lg:inline-block"
+            >
+              (281) 265-2832
+            </a>
+            <CartModal />
+          </div>
         </div>
-        <div className="hidden flex-1 justify-center max-w-md md:flex">
-          <Suspense fallback={<SearchSkeleton />}>
-            <Search />
-          </Suspense>
-        </div>
-        <div className="flex items-center gap-3">
-          <a
-            href="tel:+12812652832"
-            className="hidden text-sm font-semibold text-brand-charcoal hover:text-brand-red lg:inline-block"
-          >
-            (281) 265-2832
-          </a>
-          <CartModal />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
