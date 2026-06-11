@@ -72,23 +72,33 @@ export default function PressBrakeSafetyPage() {
           <div className="overflow-hidden rounded-2xl border border-brand-red/30 bg-gradient-to-br from-brand-charcoal-dark via-brand-charcoal to-brand-charcoal-dark">
             <div className="grid gap-0 lg:grid-cols-2">
               {/* Video / image side */}
-              <div className="relative aspect-video bg-brand-charcoal-dark lg:aspect-auto lg:min-h-[480px]">
-                <Image
-                  src="/photos/sentinel-plus-detail.jpg"
-                  alt="Lazer Safe Sentinel Plus Automatic with auto brackets on a press brake"
-                  fill
-                  className="object-cover opacity-90"
+              <div className="relative aspect-video overflow-hidden bg-brand-charcoal-dark lg:aspect-auto lg:min-h-[480px]">
+                {/*
+                  Looped clip of Lazer Safe's official Sentinel Plus Automatic demo (BtY_ujYEQbk).
+                  Auto-plays muted (browsers require mute for autoplay), loops via the YouTube
+                  playlist trick (loop=1 needs playlist=<same id>), hides chrome, plays inline on
+                  mobile. start/end define the bracket-motion window — tweak in lockstep if you
+                  want a tighter loop.
+                */}
+                <iframe
+                  src="https://www.youtube.com/embed/BtY_ujYEQbk?autoplay=1&mute=1&loop=1&playlist=BtY_ujYEQbk&controls=0&modestbranding=1&rel=0&playsinline=1&start=8&end=22&iv_load_policy=3"
+                  title="Sentinel Plus Automatic — auto-positioning brackets in action"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  className="absolute inset-0 h-full w-full border-0"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-charcoal/40" />
-                {/* Play icon placeholder for video */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-red/90 text-3xl text-white shadow-2xl">
-                    ▶
-                  </div>
+                <div className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-brand-amber/95 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
+                  Auto-brackets in action
                 </div>
-                <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-brand-amber px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
-                  Looping demo video — coming soon
-                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=BtY_ujYEQbk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-brand-charcoal/85 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition-colors hover:bg-brand-red"
+                >
+                  Watch full demo
+                  <span aria-hidden>↗</span>
+                </a>
               </div>
 
               {/* Copy side */}
