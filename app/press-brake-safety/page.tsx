@@ -2,16 +2,12 @@ import Footer from "components/layout/footer";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoCarousel from "components/photo-carousel";
+import { INSTALLS, installsToCarouselPhotos } from "lib/brake-installs";
 
-const INSTALL_PHOTOS = [
-  { src: "/photos/sentinel-plus-hero.jpg", alt: "Lazer Safe Sentinel sensor module on a press brake", caption: "Sentinel sensor mounted beneath the upper beam" },
-  { src: "/photos/install-img9141.jpg", alt: "Lazer Safe active detection on a press brake during forming", caption: "Active camera detection during a live forming operation" },
-  { src: "/photos/press-brake-diamond.jpg", alt: "Diamond DA8525 press brake with Lazer Safe retrofit", caption: "Diamond DA8525 retrofit, completed" },
-  { src: "/photos/press-brake-rear-guarding.jpg", alt: "Accurpress with Lazer Safe sensors and yellow rear guarding", caption: "Accurpress with Sentinel Plus + integrated rear guarding" },
-  { src: "/photos/install-161a0335.jpg", alt: "Lazer Safe sensor installed on a press brake with full tooling array", caption: "Heavy-tonnage press brake with Sentinel installed" },
-  { src: "/photos/install-161a0426.jpg", alt: "Operator hands working at a press brake with Lazer Safe", caption: "Operator working close to the tool — safely" },
-  { src: "/photos/install-161a0614.jpg", alt: "Sentinel HMI touchscreen mounted on press brake", caption: "Sentinel Plus HMI panel — live status and mode selection" },
-];
+// Use the full brand-confirmed install gallery as the carousel source.
+const INSTALL_PHOTOS = installsToCarouselPhotos();
+const TOTAL_BRAKES = INSTALLS.length;
+const CONFIRMED_BRAKES = INSTALLS.filter((i) => !i.pending).length;
 
 export const metadata = {
   title: "Press Brake Safety · Lazer Safe Retrofits",
@@ -142,16 +138,30 @@ export default function PressBrakeSafetyPage() {
               Lazer Safe systems
             </p>
             <h2 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
-              Three solutions for press brake safety.
+              Four solutions for press brake safety.
             </h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <ProductCard
+              tag="Premium · Auto"
+              tagHighlight
+              title="Sentinel Plus Automatic"
+              tagline="Sentinel Plus with auto-positioning brackets — change tools fast, the system re-aligns itself."
+              img="/photos/sentinel-plus-detail.jpg"
+              features={[
+                "Auto-positioning brackets, no manual realignment",
+                "Tool changes in seconds, not minutes",
+                "All Sentinel Plus features included",
+                "Rapid Bend Plus high-speed close",
+                "The upgrade operators ask for after the demo",
+              ]}
+            />
             <ProductCard
               tag="Flagship"
               title="Sentinel Plus"
               tagline="Lazer Safe's flagship press brake retrofit. Camera-based AOPD optimized for high-speed performance machines."
-              img="/photos/sentinel-plus-detail.jpg"
+              img="/photos/sentinel-plus-hero.jpg"
               features={[
                 "Rapid Bend Plus — close at high speed down to 2mm above material",
                 "Automatic tool alignment in seconds",
@@ -193,19 +203,40 @@ export default function PressBrakeSafetyPage() {
         </div>
       </section>
 
-      {/* GALLERY — rotating real installs */}
+      {/* COMPATIBILITY — rotating preview of every brake we've retrofitted */}
       <section className="bg-brand-cream py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="mb-10 max-w-2xl">
-            <p className="mb-2 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-              <span className="h-3 w-1 bg-brand-amber" aria-hidden />
-              Real installs
-            </p>
-            <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
-              Press brake retrofits, done in U.S. shops.
-            </h2>
+          <div className="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="mb-2 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
+                <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+                Compatibility · {TOTAL_BRAKES} brakes pictured
+              </p>
+              <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
+                Press brakes we&rsquo;ve retrofitted.
+              </h2>
+              <p className="mt-3 text-base text-brand-charcoal/70">
+                Find your brake in the rotating gallery below, or open the full grid to scan every make and model we&rsquo;ve installed Lazer Safe on.
+              </p>
+            </div>
+            <Link
+              href="/press-brake-safety/compatibility"
+              className="inline-flex flex-none items-center gap-2 rounded-full border border-brand-red bg-white px-5 py-2.5 text-sm font-semibold text-brand-red transition-all hover:bg-brand-red hover:text-white"
+            >
+              View full gallery
+              <span aria-hidden>→</span>
+            </Link>
           </div>
-          <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={5000} />
+          <Link
+            href="/press-brake-safety/compatibility"
+            className="block"
+            aria-label="Open the full press brake compatibility gallery"
+          >
+            <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={4000} />
+          </Link>
+          <p className="mt-5 text-center text-sm text-brand-charcoal/60">
+            {CONFIRMED_BRAKES} brand-confirmed installs in the gallery · pause on hover to read the caption · tap the gallery to see all {TOTAL_BRAKES} brakes
+          </p>
         </div>
       </section>
 
@@ -302,32 +333,6 @@ export default function PressBrakeSafetyPage() {
         </div>
       </section>
 
-      {/* Brake Compatibility entry point */}
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <Link
-            href="/press-brake-safety/compatibility"
-            className="group flex flex-col items-start justify-between gap-4 rounded-xl border border-brand-grey/30 bg-brand-cream p-7 transition-all hover:border-brand-red md:flex-row md:items-center"
-          >
-            <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
-                Have a specific brake in mind?
-              </p>
-              <p className="text-lg font-semibold text-brand-charcoal">
-                See the makes and models we&rsquo;ve already retrofitted →
-              </p>
-              <p className="mt-1 text-sm text-brand-charcoal/60">
-                Accurpress, Cincinnati, Diamond, Amada, Ermaksan, Pacific, Guifil, and growing.
-              </p>
-            </div>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-red transition-all group-hover:gap-3">
-              View compatibility gallery
-              <span aria-hidden>→</span>
-            </span>
-          </Link>
-        </div>
-      </section>
-
       {/* Learn more at Lazer Safe */}
       <section className="border-y border-brand-grey/20 bg-brand-cream py-12">
         <div className="mx-auto max-w-5xl px-4 lg:px-8">
@@ -391,20 +396,33 @@ function ProductCard({
   tagline,
   img,
   features,
+  tagHighlight = false,
 }: {
   tag: string;
   title: string;
   tagline: string;
   img: string;
   features: string[];
+  tagHighlight?: boolean;
 }) {
   return (
-    <div className="group overflow-hidden rounded-xl border border-brand-grey/30 bg-white transition-all hover:border-brand-red hover:shadow-xl">
+    <div
+      className={`group overflow-hidden rounded-xl border bg-white transition-all hover:shadow-xl ${
+        tagHighlight
+          ? "border-brand-amber/60 ring-1 ring-brand-amber/30 hover:border-brand-amber"
+          : "border-brand-grey/30 hover:border-brand-red"
+      }`}
+    >
       <div className="relative h-48 overflow-hidden bg-brand-charcoal">
         <img src={img} alt={title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        {tagHighlight && (
+          <div className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-brand-amber px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-charcoal">
+            ★ Top tier
+          </div>
+        )}
       </div>
       <div className="p-7">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">{tag}</p>
+        <p className={`text-xs font-semibold uppercase tracking-[0.2em] ${tagHighlight ? "text-brand-amber" : "text-brand-red"}`}>{tag}</p>
         <h3 className="mt-2 text-2xl font-bold text-brand-charcoal">{title}</h3>
         <p className="mt-3 text-sm text-brand-charcoal/70">{tagline}</p>
         <ul className="mt-5 space-y-2 text-sm text-brand-charcoal/85">
