@@ -199,18 +199,17 @@ export const INSTALLS: Install[] = [
     caption: "Allsteel press brake with Lazer Safe sensors mounted on white stand-off arms",
   },
 
-  // === Vintage / unknown make ===
+  // === Older / hand-identified ===
   {
-    photo: "/photos/brake-vintage-heavy.jpg",
-    caption: "Heavy-duty vintage hydraulic press brake with Lazer Safe sensors on ram corners — proof Lazer Safe works on older iron",
-    notes: "Make/model to confirm",
-    pending: true,
+    make: "Cincinnati",
+    photo: "/photos/brake-cincinnati-older.jpg",
+    caption: "Heavy-duty older Cincinnati hydraulic press brake — Lazer Safe sensors mounted on the ram corners",
   },
   {
-    photo: "/photos/brake-vintage-cincinnati-advantage.jpg",
-    caption: "Older brake with red Advantage-style side panels and Lazer Safe sensor mounted on the ram",
-    notes: "Make to confirm",
-    pending: true,
+    make: "Accurpress",
+    model: "7-series Advantage",
+    photo: "/photos/brake-accurpress-7series-advantage.jpg",
+    caption: "Accurpress 7-series Advantage with Lazer Safe sensor mounted on the ram",
   },
 
 ];
