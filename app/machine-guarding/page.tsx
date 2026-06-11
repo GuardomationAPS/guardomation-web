@@ -292,7 +292,7 @@ export default function MachineGuardingPage() {
               A mix of light curtains, safety mats, fencing, and custom enclosures from shop floors we&rsquo;ve been on.
             </p>
           </div>
-          <PhotoCarousel photos={GUARDING_PHOTOS} autoAdvanceMs={5000} />
+          <PhotoCarousel photos={GUARDING_PHOTOS} autoAdvanceMs={3000} />
         </div>
       </section>
 

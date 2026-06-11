@@ -37,7 +37,7 @@ export default function InstallsGallery() {
           className="block"
           aria-label="Open the full press brake compatibility gallery"
         >
-          <PhotoCarousel photos={photos} autoAdvanceMs={4000} />
+          <PhotoCarousel photos={photos} autoAdvanceMs={2500} />
         </Link>
 
         <p className="mt-5 text-center text-sm text-brand-grey">

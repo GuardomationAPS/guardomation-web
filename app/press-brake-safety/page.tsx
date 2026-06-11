@@ -242,7 +242,7 @@ export default function PressBrakeSafetyPage() {
             className="block"
             aria-label="Open the full press brake compatibility gallery"
           >
-            <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={4000} />
+            <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={2500} />
           </Link>
           <p className="mt-5 text-center text-sm text-brand-charcoal/60">
             {CONFIRMED_BRAKES} brand-confirmed installs in the gallery · pause on hover to read the caption · tap the gallery to see all {TOTAL_BRAKES} brakes
