@@ -72,21 +72,21 @@ export async function Navbar() {
           </div>
 
           {/* Center: nav links + search (desktop) */}
-          <div className="hidden flex-1 items-center justify-center gap-6 md:flex">
-            <ul className="flex gap-7 text-sm font-medium tracking-tight md:items-center">
+          <div className="hidden min-w-0 flex-1 items-center justify-center gap-4 md:flex lg:gap-6">
+            <ul className="flex gap-4 text-sm font-medium tracking-tight md:items-center lg:gap-6 xl:gap-7">
               {navItems.map((item: Menu) => (
                 <li key={item.title}>
                   <Link
                     href={item.path}
                     prefetch={true}
-                    className="text-brand-charcoal transition-colors hover:text-brand-red"
+                    className="whitespace-nowrap text-brand-charcoal transition-colors hover:text-brand-red"
                   >
                     {item.title}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="w-64 flex-none xl:w-72">
+            <div className="w-48 flex-none lg:w-56 xl:w-72">
               <Suspense fallback={<SearchSkeleton />}>
                 <Search />
               </Suspense>
