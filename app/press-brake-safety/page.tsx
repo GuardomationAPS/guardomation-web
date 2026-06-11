@@ -175,7 +175,7 @@ export default function PressBrakeSafetyPage() {
               tag="Proven"
               title="Lazer Safe Sentinel"
               tagline="The original AOPD retrofit — Lazer Safe's proven block-laser press brake guarding system."
-              img="/photos/install-161a0337.jpg"
+              img="/photos/sentinel-block-laser.jpg"
               features={[
                 "Dual continuous laser beam below the punch tip",
                 "Operator holds work piece during high-speed close",

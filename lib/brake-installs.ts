@@ -154,11 +154,6 @@ export const INSTALLS: Install[] = [
     photo: "/photos/brake-cincinnati-modern.jpg",
     caption: "Modern blue Cincinnati hydraulic brake with Sentinel guarding installed",
   },
-  {
-    make: "Cincinnati",
-    photo: "/photos/brake-cincinnati-target-zero.jpg",
-    caption: "Cincinnati brake at a Target Zero Accidents shop floor — Sentinel HMI mounted on ram",
-  },
 
   // === LinkedIn archive — Trumpf, Ermak, Clearing, KRRAS, Steel ===
   {
@@ -205,10 +200,9 @@ export const INSTALLS: Install[] = [
     caption: "KRRAS press brake with Lazer Safe sensors at table level + controller cabinet at front",
   },
   {
-    photo: "/photos/brake-steel-asteel.jpg",
-    caption: "Press brake (label partially visible) with Lazer Safe sensors mounted on white stand-off arms",
-    notes: "Brand confirmation pending",
-    pending: true,
+    make: "Allsteel",
+    photo: "/photos/brake-allsteel.jpg",
+    caption: "Allsteel press brake with Lazer Safe sensors mounted on white stand-off arms",
   },
 
   // === Vintage / unknown make ===
@@ -225,27 +219,6 @@ export const INSTALLS: Install[] = [
     pending: true,
   },
 
-  // === Pre-LinkedIn archive — keeping the original 4 ID-pending installs ===
-  {
-    photo: "/photos/install-161a0335.jpg",
-    caption: "Heavy-tonnage hydraulic brake with extended tooling array — Sentinel transmitter mounted upper-right",
-    pending: true,
-  },
-  {
-    photo: "/photos/install-161a0471.jpg",
-    caption: "Long-bed press brake with full die row — Sentinel system in field operation",
-    pending: true,
-  },
-  {
-    photo: "/photos/install-img9144.jpg",
-    caption: "Upper-tool array with Sentinel sensor at the right side of the bed",
-    pending: true,
-  },
-  {
-    photo: "/photos/install-img9143.jpg",
-    caption: "Wide view through the working area — sheet metal forming under Sentinel-protected die",
-    pending: true,
-  },
 ];
 
 export const BRAKES_WITHOUT_PHOTOS = [
