@@ -32,29 +32,29 @@ export default function ContactPage() {
             <div className="space-y-4">
               <a
                 href="tel:+12812652832"
-                className="group flex items-center gap-5 rounded-xl border border-white/10 bg-brand-charcoal/80 p-7 transition-all hover:border-brand-amber hover:bg-brand-charcoal"
+                className="group flex items-center gap-4 rounded-xl border border-white/10 bg-brand-charcoal/80 p-5 transition-all hover:border-brand-amber hover:bg-brand-charcoal lg:gap-5 lg:p-7"
               >
-                <span className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-brand-amber/40 text-2xl text-brand-amber">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full border border-brand-amber/40 text-2xl text-brand-amber lg:h-14 lg:w-14">
                   ☎
                 </span>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-xs uppercase tracking-[0.15em] text-brand-grey">Call</div>
-                  <div className="font-display text-2xl font-bold text-white">(281) 265-2832</div>
-                  <div className="mt-1 text-sm text-brand-grey">Mon–Fri 8a–5p CT · Mobile: (281) 384-6607</div>
+                  <div className="font-display text-xl font-bold text-white lg:text-2xl">(281) 265-2832</div>
+                  <div className="mt-1 text-xs text-brand-grey lg:text-sm">Mon–Fri 8a–5p CT · Mobile (281) 384-6607</div>
                 </div>
               </a>
 
               <a
                 href="mailto:info@guardomation.com"
-                className="group flex items-center gap-5 rounded-xl border border-white/10 bg-brand-charcoal/80 p-7 transition-all hover:border-brand-amber hover:bg-brand-charcoal"
+                className="group flex items-center gap-4 rounded-xl border border-white/10 bg-brand-charcoal/80 p-5 transition-all hover:border-brand-amber hover:bg-brand-charcoal lg:gap-5 lg:p-7"
               >
-                <span className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-brand-amber/40 text-2xl text-brand-amber">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full border border-brand-amber/40 text-2xl text-brand-amber lg:h-14 lg:w-14">
                   ✉
                 </span>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-xs uppercase tracking-[0.15em] text-brand-grey">Email</div>
-                  <div className="font-display text-2xl font-bold text-white">info@guardomation.com</div>
-                  <div className="mt-1 text-sm text-brand-grey">Simple quotes within the week. Complex jobs may need a site visit.</div>
+                  <div className="font-display truncate text-lg font-bold text-white lg:text-2xl">info@guardomation.com</div>
+                  <div className="mt-1 text-xs text-brand-grey lg:text-sm">Simple quotes within the week. Complex jobs may need a site visit.</div>
                 </div>
               </a>
 

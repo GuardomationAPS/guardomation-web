@@ -316,7 +316,7 @@ export default function CompatibilityPage() {
             </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {INSTALLS.map((install, i) => (
               <article
                 key={i}
@@ -328,34 +328,34 @@ export default function CompatibilityPage() {
                     alt={`${install.make ?? "Press brake"}${install.model ? ` ${install.model}` : ""} with Lazer Safe Sentinel installed`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent" />
-                  <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
-                    <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
-                    Lazer Safe Installed
+                  <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
+                    <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
+                    LS Installed
                   </div>
                   {install.pending && (
-                    <div className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-brand-amber/95 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
+                    <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-amber/95 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal lg:right-4 lg:top-4 lg:px-3 lg:py-1 lg:text-xs">
                       ID pending
                     </div>
                   )}
                 </div>
-                <div className="p-6">
+                <div className="p-3 lg:p-6">
                   {install.make ? (
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">{install.make}</p>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-red lg:text-xs lg:tracking-[0.2em]">{install.make}</p>
                   ) : (
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/40">Make to confirm</p>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-charcoal/40 lg:text-xs lg:tracking-[0.2em]">Make to confirm</p>
                   )}
-                  <h3 className="mt-1 text-xl font-bold text-brand-charcoal">{install.model || "Hydraulic press brake"}</h3>
+                  <h3 className="mt-0.5 text-sm font-bold text-brand-charcoal lg:mt-1 lg:text-xl">{install.model || "Hydraulic press brake"}</h3>
                   {install.tonnage && (
-                    <p className="mt-1 text-sm font-semibold text-brand-charcoal/60">{install.tonnage}</p>
+                    <p className="mt-0.5 text-xs font-semibold text-brand-charcoal/60 lg:mt-1 lg:text-sm">{install.tonnage}</p>
                   )}
                   {install.caption && (
-                    <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70">{install.caption}</p>
+                    <p className="mt-2 hidden text-sm leading-relaxed text-brand-charcoal/70 lg:mt-3 lg:block">{install.caption}</p>
                   )}
                   {install.notes && (
-                    <p className="mt-3 rounded-md bg-brand-cream p-2 text-xs italic text-brand-charcoal/70">{install.notes}</p>
+                    <p className="mt-2 hidden rounded-md bg-brand-cream p-2 text-xs italic text-brand-charcoal/70 lg:mt-3 lg:block">{install.notes}</p>
                   )}
                 </div>
               </article>
