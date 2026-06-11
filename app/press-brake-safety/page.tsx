@@ -174,22 +174,22 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Proven"
               title="Lazer Safe Sentinel"
-              tagline="The original AOPD retrofit — Lazer Safe's proven press brake guarding system."
-              img="/photos/press-brake-diamond.jpg"
+              tagline="The original AOPD retrofit — Lazer Safe's proven block-laser press brake guarding system."
+              img="/photos/install-161a0337.jpg"
               features={[
-                "Continuous dual laser field below the punch tip",
+                "Dual continuous laser beam below the punch tip",
                 "Operator holds work piece during high-speed close",
                 "Compatible with a wide range of press brakes",
                 "Mute-point optically verified every cycle",
-                "Light curtain option available",
+                "F/M/R/O status LEDs on the sensor block",
                 "Reduces operator fatigue vs. traditional curtains",
               ]}
             />
             <ProductCard
               tag="Complement"
               title="Rear Guarding"
-              tagline="Interlocked scissor gates protecting the rear access space on every press brake we touch."
-              img="/photos/press-brake-rear-guarding.jpg"
+              tagline="Interlocked scissor gates + side fencing protecting the rear access space on every press brake we touch."
+              img="/photos/guarding-mg-02.jpg"
               features={[
                 "Expandable aluminum barrier kit, safety yellow + black",
                 "Electrically interlocked",
