@@ -164,7 +164,7 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Proven"
               title="Lazer Safe Sentinel"
-              tagline="The original AOPD retrofit — billed by Lazer Safe as the world's #1 press brake guarding solution."
+              tagline="The original AOPD retrofit — Lazer Safe's proven press brake guarding system."
               img="/photos/press-brake-diamond.jpg"
               features={[
                 "Continuous dual laser field below the punch tip",

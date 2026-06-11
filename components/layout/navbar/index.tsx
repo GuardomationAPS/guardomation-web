@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
+import Search, { SearchSkeleton } from "./search";
 
 export async function Navbar() {
   const menu = await getMenu("next-js-frontend-header-menu");
@@ -70,26 +71,33 @@ export async function Navbar() {
             </Link>
           </div>
 
-          {/* Center: nav links (desktop) */}
-          <ul className="hidden gap-7 text-sm font-medium tracking-tight md:flex md:items-center">
-            {navItems.map((item: Menu) => (
-              <li key={item.title}>
-                <Link
-                  href={item.path}
-                  prefetch={true}
-                  className="text-brand-charcoal transition-colors hover:text-brand-red"
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* Center: nav links + search (desktop) */}
+          <div className="hidden flex-1 items-center justify-center gap-6 md:flex">
+            <ul className="flex gap-7 text-sm font-medium tracking-tight md:items-center">
+              {navItems.map((item: Menu) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.path}
+                    prefetch={true}
+                    className="text-brand-charcoal transition-colors hover:text-brand-red"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="w-64 flex-none xl:w-72">
+              <Suspense fallback={<SearchSkeleton />}>
+                <Search />
+              </Suspense>
+            </div>
+          </div>
 
           {/* Right: phone + cart (reserves space for the corner badge) */}
           <div className="flex items-center gap-4 md:pr-[220px]">
             <a
               href="tel:+12812652832"
-              className="hidden text-sm font-semibold text-brand-charcoal hover:text-brand-red lg:inline-block"
+              className="hidden text-sm font-semibold text-brand-charcoal hover:text-brand-red xl:inline-block"
             >
               (281) 265-2832
             </a>

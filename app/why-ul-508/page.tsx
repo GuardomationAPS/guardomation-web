@@ -58,7 +58,7 @@ export default function WhyUL508Page() {
             />
             <ValueRow
               title="OSHA citations cite it"
-              desc="When an OSHA inspector evaluates your machine safeguarding, they verify that listed components are present where required by 29 CFR 1910 Subpart O and S. Listed components shift the burden of proof on you."
+              desc="When an OSHA inspector evaluates your machine safeguarding, they verify that listed components are present where required by 29 CFR 1910 Subpart O and S. Listed components shift the burden of proof off you."
             />
             <ValueRow
               title="It&rsquo;s verifiable, in public"
@@ -90,7 +90,7 @@ export default function WhyUL508Page() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand-red" />
-                <span><strong>Country of origin</strong> — Made in USA matters for some inspectors and many customers</span>
+                <span><strong>Country of origin</strong> — Made in USA matters for federal contracts, Buy American programs, and many buyers</span>
               </li>
             </ul>
           </div>

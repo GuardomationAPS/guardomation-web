@@ -34,3 +34,27 @@ export const getProductRecommendationsQuery = /* GraphQL */ `
   }
   ${productFragment}
 `;
+
+export const predictiveSearchQuery = /* GraphQL */ `
+  query predictiveSearch($query: String!) {
+    predictiveSearch(query: $query, limit: 6, types: PRODUCT) {
+      products {
+        id
+        handle
+        title
+        featuredImage {
+          url
+          altText
+          width
+          height
+        }
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+`;

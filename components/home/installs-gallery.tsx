@@ -4,7 +4,7 @@ const INSTALLS = [
   {
     src: "/photos/install-161a0335.jpg",
     title: "Press Brake Retrofit",
-    caption: "LazerSafe Sentinel mounted on a heavy-tonnage press brake with full upper-tool array.",
+    caption: "Lazer Safe Sentinel mounted on a heavy-tonnage press brake with full upper-tool array.",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
@@ -28,7 +28,7 @@ const INSTALLS = [
   {
     src: "/photos/install-161a0444.jpg",
     title: "Field Install",
-    caption: "Retrofit complete and certified — back in production same day.",
+    caption: "Retrofit complete and certified — back in production.",
     span: "",
   },
 ];
@@ -70,7 +70,7 @@ export default function InstallsGallery() {
                 <div className="flex items-center gap-2 mb-1">
                   <span className="h-2 w-0.5 bg-brand-amber" aria-hidden />
                   <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-amber">
-                    LazerSafe
+                    Lazer Safe
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-white">{shot.title}</h3>

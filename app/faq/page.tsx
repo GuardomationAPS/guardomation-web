@@ -42,7 +42,7 @@ const FAQS: { section: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Are GS-series anti-restart controls UL listed?",
-        a: "Yes — our GS-series products are UL 508 certified. Look for the certification mark on the product page. Not all competing anti-restart controls carry UL 508 certification; it&rsquo;s a meaningful safety and compliance differentiator.",
+        a: "Yes — our GS-series anti-restart panels are UL 508A listed. Look for the certification mark on the product page. Not all competing anti-restart controls carry UL 508A; it&rsquo;s a meaningful safety and compliance differentiator that inspectors and insurance carriers actually recognize.",
       },
       {
         q: "What&rsquo;s the difference between GS-104, GS-104 MBAP, and GS-104 MBAI?",

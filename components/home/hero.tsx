@@ -95,7 +95,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/40 to-transparent" />
               <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
-                Exclusive U.S. Distribution
+                Appointed U.S. Distributor
               </div>
             </div>
 
