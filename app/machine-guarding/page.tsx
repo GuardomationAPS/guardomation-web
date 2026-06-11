@@ -96,13 +96,13 @@ export default function MachineGuardingPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-              Categories
+              Most-requested categories
             </p>
             <h2 className="text-balance text-4xl font-bold text-brand-charcoal lg:text-5xl">
-              Four ways we guard your shop floor.
+              Four of the products we move every week.
             </h2>
             <p className="mt-4 text-base text-brand-charcoal/70 lg:text-lg">
-              Most jobs blend two or three of these into one solution — that&rsquo;s where the on-site assessment matters.
+              These are the high-volume categories — but they&rsquo;re a fraction of what we install. Most jobs blend two or three into one solution, and the rest of the catalog (chip guards, area scanners, custom enclosures, and more) is below.
             </p>
           </div>
 
@@ -160,6 +160,70 @@ export default function MachineGuardingPage() {
               ]}
               shopHref="/search/anti-restart-controls"
             />
+          </div>
+
+          {/* AND MORE — broader catalog */}
+          <div className="mt-16 rounded-xl border border-brand-grey/30 bg-brand-cream p-7 lg:p-10">
+            <p className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+              <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+              And a lot more
+            </p>
+            <h3 className="text-balance text-2xl font-bold text-brand-charcoal lg:text-3xl">
+              What we also install, fabricate, and source.
+            </h3>
+            <p className="mt-3 max-w-3xl text-sm text-brand-charcoal/70 lg:text-base">
+              Three decades on shop floors means we&rsquo;ve covered just about everything. If it isn&rsquo;t on this list, it&rsquo;s still worth asking — we have 30+ brand partners and an in-house fab capability for custom work.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "Chip guards",
+                "Chuck guards",
+                "Area scanners (SICK, OMRON)",
+                "Single-axis light beams",
+                "Two-hand controls",
+                "Pull-back / hand-restraint devices",
+                "Presence-sensing mats &amp; edges",
+                "Safety relays &amp; safety PLCs",
+                "Lockout / tagout devices",
+                "E-stop pendants &amp; foot switches",
+                "Custom welded enclosures",
+                "Interlock switches (RFID, key, hinge)",
+                "Robot-cell area scanners (3D)",
+                "Conveyor pull cords",
+                "Bridge crane safety",
+                "Forklift / pedestrian alerting",
+                "Sound-level &amp; arc-flash signage",
+                "Saw safety (riving knives, blade guards)",
+                "Coolant &amp; chip splash guards",
+                "Hot-work &amp; weld curtains",
+                "Custom fab + paint",
+                "OEM machine retrofits",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-brand-grey/40 bg-white px-3.5 py-1.5 text-sm font-medium text-brand-charcoal/80"
+                  dangerouslySetInnerHTML={{ __html: item }}
+                />
+              ))}
+              <span className="rounded-full border border-brand-red/40 bg-brand-red/5 px-3.5 py-1.5 text-sm font-semibold text-brand-red">
+                + custom solutions
+              </span>
+            </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact?topic=other"
+                className="inline-flex items-center justify-center gap-2 bg-brand-red px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-red-dark"
+              >
+                Ask about a specific job
+                <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href="/line-cards"
+                className="inline-flex items-center justify-center gap-2 border border-brand-charcoal/30 px-5 py-2.5 text-sm font-semibold text-brand-charcoal transition-all hover:border-brand-charcoal"
+              >
+                See our 30+ brand partners
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -250,7 +314,7 @@ export default function MachineGuardingPage() {
               {
                 num: "01",
                 title: "Walk the floor",
-                desc: "We come on-site (or you send photos + a machine list) and identify what needs guarding under OSHA 1910 Subpart O. Free for most jobs.",
+                desc: "We come on-site (or you send photos + a machine list) and identify what needs guarding under OSHA 1910 Subpart O.",
               },
               {
                 num: "02",
