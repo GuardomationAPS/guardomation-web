@@ -9,12 +9,13 @@ export const metadata = {
 };
 
 type Install = {
-  make: string;
+  make?: string;
   model?: string;
   photo: string;
   caption?: string;
   tonnage?: string;
   notes?: string;
+  pending?: boolean; // true = brake identification not yet confirmed
 };
 
 const INSTALLS: Install[] = [
@@ -49,6 +50,26 @@ const INSTALLS: Install[] = [
     make: "Guifil",
     photo: "/photos/press-brake-guifil.jpg",
     caption: "Guifil press brake with Sentinel retrofit",
+  },
+  {
+    photo: "/photos/install-161a0335.jpg",
+    caption: "Heavy-tonnage hydraulic brake with extended tooling array — Sentinel transmitter mounted upper-right",
+    pending: true,
+  },
+  {
+    photo: "/photos/install-161a0471.jpg",
+    caption: "Long-bed press brake with full die row — Sentinel system in field operation",
+    pending: true,
+  },
+  {
+    photo: "/photos/install-img9144.jpg",
+    caption: "Upper-tool array with Sentinel sensor at the right side of the bed",
+    pending: true,
+  },
+  {
+    photo: "/photos/install-img9143.jpg",
+    caption: "Wide view through the working area — sheet metal forming under Sentinel-protected die",
+    pending: true,
   },
 ];
 
@@ -112,7 +133,7 @@ export default function CompatibilityPage() {
           <div className="mb-10 flex items-end justify-between gap-4">
             <div>
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-                {INSTALLS.length} verified installs · gallery is growing
+                {INSTALLS.length} press brakes pictured · {INSTALLS.filter((i) => !i.pending).length} brand-confirmed
               </p>
               <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
                 Find your brake.
@@ -129,7 +150,7 @@ export default function CompatibilityPage() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-brand-charcoal-dark">
                   <Image
                     src={install.photo}
-                    alt={`${install.make}${install.model ? ` ${install.model}` : ""} press brake with Lazer Safe Sentinel installed`}
+                    alt={`${install.make ?? "Press brake"}${install.model ? ` ${install.model}` : ""} with Lazer Safe Sentinel installed`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 50vw, 33vw"
@@ -139,9 +160,18 @@ export default function CompatibilityPage() {
                     <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
                     Lazer Safe Installed
                   </div>
+                  {install.pending && (
+                    <div className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-brand-amber/95 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-charcoal">
+                      ID pending
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">{install.make}</p>
+                  {install.make ? (
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">{install.make}</p>
+                  ) : (
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-charcoal/40">Make to confirm</p>
+                  )}
                   <h3 className="mt-1 text-xl font-bold text-brand-charcoal">{install.model || "Hydraulic press brake"}</h3>
                   {install.tonnage && (
                     <p className="mt-1 text-sm font-semibold text-brand-charcoal/60">{install.tonnage}</p>
