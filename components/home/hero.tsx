@@ -80,7 +80,7 @@ export default function Hero() {
         <div className="mt-20 grid gap-6 lg:grid-cols-2 lg:gap-8">
           {/* LAZERSAFE */}
           <Link
-            href="/contact?topic=press-brake-retrofit"
+            href="/press-brake-safety"
             className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70"
           >
             <div className="absolute inset-x-0 top-0 h-1" style={{ background: "linear-gradient(90deg, #812866 0%, #BA0C2F 50%, #CF732E 100%)" }} aria-hidden />
@@ -117,7 +117,7 @@ export default function Hero() {
 
           {/* MACHINE GUARDING — equal size; uses 2 real photos for visual parity */}
           <Link
-            href="/search"
+            href="/machine-guarding"
             className="group relative overflow-hidden rounded-xl border border-brand-amber/20 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-amber/60"
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-brand-amber" aria-hidden />

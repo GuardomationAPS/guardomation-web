@@ -7,7 +7,7 @@ const FOOTER_NAV = {
     { label: "Lazer Safe Sentinel Plus", href: "/press-brake-safety/sentinel-plus" },
     { label: "Rear Guarding", href: "/press-brake-safety/rear-guarding" },
     { label: "Brake Compatibility", href: "/press-brake-safety/compatibility" },
-    { label: "Machine Guarding", href: "/search" },
+    { label: "Machine Guarding", href: "/machine-guarding" },
     { label: "Why UL 508A", href: "/why-ul-508" },
     { label: "Safety Assessments", href: "/services" },
   ],

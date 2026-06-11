@@ -13,7 +13,7 @@ export async function Navbar() {
   // Default IA — will eventually come from Shopify menu management
   const defaultMenu: Menu[] = [
     { title: "Press Brake Safety", path: "/press-brake-safety" },
-    { title: "Machine Guarding", path: "/search" },
+    { title: "Machine Guarding", path: "/machine-guarding" },
     { title: "Shop", path: "/search" },
     { title: "Support", path: "/support" },
     { title: "Contact", path: "/contact" },
