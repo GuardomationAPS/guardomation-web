@@ -27,7 +27,7 @@ export function middleware(req: NextRequest) {
   return new NextResponse("Authentication required.", {
     status: 401,
     headers: {
-      "WWW-Authenticate": 'Basic realm="Guardomation dev — password required", charset="UTF-8"',
+      "WWW-Authenticate": 'Basic realm="Guardomation Dev"',
     },
   });
 }
