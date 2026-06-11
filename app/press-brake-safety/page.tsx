@@ -302,6 +302,32 @@ export default function PressBrakeSafetyPage() {
         </div>
       </section>
 
+      {/* Brake Compatibility entry point */}
+      <section className="bg-white py-12">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <Link
+            href="/press-brake-safety/compatibility"
+            className="group flex flex-col items-start justify-between gap-4 rounded-xl border border-brand-grey/30 bg-brand-cream p-7 transition-all hover:border-brand-red md:flex-row md:items-center"
+          >
+            <div>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+                Have a specific brake in mind?
+              </p>
+              <p className="text-lg font-semibold text-brand-charcoal">
+                See the makes and models we&rsquo;ve already retrofitted →
+              </p>
+              <p className="mt-1 text-sm text-brand-charcoal/60">
+                Accurpress, Cincinnati, Diamond, Amada, Ermaksan, Pacific, Guifil, and growing.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-red transition-all group-hover:gap-3">
+              View compatibility gallery
+              <span aria-hidden>→</span>
+            </span>
+          </Link>
+        </div>
+      </section>
+
       {/* Learn more at Lazer Safe */}
       <section className="border-y border-brand-grey/20 bg-brand-cream py-12">
         <div className="mx-auto max-w-5xl px-4 lg:px-8">

@@ -6,8 +6,9 @@ const FOOTER_NAV = {
     { label: "Press Brake Safety", href: "/press-brake-safety" },
     { label: "Lazer Safe Sentinel Plus", href: "/press-brake-safety/sentinel-plus" },
     { label: "Rear Guarding", href: "/press-brake-safety/rear-guarding" },
+    { label: "Brake Compatibility", href: "/press-brake-safety/compatibility" },
     { label: "Machine Guarding", href: "/search" },
-    { label: "Anti-Restart Controls (GS Series)", href: "/search/anti-restart-controls" },
+    { label: "Why UL 508A", href: "/why-ul-508" },
     { label: "Safety Assessments", href: "/services" },
   ],
   Shop: [
