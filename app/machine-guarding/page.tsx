@@ -136,8 +136,8 @@ export default function MachineGuardingPage() {
             <CategoryCard
               tag="Hard barrier"
               title="Fencing &amp; Gates"
-              tagline="Aluminum or steel perimeter fencing with interlocked access doors and scissor gates."
-              img="/photos/guarding-mg-02.jpg"
+              tagline="Aluminum or steel perimeter fencing with interlocked access doors and expandable scissor gates."
+              img="/photos/guarding-scissor-gate-on-brake.jpg"
               features={[
                 "Modular panels — scale to any footprint",
                 "Interlocked swing &amp; sliding doors",

@@ -81,7 +81,7 @@ export default function PressBrakeSafetyPage() {
                   want a tighter loop.
                 */}
                 <iframe
-                  src="https://www.youtube.com/embed/BtY_ujYEQbk?autoplay=1&mute=1&loop=1&playlist=BtY_ujYEQbk&controls=0&modestbranding=1&rel=0&playsinline=1&start=8&end=22&iv_load_policy=3"
+                  src="https://www.youtube.com/embed/BtY_ujYEQbk?autoplay=1&mute=1&loop=1&playlist=BtY_ujYEQbk&controls=0&modestbranding=1&rel=0&playsinline=1&start=25&end=35&iv_load_policy=3"
                   title="Sentinel Plus Automatic — auto-positioning brackets in action"
                   allow="autoplay; encrypted-media; picture-in-picture"
                   className="absolute inset-0 h-full w-full border-0"
@@ -199,7 +199,7 @@ export default function PressBrakeSafetyPage() {
               tag="Complement"
               title="Rear Guarding"
               tagline="Interlocked scissor gates + side fencing protecting the rear access space on every press brake we touch."
-              img="/photos/guarding-mg-02.jpg"
+              img="/photos/guarding-scissor-gate-on-brake.jpg"
               features={[
                 "Expandable aluminum barrier kit, safety yellow + black",
                 "Electrically interlocked",

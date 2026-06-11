@@ -143,9 +143,9 @@ export const INSTALLS: Install[] = [
   },
   {
     make: "Amada",
+    model: "RG-50",
     photo: "/photos/brake-amada-small-red.jpg",
-    caption: "Smaller red Amada brake — Sentinel install at the table edge",
-    pending: true,
+    caption: "Compact Amada RG-50 — Sentinel install at the table edge",
   },
 
   // === LinkedIn archive — Cincinnati family ===
@@ -187,12 +187,6 @@ export const INSTALLS: Install[] = [
     photo: "/photos/brake-clearing-niagara-hbm100.jpg",
     tonnage: "100 ton · 8 ft",
     caption: "Clearing Niagara HBM-100-8-10 retrofit — Sentinel sensors on both sides of the ram",
-  },
-  {
-    make: "Clearing",
-    model: "HBM (smaller)",
-    photo: "/photos/brake-clearing-hbm-small.jpg",
-    caption: "Smaller Clearing HBM brake with Sentinel sensor on the left ram corner",
   },
   {
     make: "KRRAS",

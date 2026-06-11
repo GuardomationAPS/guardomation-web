@@ -94,12 +94,6 @@ export default function CompatibilityPage() {
                   {install.tonnage && (
                     <p className="mt-0.5 text-xs font-semibold text-brand-charcoal/60 lg:mt-1 lg:text-sm">{install.tonnage}</p>
                   )}
-                  {install.caption && (
-                    <p className="mt-2 hidden text-sm leading-relaxed text-brand-charcoal/70 lg:mt-3 lg:block">{install.caption}</p>
-                  )}
-                  {install.notes && (
-                    <p className="mt-2 hidden rounded-md bg-brand-cream p-2 text-xs italic text-brand-charcoal/70 lg:mt-3 lg:block">{install.notes}</p>
-                  )}
                 </div>
               </article>
             ))}
