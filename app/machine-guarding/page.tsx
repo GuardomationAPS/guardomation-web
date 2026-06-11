@@ -4,10 +4,14 @@ import Link from "next/link";
 import PhotoCarousel from "components/photo-carousel";
 
 const GUARDING_PHOTOS = [
-  { src: "/photos/guarding-mg-02.jpg", alt: "Yellow scissor gate and side fencing on a press brake", caption: "Scissor gate + side fencing — rear access protection on a press brake" },
+  { src: "/photos/guarding-scissor-gate-on-brake.jpg", alt: "Yellow expandable scissor gate mounted on a press brake", caption: "Expandable scissor gate — interlocked rear access protection on a press brake" },
   { src: "/photos/guarding-mg-03.jpg", alt: "Strippit turret press with bright yellow safety mat", caption: "Pressure-sensitive safety mat around a Strippit 1000 turret press" },
+  { src: "/photos/guarding-milling-bridgeport.jpg", alt: "Vintage Bridgeport-style milling machine with orange swing-arm chip shield", caption: "Bridgeport-style milling machine with swing-arm chip shield and quill guard" },
+  { src: "/photos/guarding-drill-press-24in.jpg", alt: "24-inch drill press with orange chuck guard and clear chip shield", caption: "24-inch drill press with orange chuck-guard arm and clear chip shield" },
+  { src: "/photos/guarding-punch-press-mesh.jpg", alt: "Punch press P-6058 with full mesh perimeter guarding at the work area", caption: "Punch press with full mesh perimeter guarding at the point of operation" },
   { src: "/photos/guarding-mg-05.jpg", alt: "Punch press with full perimeter guarding", caption: "Vertical-bar perimeter guarding around a punch press" },
   { src: "/photos/guarding-mg-04.jpg", alt: "Light curtain installation around a hydraulic press", caption: "Light curtains creating a non-contact safety field at the point of operation" },
+  { src: "/photos/guarding-control-panel-interior.jpg", alt: "UL 508A control panel interior with wiring diagram and emergency stop", caption: "Inside a UL 508A control panel build — APS schematic, listed components, latching e-stop" },
   { src: "/photos/guarding-mg-06.jpg", alt: "Anti-restart control panel internal wiring", caption: "GS-series anti-restart control panel — UL 508A listed, made in USA" },
   { src: "/photos/guarding-mg-01.jpg", alt: "Yellow safety enclosure around a CNC turret", caption: "Custom yellow enclosure with viewing windows around a CNC turret" },
 ];
