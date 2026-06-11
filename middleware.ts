@@ -1,42 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Dev-gate: when SITE_PASSWORD env var is set, the site is protected behind
-// HTTP Basic Auth. Username is ignored; only the password matters. When the
-// env var is unset (e.g., production), the gate is disabled and requests
-// pass through normally.
+// a custom login page at /enter. On success the gate sets an httpOnly cookie
+// (gd_access) whose value matches SITE_PASSWORD. When the env var is unset
+// (e.g., production), the gate is disabled and requests pass through.
 const SITE_PASSWORD = process.env.SITE_PASSWORD;
 
 export function middleware(req: NextRequest) {
   if (!SITE_PASSWORD) return NextResponse.next();
 
-  const auth = req.headers.get("authorization");
-  if (auth?.startsWith("Basic ")) {
-    try {
-      const encoded = auth.slice(6);
-      const decoded = atob(encoded);
-      const colonIdx = decoded.indexOf(":");
-      const pass = colonIdx >= 0 ? decoded.slice(colonIdx + 1) : "";
-      if (pass === SITE_PASSWORD) {
-        return NextResponse.next();
-      }
-    } catch {
-      // fall through to 401
-    }
+  const { pathname } = req.nextUrl;
+
+  // Allow the gate page and its API endpoint to render — otherwise we'd
+  // redirect /enter → /enter and loop.
+  if (pathname === "/enter" || pathname === "/api/enter") {
+    return NextResponse.next();
   }
 
-  return new NextResponse("Authentication required.", {
-    status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="Guardomation Dev"',
-    },
-  });
+  const cookie = req.cookies.get("gd_access")?.value;
+  if (cookie === SITE_PASSWORD) {
+    return NextResponse.next();
+  }
+
+  // Redirect to the gate page, preserving the path they wanted so we can
+  // bounce them back after login.
+  const url = req.nextUrl.clone();
+  url.pathname = "/enter";
+  url.search = `?next=${encodeURIComponent(pathname + (req.nextUrl.search || ""))}`;
+  return NextResponse.redirect(url);
 }
 
 export const config = {
-  // Run on every request except static assets, the Next.js image optimizer,
-  // robots.txt (so search engines can still fetch the noindex directive),
-  // and favicon.
   matcher: [
-    "/((?!_next/static|_next/image|_next/data|favicon.ico|robots.txt|sitemap.xml).*)",
+    "/((?!_next/static|_next/image|_next/data|favicon.ico|icon|apple-icon|robots.txt|sitemap.xml|opengraph-image).*)",
   ],
 };
