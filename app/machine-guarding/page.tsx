@@ -351,26 +351,45 @@ export default function MachineGuardingPage() {
         </div>
       </section>
 
-      {/* WHY UL 508A callout */}
-      <section className="border-y border-brand-grey/20 bg-brand-cream py-12">
-        <div className="mx-auto max-w-5xl px-4 lg:px-8">
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-            <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
-                Anti-restart spec sheet check
-              </p>
-              <p className="text-base text-brand-charcoal">
-                Not all anti-restart controls carry the UL 508A panel listing inspectors and underwriters actually recognize.
-              </p>
+      {/* WHY UL 508A callout — compact card */}
+      <section className="bg-brand-cream py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <Link
+            href="/why-ul-508"
+            className="group block overflow-hidden rounded-xl border border-brand-grey/40 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand-red hover:shadow-lg"
+          >
+            <div className="flex items-stretch">
+              {/* Left accent strip with the UL 508A mark */}
+              <div className="flex flex-none flex-col items-center justify-center bg-brand-charcoal px-5 py-6 text-center md:px-7">
+                <div className="font-display text-3xl font-bold leading-none text-brand-amber md:text-4xl">
+                  UL
+                </div>
+                <div className="mt-1 font-display text-xl font-bold leading-none text-white md:text-2xl">
+                  508A
+                </div>
+                <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-grey">
+                  Listed panel
+                </div>
+              </div>
+              {/* Copy */}
+              <div className="flex flex-1 items-center justify-between gap-3 px-5 py-5 md:px-7">
+                <div>
+                  <p className="text-sm font-bold text-brand-charcoal md:text-base">
+                    Buying an anti-restart? Check the spec sheet.
+                  </p>
+                  <p className="mt-1 text-xs text-brand-charcoal/70 md:text-sm">
+                    Not all are UL 508A listed — and that&rsquo;s the line underwriters and AHJ inspectors actually look for.
+                  </p>
+                </div>
+                <span
+                  aria-hidden
+                  className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand-red text-white transition-all group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </div>
             </div>
-            <Link
-              href="/why-ul-508"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-red hover:underline"
-            >
-              Why UL 508A matters
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
+          </Link>
         </div>
       </section>
 
