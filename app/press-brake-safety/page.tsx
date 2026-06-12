@@ -81,7 +81,7 @@ export default function PressBrakeSafetyPage() {
                   want a tighter loop.
                 */}
                 <iframe
-                  src="https://www.youtube.com/embed/BtY_ujYEQbk?autoplay=1&mute=1&loop=1&playlist=BtY_ujYEQbk&controls=0&modestbranding=1&rel=0&playsinline=1&start=25&end=35&iv_load_policy=3"
+                  src="https://www.youtube.com/embed/BtY_ujYEQbk?autoplay=1&mute=1&loop=1&playlist=BtY_ujYEQbk&controls=0&modestbranding=1&rel=0&playsinline=1&start=27&end=60&iv_load_policy=3"
                   title="Sentinel Plus Automatic — auto-positioning brackets in action"
                   allow="autoplay; encrypted-media; picture-in-picture"
                   className="absolute inset-0 h-full w-full border-0"
