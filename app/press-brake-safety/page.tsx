@@ -314,13 +314,13 @@ export default function PressBrakeSafetyPage() {
               <div className="p-6 lg:p-7">
                 <p className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
                   <span className="h-3 w-1 bg-brand-amber" aria-hidden />
-                  Existing block-laser customers
+                  Existing Lazer Safe customers
                 </p>
                 <h3 className="text-balance text-xl font-bold text-brand-charcoal lg:text-2xl">
-                  Already running a Sentinel block-laser system?
+                  Already running a legacy Lazer Safe system?
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70 lg:text-base">
-                  We still support the original Lazer Safe Sentinel and Sentinel block-laser XL. Spare parts, recalibration, and plug-and-play upgrades to Sentinel Plus are available — minor software config, no rewiring on most installs.
+                  We still support every Lazer Safe model we&rsquo;ve installed over the years — block lasers, planar lasers, and earlier Sentinel systems. Spare parts, recalibration, and upgrade paths to Sentinel Plus are all available. Reach out and we&rsquo;ll sort out what your system needs.
                 </p>
                 <div className="mt-5 flex flex-col gap-2 sm:flex-row">
                   <Link
