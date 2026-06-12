@@ -184,15 +184,15 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Long range · XL"
               title="Sentinel Plus XL"
-              tagline="Same Sentinel Plus tech, long-range version — purpose-built for large press brakes (25ft+ beds) where standard sensor range falls short."
+              tagline="The robust guarding solution for long press brakes — optional upgrade for Sentinel Plus that extends optical range from 26ft (8m) to 50ft (15m max) for long-bed retrofits."
               img="/photos/sentinel-plus-xl.jpg"
               features={[
-                "Extended detection range for long-bed press brakes",
-                "All Sentinel Plus features (Rapid Bend Plus, multiple modes, GUI)",
-                "Plug-and-play upgrade from standard Sentinel Plus",
-                "Best fit for 25ft+ press brakes and heavy-tonnage retrofits",
-                "Minor software config — no rewiring",
-                "Same operator interface as Sentinel Plus",
+                "Long-range laser transmitter + camera receiver — extends range 8m → 15m",
+                "Wider optical coverage for the tool sets used on long brakes",
+                "Greater resistance to machine vibration and environmental effects",
+                "All Sentinel Plus features (Rapid Bend Plus, GUI, all modes)",
+                "Optional upgrade installed on top of standard Sentinel Plus",
+                "We&rsquo;re a Lazer Safe Retrofit Dealer set up to spec and install it",
               ]}
             />
             <ProductCard
