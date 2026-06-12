@@ -320,7 +320,7 @@ export default function PressBrakeSafetyPage() {
                   Already running a legacy Lazer Safe system?
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70 lg:text-base">
-                  We still support every Lazer Safe model we&rsquo;ve installed over the years — block lasers, planar lasers, and earlier Sentinel systems. Spare parts, recalibration, and upgrade paths to Sentinel Plus are all available. Reach out and we&rsquo;ll sort out what your system needs.
+                  We still support every Lazer Safe model we&rsquo;ve installed over the years — block lasers, planar lasers, and earlier systems. Spare parts, recalibration, and upgrade paths to Sentinel Plus are all available. Reach out and we&rsquo;ll sort out what your system needs.
                 </p>
                 <div className="mt-5 flex flex-col gap-2 sm:flex-row">
                   <Link
