@@ -182,7 +182,7 @@ export default function MachineGuardingPage() {
               {[
                 "Chip guards",
                 "Chuck guards",
-                "Area scanners (SICK, OMRON)",
+                "Area scanners (Keyence, SICK, OMRON, Banner)",
                 "Single-axis light beams",
                 "Two-hand controls",
                 "Pull-back / hand-restraint devices",
