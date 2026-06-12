@@ -191,8 +191,6 @@ export default function PressBrakeSafetyPage() {
                 "Wider optical coverage for the tool sets used on long brakes",
                 "Greater resistance to machine vibration and environmental effects",
                 "All Sentinel Plus features (Rapid Bend Plus, GUI, all modes)",
-                "Optional upgrade installed on top of standard Sentinel Plus",
-                "We&rsquo;re a Lazer Safe Retrofit Dealer set up to spec and install it",
               ]}
             />
             <ProductCard
