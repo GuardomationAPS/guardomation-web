@@ -52,7 +52,7 @@ export default function SupportPage() {
               },
               {
                 title: "Datasheets &amp; brochures",
-                desc: "Lazer Safe Sentinel and Sentinel Plus product brochures available on request. Email info@guardomation.com.",
+                desc: "Lazer Safe Sentinel Plus, Sentinel Plus XL, and legacy Sentinel block-laser brochures available on request. Email info@guardomation.com.",
               },
             ].map((card) => (
               <div

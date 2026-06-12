@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const PARTNERS = [
-  { name: "Lazer Safe", focus: "Press brake retrofit safety (Sentinel, Sentinel Plus)", featured: true, url: "https://www.lazersafe.com" },
+  { name: "Lazer Safe", focus: "Press brake retrofit safety (Sentinel Plus, Sentinel Plus XL)", featured: true, url: "https://www.lazersafe.com" },
   { name: "Banner Engineering", focus: "Light curtains, safety relays, sensors", url: "https://www.bannerengineering.com" },
   { name: "OMRON / STI", focus: "Safety controllers, light curtains, e-stops", url: "https://www.omron.com" },
   { name: "IDEM Safety", focus: "Interlock switches, e-stops, safety locks", url: "https://www.idemsafety.com" },
@@ -70,7 +70,7 @@ export default function LineCardsPage() {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold text-white lg:text-4xl">Lazer Safe</h2>
                   <p className="mt-3 text-base text-brand-grey">
-                    Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel, Sentinel Plus with Rapid Bend Plus, and full spare-parts support.
+                    Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel Plus with Rapid Bend Plus (auto and manual brackets), Sentinel Plus XL for long beds, plus full spare-parts support for legacy Sentinel block-laser installs.
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-5">
                     <Link

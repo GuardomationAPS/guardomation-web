@@ -12,7 +12,7 @@ const CONFIRMED_BRAKES = INSTALLS.filter((i) => !i.pending).length;
 export const metadata = {
   title: "Press Brake Safety · Lazer Safe Retrofits",
   description:
-    "Guardomation is the U.S. Master Distributor for Lazer Safe — Sentinel Plus with Rapid Bend Plus, Sentinel, and rear guarding for press brake retrofits. Turn-key packages, on-site installation, operator training.",
+    "Guardomation is the U.S. Master Distributor for Lazer Safe — Sentinel Plus Automatic, Sentinel Plus, Sentinel Plus XL, and rear guarding for press brake retrofits. Turn-key packages, on-site installation, operator training.",
 };
 
 export default function PressBrakeSafetyPage() {
@@ -131,7 +131,7 @@ export default function PressBrakeSafetyPage() {
                     href="/press-brake-safety/sentinel-plus"
                     className="inline-flex items-center justify-center gap-2 border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-brand-amber hover:text-brand-amber"
                   >
-                    Learn about Sentinel Plus base
+                    Learn more about Sentinel Plus
                   </Link>
                 </div>
               </div>
@@ -157,11 +157,11 @@ export default function PressBrakeSafetyPage() {
               tag="Premium · Auto"
               tagHighlight
               title="Sentinel Plus Automatic"
-              tagline="Sentinel Plus with auto-positioning brackets — change tools fast, the system re-aligns itself."
+              tagline="Sentinel Plus with auto-positioning brackets — the system re-aligns itself on every tool change, saving real minutes per cycle."
               img="/photos/sentinel-plus-detail.jpg"
               features={[
-                "Auto-positioning brackets, no manual realignment",
-                "Tool changes in seconds, not minutes",
+                "Auto-positioning brackets — no manual realignment after a tool change",
+                "Minutes saved per tool change add up fast over a shift",
                 "All Sentinel Plus features included",
                 "Rapid Bend Plus high-speed close",
                 "The upgrade operators ask for after the demo",
@@ -170,7 +170,7 @@ export default function PressBrakeSafetyPage() {
             <ProductCard
               tag="Flagship · Manual brackets"
               title="Sentinel Plus"
-              tagline="The same flagship Sentinel Plus system with manual-positioning brackets — top-tier guarding for shops where tool changes aren't constant."
+              tagline="Lazer Safe's flagship press brake retrofit — camera-based AOPD safety, manual bracket positioning. Proven on thousands of brakes."
               img="/photos/sentinel-plus-hero.jpg"
               features={[
                 "Rapid Bend Plus — close at high speed down to 2mm above material",
@@ -295,6 +295,52 @@ export default function PressBrakeSafetyPage() {
                 <p className="text-sm leading-relaxed text-brand-grey">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LEGACY BLOCK LASER — spare parts + upgrade callout */}
+      <section className="bg-brand-cream py-14 lg:py-16">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <div className="overflow-hidden rounded-xl border border-brand-grey/30 bg-white shadow-sm">
+            <div className="grid items-stretch md:grid-cols-[180px_1fr]">
+              <div className="relative h-44 md:h-auto">
+                <Image
+                  src="/photos/sentinel-block-laser.jpg"
+                  alt="Lazer Safe original Sentinel block-laser sensor module"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 180px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 lg:p-7">
+                <p className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
+                  <span className="h-3 w-1 bg-brand-amber" aria-hidden />
+                  Existing block-laser customers
+                </p>
+                <h3 className="text-balance text-xl font-bold text-brand-charcoal lg:text-2xl">
+                  Already running a Sentinel block-laser system?
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70 lg:text-base">
+                  We still support the original Lazer Safe Sentinel and Sentinel block-laser XL. Spare parts, recalibration, and plug-and-play upgrades to Sentinel Plus are available — minor software config, no rewiring on most installs.
+                </p>
+                <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                  <Link
+                    href="/contact?topic=service"
+                    className="inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-red-dark"
+                  >
+                    Ask about parts or an upgrade
+                    <span aria-hidden>→</span>
+                  </Link>
+                  <a
+                    href="tel:+12812652832"
+                    className="inline-flex items-center justify-center gap-2 rounded-md border border-brand-charcoal/30 px-5 py-2.5 text-sm font-semibold text-brand-charcoal transition-all hover:border-brand-charcoal"
+                  >
+                    (281) 265-2832
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
