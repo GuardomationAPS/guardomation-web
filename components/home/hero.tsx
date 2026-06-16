@@ -45,17 +45,17 @@ export default function Hero() {
         <div className="max-w-3xl">
           <p className="mb-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
             <span className="inline-block h-3 w-1 bg-brand-amber" />
-            Exclusive U.S. Master Distributor for Lazer Safe
+            Machine Guarding Solutions
           </p>
 
           <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-7xl">
-            Press brake retrofits done right.
+            Authorized distribution.
             <br />
-            <span className="text-brand-grey">Whole-shop guarding to match.</span>
+            <span className="text-brand-grey">Application expertise. On-site installation.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-relaxed text-brand-grey lg:text-xl">
-            Exclusive U.S. Master Distributor for Lazer Safe, with three decades of machine guarding service across press brakes, shears, turret presses, and beyond.
+            U.S. Master Distributor for Lazer Safe. 30+ safety brand partnerships across press brakes, shears, turret presses, and beyond.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-6 text-sm text-brand-grey">

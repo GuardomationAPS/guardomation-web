@@ -4,7 +4,7 @@ export type Props = {
   title?: string;
 };
 
-const DEFAULT_TITLE = "Press brake retrofits done right. Whole-shop guarding to match.";
+const DEFAULT_TITLE = "Authorized distribution. Application expertise. On-site installation.";
 
 export default async function OpengraphImage(
   props?: Props,
