@@ -45,7 +45,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <p className="mb-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
             <span className="inline-block h-3 w-1 bg-brand-amber" />
-            Appointed U.S. Master Distributor for Lazer Safe
+            Exclusive U.S. Master Distributor for Lazer Safe
           </p>
 
           <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-7xl">
@@ -55,7 +55,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-relaxed text-brand-grey lg:text-xl">
-            Appointed Master Distributor for Lazer Safe in the United States, with three decades of machine guarding service across press brakes, shears, turret presses, and beyond.
+            Exclusive U.S. Master Distributor for Lazer Safe, with three decades of machine guarding service across press brakes, shears, turret presses, and beyond.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-6 text-sm text-brand-grey">
@@ -79,13 +79,10 @@ export default function Hero() {
         {/* DUAL CARDS — LazerSafe + Machine Guarding, equal width */}
         <div className="mt-20 grid gap-6 lg:grid-cols-2 lg:gap-8">
           {/* LAZERSAFE */}
-          <Link
-            href="/press-brake-safety"
-            className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70"
-          >
+          <div className="group relative overflow-hidden rounded-xl border border-brand-red/30 bg-brand-charcoal/80 backdrop-blur-sm transition-all hover:border-brand-red/70">
             <div className="absolute inset-x-0 top-0 h-1" style={{ background: "linear-gradient(90deg, #812866 0%, #BA0C2F 50%, #CF732E 100%)" }} aria-hidden />
 
-            <div className="relative h-72 overflow-hidden">
+            <Link href="/press-brake-safety" className="relative block h-72 overflow-hidden">
               <img
                 src="/photos/sentinel-plus-hero.jpg"
                 alt="Lazer Safe Sentinel transmitter sensor module mounted on a press brake"
@@ -95,9 +92,9 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/40 to-transparent" />
               <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
-                Appointed U.S. Distributor
+                Exclusive U.S. Distributor
               </div>
-            </div>
+            </Link>
 
             <div className="p-8 lg:p-10">
               <p className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
@@ -108,12 +105,24 @@ export default function Hero() {
               <p className="mt-4 text-base leading-relaxed text-brand-grey">
                 Camera-based AOPD safety mounted beneath the punch. Operators hold the work piece as the tools close at high speed — no fixed guards in the way, no compromise on production.
               </p>
-              <span className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-red transition-all group-hover:gap-3">
-                Get a Lazer Safe quote
-                <span aria-hidden>→</span>
-              </span>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href="/contact?topic=press-brake-retrofit"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red-dark hover:shadow-brand-red/50"
+                >
+                  Get a Lazer Safe quote
+                  <span aria-hidden>→</span>
+                </Link>
+                <Link
+                  href="/press-brake-safety"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-grey transition-all hover:text-white"
+                >
+                  Or learn more
+                  <span aria-hidden>→</span>
+                </Link>
+              </div>
             </div>
-          </Link>
+          </div>
 
           {/* MACHINE GUARDING — equal size; uses 2 real photos for visual parity */}
           <Link

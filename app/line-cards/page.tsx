@@ -70,7 +70,7 @@ export default function LineCardsPage() {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold text-white lg:text-4xl">Lazer Safe</h2>
                   <p className="mt-3 text-base text-brand-grey">
-                    Appointed U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel Plus with Rapid Bend Plus (auto and manual brackets), Sentinel Plus XL for long beds, plus full spare-parts support for legacy Sentinel block-laser installs.
+                    Exclusive U.S. Master Distributor for Lazer Safe press brake retrofit systems. Sentinel Plus with Rapid Bend Plus (auto and manual brackets), Sentinel Plus XL for long beds, plus full spare-parts support for legacy Sentinel block-laser installs.
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-5">
                     <Link

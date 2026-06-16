@@ -39,7 +39,7 @@ export default function PressBrakeSafetyPage() {
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-brand-red px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
-              Appointed U.S. Master Distributor for Lazer Safe
+              Exclusive U.S. Master Distributor for Lazer Safe
             </p>
             <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
               Press brake retrofits, done right.
@@ -360,7 +360,7 @@ export default function PressBrakeSafetyPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <ValueCard
-              title="Appointed Master Distributor"
+              title="Exclusive Master Distributor"
               desc="Authorized to distribute and service Lazer Safe systems across the United States."
             />
             <ValueCard

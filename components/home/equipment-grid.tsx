@@ -1,18 +1,22 @@
 import Link from "next/link";
 
+// Equipment categories. Collections with confirmed products use Shopify collection routes
+// (/search/<slug>); those still being populated route to a search query to avoid 404ing
+// when the Shopify collection doesn't exist yet. Flip to the collection route once the
+// expansion CSV gets imported and the collection is live.
 const EQUIPMENT_CATEGORIES = [
-  { name: "Anti-Restart Controls", slug: "anti-restart-controls", count: 12 },
-  { name: "Drill Press Guards", slug: "drill-press-guards", count: 5 },
-  { name: "Press Safety Clutch Valves", slug: "press-safety-clutch-valves", count: 4 },
-  { name: "Emergency Stops", slug: "emergency-stops", count: 3 },
-  { name: "Milling Machine Guards", slug: "milling-machine-guards", count: 3 },
-  { name: "Grinder Guards", slug: "grinder-guards", count: 3 },
-  { name: "Band Saw Guards", slug: "band-saw-guards", count: 2 },
-  { name: "Light Curtains", slug: "light-curtains", count: 0 },
-  { name: "Safety Mats", slug: "safety-mats", count: 0 },
-  { name: "Interlock Switches", slug: "interlock-switches", count: 0 },
-  { name: "Guarding Fences & Gates", slug: "guarding-fences-gates", count: 0 },
-  { name: "Motor Braking Systems", slug: "motor-braking", count: 0 },
+  { name: "Anti-Restart Controls", href: "/search/anti-restart-controls" },
+  { name: "Drill Press Guards", href: "/search/drill-press-guards" },
+  { name: "Press Safety Clutch Valves", href: "/search/press-safety-clutch-valves" },
+  { name: "Emergency Stops", href: "/search/emergency-stops" },
+  { name: "Milling Machine Guards", href: "/search/milling-machine-guards" },
+  { name: "Grinder Guards", href: "/search/grinder-guards" },
+  { name: "Band Saw Guards", href: "/search/band-saw-guards" },
+  { name: "Light Curtains", href: "/search?q=light+curtain" },
+  { name: "Safety Mats", href: "/search?q=safety+mat" },
+  { name: "Interlock Switches", href: "/search?q=interlock" },
+  { name: "Guarding Fences & Gates", href: "/search?q=fence" },
+  { name: "Motor Braking Systems", href: "/search?q=motor+brake" },
 ];
 
 export default function EquipmentGrid() {
@@ -30,8 +34,8 @@ export default function EquipmentGrid() {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {EQUIPMENT_CATEGORIES.map((cat) => (
             <Link
-              key={cat.slug}
-              href={`/search/${cat.slug}`}
+              key={cat.name}
+              href={cat.href}
               className="group rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-md"
             >
               <h3 className="text-sm font-semibold text-brand-charcoal lg:text-base">

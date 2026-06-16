@@ -50,7 +50,7 @@ export default function Footer() {
               />
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed">
-              Appointed U.S. Master Distributor for Lazer Safe. Three decades of machine guarding service across press brakes, shears, turret presses, robot cells, and every machine in between.
+              Exclusive U.S. Master Distributor for Lazer Safe. Three decades of machine guarding service across press brakes, shears, turret presses, robot cells, and every machine in between.
             </p>
 
             <div className="mt-8 space-y-3">
