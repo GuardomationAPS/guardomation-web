@@ -72,8 +72,9 @@ export default async function ProductPage(props: {
     },
   };
 
-  // Use first tag as a label hint (vendor isn't in default vercel/commerce GraphQL)
-  const labelTag = product.tags?.[0] || "Guardomation";
+  // Tag badge — prefer the product Type (e.g. "Band Saw Guard"), since
+  // first-alphabetical-tag was returning useless labels like "ANSI B01.1".
+  const labelTag = product.productType || product.tags?.[0] || "Guardomation";
   const isQuoteOnly = parseFloat(product.priceRange.minVariantPrice.amount) === 0;
 
   return (
