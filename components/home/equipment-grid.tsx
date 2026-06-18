@@ -1,17 +1,16 @@
 import Link from "next/link";
 
-// Equipment categories. Collections with confirmed products use Shopify collection routes
-// (/search/<slug>); those still being populated route to a search query to avoid 404ing
-// when the Shopify collection doesn't exist yet. Flip to the collection route once the
-// expansion CSV gets imported and the collection is live.
+// Equipment categories. Route to search queries (not Shopify collections) until
+// proper collections are built in admin — search/?q= always returns results, while
+// /search/<slug> 404s if the collection handle doesn't exist.
 const EQUIPMENT_CATEGORIES = [
-  { name: "Anti-Restart Controls", href: "/search/anti-restart-controls" },
-  { name: "Drill Press Guards", href: "/search/drill-press-guards" },
-  { name: "Press Safety Clutch Valves", href: "/search/press-safety-clutch-valves" },
-  { name: "Emergency Stops", href: "/search/emergency-stops" },
-  { name: "Milling Machine Guards", href: "/search/milling-machine-guards" },
-  { name: "Grinder Guards", href: "/search/grinder-guards" },
-  { name: "Band Saw Guards", href: "/search/band-saw-guards" },
+  { name: "Anti-Restart Controls", href: "/search?q=anti-restart" },
+  { name: "Drill Press Guards", href: "/search?q=drill+press" },
+  { name: "Press Safety Clutch Valves", href: "/search?q=clutch+valve" },
+  { name: "Emergency Stops", href: "/search?q=emergency+stop" },
+  { name: "Milling Machine Guards", href: "/search?q=milling+machine" },
+  { name: "Grinder Guards", href: "/search?q=grinder" },
+  { name: "Band Saw Guards", href: "/search?q=band+saw" },
   { name: "Light Curtains", href: "/search?q=light+curtain" },
   { name: "Safety Mats", href: "/search?q=safety+mat" },
   { name: "Interlock Switches", href: "/search?q=interlock" },

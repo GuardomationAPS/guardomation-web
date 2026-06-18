@@ -22,39 +22,25 @@ export function VariantPrice({ product }: { product: Product }) {
     ),
   );
 
-  // Show selected variant price if found; otherwise show a price range
-  // (min – max) so visitors landing without a selection still see real numbers.
-  if (selectedVariant) {
+  // Show the selected variant price; otherwise fall back to the first variant
+  // (canonical default per Shopify CSV import order). A price range looked
+  // sloppy in the chip, so we always show a single clean number.
+  const displayVariant = selectedVariant || product.variants[0];
+
+  if (displayVariant) {
     return (
       <Price
-        amount={selectedVariant.price.amount}
-        currencyCode={selectedVariant.price.currencyCode}
+        amount={displayVariant.price.amount}
+        currencyCode={displayVariant.price.currencyCode}
       />
     );
   }
 
-  const minAmt = parseFloat(product.priceRange.minVariantPrice.amount);
-  const maxAmt = parseFloat(product.priceRange.maxVariantPrice.amount);
-  if (minAmt === maxAmt) {
-    return (
-      <Price
-        amount={product.priceRange.maxVariantPrice.amount}
-        currencyCode={product.priceRange.maxVariantPrice.currencyCode}
-      />
-    );
-  }
-
+  // Final fallback if a product has no variants at all (shouldn't happen).
   return (
-    <span>
-      <Price
-        amount={product.priceRange.minVariantPrice.amount}
-        currencyCode={product.priceRange.minVariantPrice.currencyCode}
-      />
-      <span aria-hidden> – </span>
-      <Price
-        amount={product.priceRange.maxVariantPrice.amount}
-        currencyCode={product.priceRange.maxVariantPrice.currencyCode}
-      />
-    </span>
+    <Price
+      amount={product.priceRange.maxVariantPrice.amount}
+      currencyCode={product.priceRange.maxVariantPrice.currencyCode}
+    />
   );
 }

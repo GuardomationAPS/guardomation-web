@@ -13,11 +13,11 @@ const FOOTER_NAV = {
   ],
   Shop: [
     { label: "All Products", href: "/search" },
-    { label: "Anti-Restart Controls", href: "/search/anti-restart-controls" },
-    { label: "Light Curtains", href: "/search/light-curtains" },
-    { label: "E-Stops", href: "/search/emergency-stops" },
-    { label: "Press Brake Guards", href: "/search/press-brake-guards" },
-    { label: "Drill Press Guards", href: "/search/drill-press-guards" },
+    { label: "Anti-Restart Controls", href: "/search?q=anti-restart" },
+    { label: "Light Curtains", href: "/search?q=light+curtain" },
+    { label: "E-Stops", href: "/search?q=emergency+stop" },
+    { label: "Press Brake Guards", href: "/search?q=press+brake" },
+    { label: "Drill Press Guards", href: "/search?q=drill+press" },
   ],
   Company: [
     { label: "Support", href: "/support" },

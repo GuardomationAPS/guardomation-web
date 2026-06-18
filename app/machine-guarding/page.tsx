@@ -122,7 +122,7 @@ export default function MachineGuardingPage() {
                 "Muting + blanking for material feed",
                 "Integrate with anti-restart + e-stop",
               ]}
-              shopHref="/search/light-curtains"
+              shopHref="/search?q=light+curtain"
             />
             <CategoryCard
               tag="Pressure-sensitive"
@@ -135,7 +135,7 @@ export default function MachineGuardingPage() {
                 "Integrate with safety relay + e-stop",
                 "Replaceable wear strips and edges",
               ]}
-              shopHref="/search/safety-mats"
+              shopHref="/search?q=safety+mat"
             />
             <CategoryCard
               tag="Hard barrier"
@@ -148,7 +148,7 @@ export default function MachineGuardingPage() {
                 "Scissor gates for rear/side access",
                 "Safety yellow + black or custom color",
               ]}
-              shopHref="/search/guarding-fences-gates"
+              shopHref="/search?q=fence"
             />
             <CategoryCard
               tag="Controls"
@@ -162,7 +162,7 @@ export default function MachineGuardingPage() {
                 "UL 508A panel listing — searchable in Product iQ",
                 "NEMA-rated enclosure, latching e-stop",
               ]}
-              shopHref="/search/anti-restart-controls"
+              shopHref="/search?q=anti-restart"
             />
           </div>
 
@@ -255,11 +255,11 @@ export default function MachineGuardingPage() {
               { name: "Shears", href: "/search?q=shear", desc: "Front guards, rear fencing, interlocked covers" },
               { name: "Turret Presses", href: "/search?q=turret", desc: "Perimeter fencing, safety mats, light curtains" },
               { name: "Robot Cells", href: "/search?q=robot", desc: "Full enclosures, interlocked doors, area scanners" },
-              { name: "Drill Presses", href: "/search/drill-press-guards", desc: "Chuck guards, anti-restart, e-stop foot switches" },
-              { name: "Grinders", href: "/search/grinder-guards", desc: "Wheel guards, work rests, eye shields" },
-              { name: "Band Saws", href: "/search/band-saw-guards", desc: "Blade guards, anti-restart, two-hand controls" },
+              { name: "Drill Presses", href: "/search?q=drill+press", desc: "Chuck guards, anti-restart, e-stop foot switches" },
+              { name: "Grinders", href: "/search?q=grinder", desc: "Wheel guards, work rests, eye shields" },
+              { name: "Band Saws", href: "/search?q=band+saw", desc: "Blade guards, anti-restart, two-hand controls" },
               { name: "Lathes", href: "/search?q=lathe", desc: "Chuck guards, chip guards, interlocked covers" },
-              { name: "Milling Machines", href: "/search/milling-machine-guards", desc: "Spindle guards, work area covers, e-stops" },
+              { name: "Milling Machines", href: "/search?q=milling+machine", desc: "Spindle guards, work area covers, e-stops" },
               { name: "Saws", href: "/search?q=saw", desc: "Riving knives, blade guards, anti-kickback" },
               { name: "Conveyors", href: "/search?q=conveyor", desc: "Pull cords, edge guards, e-stop chains" },
             ].map((m) => (
