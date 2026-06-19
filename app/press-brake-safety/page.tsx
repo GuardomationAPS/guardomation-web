@@ -1,13 +1,12 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoCarousel from "components/photo-carousel";
-import { INSTALLS, installsToCarouselPhotos } from "lib/brake-installs";
+import { installsToCarouselPhotos } from "lib/brake-installs";
 
 // Use the full brand-confirmed install gallery as the carousel source.
 const INSTALL_PHOTOS = installsToCarouselPhotos();
-const TOTAL_BRAKES = INSTALLS.length;
-const CONFIRMED_BRAKES = INSTALLS.filter((i) => !i.pending).length;
 
 export const metadata = {
   title: "Press Brake Safety · Lazer Safe Retrofits",
@@ -18,6 +17,7 @@ export const metadata = {
 export default function PressBrakeSafetyPage() {
   return (
     <>
+      <BackButton href="/" label="Home" />
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-charcoal">
         <div className="absolute inset-0">
@@ -218,7 +218,7 @@ export default function PressBrakeSafetyPage() {
             <div className="max-w-2xl">
               <p className="mb-2 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
                 <span className="h-3 w-1 bg-brand-amber" aria-hidden />
-                Compatibility · {TOTAL_BRAKES} brakes pictured
+                Compatibility
               </p>
               <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
                 Press brakes we&rsquo;ve retrofitted.
@@ -243,7 +243,7 @@ export default function PressBrakeSafetyPage() {
             <PhotoCarousel photos={INSTALL_PHOTOS} autoAdvanceMs={2500} />
           </Link>
           <p className="mt-5 text-center text-sm text-brand-charcoal/60">
-            {CONFIRMED_BRAKES} brand-confirmed installs in the gallery · pause on hover to read the caption · tap the gallery to see all {TOTAL_BRAKES} brakes
+            Pause on hover to read the caption · tap the gallery to see every brake we&rsquo;ve installed.
           </p>
         </div>
       </section>

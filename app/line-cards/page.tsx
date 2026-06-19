@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Link from "next/link";
 
 export const metadata = {
@@ -43,6 +44,7 @@ const PARTNERS = [
 export default function LineCardsPage() {
   return (
     <>
+      <BackButton href="/" label="Home" variant="light" />
       <section className="bg-brand-cream py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">

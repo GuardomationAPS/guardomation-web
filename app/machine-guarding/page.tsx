@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoCarousel from "components/photo-carousel";
@@ -25,6 +26,7 @@ export const metadata = {
 export default function MachineGuardingPage() {
   return (
     <>
+      <BackButton href="/" label="Home" />
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-charcoal">
         <div className="absolute inset-0">

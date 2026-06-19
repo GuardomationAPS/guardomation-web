@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export const metadata = {
 export default function WhyUL508Page() {
   return (
     <>
+      <BackButton href="/" label="Home" />
       <section className="bg-brand-charcoal py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
           <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">

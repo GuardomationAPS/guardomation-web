@@ -1,10 +1,8 @@
 import Link from "next/link";
 import PhotoCarousel from "components/photo-carousel";
-import { INSTALLS, installsToCarouselPhotos } from "lib/brake-installs";
+import { installsToCarouselPhotos } from "lib/brake-installs";
 
 const photos = installsToCarouselPhotos();
-const total = INSTALLS.length;
-const confirmed = INSTALLS.filter((i) => !i.pending).length;
 
 export default function InstallsGallery() {
   return (
@@ -14,7 +12,7 @@ export default function InstallsGallery() {
           <div className="max-w-2xl">
             <p className="mb-2 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-amber">
               <span className="h-3 w-1 bg-brand-amber" aria-hidden />
-              Compatibility · {total} brakes pictured
+              Compatibility
             </p>
             <h2 className="text-balance text-4xl font-bold text-white lg:text-5xl">
               Real installs. Real shops.
@@ -41,7 +39,7 @@ export default function InstallsGallery() {
         </Link>
 
         <p className="mt-5 text-center text-sm text-brand-grey">
-          {confirmed} brand-confirmed installs · pause on hover to read the caption · tap the gallery to see all {total} brakes
+          Pause on hover to read the caption · tap the gallery to see every brake we&rsquo;ve installed.
         </p>
       </div>
     </section>

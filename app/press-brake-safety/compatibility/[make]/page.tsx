@@ -1,11 +1,11 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getMakesWithCounts,
   getInstallsForMakeGroupedByFamily,
-  makeSlug,
 } from "lib/brake-installs";
 
 export async function generateStaticParams() {
@@ -21,7 +21,7 @@ export async function generateMetadata(props: {
   if (!match) return { title: "Press Brake Installs" };
   return {
     title: `${match.make} press brake installs — Lazer Safe retrofits | Guardomation`,
-    description: `${match.count} Lazer Safe retrofits we've photographed on ${match.make} press brakes. Find your model.`,
+    description: `Lazer Safe retrofits we've photographed on ${match.make} press brakes. Find your model.`,
   };
 }
 
@@ -34,10 +34,10 @@ export default async function MakeDetailPage(props: {
   if (!match) return notFound();
 
   const groups = getInstallsForMakeGroupedByFamily(match.make);
-  const totalCount = match.count;
 
   return (
     <>
+      <BackButton href="/press-brake-safety/compatibility" label="all brake brands" />
       {/* HERO */}
       <section className="bg-brand-charcoal py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -53,7 +53,7 @@ export default async function MakeDetailPage(props: {
             {match.make} installs.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            {totalCount} Lazer Safe retrofit{totalCount === 1 ? "" : "s"} we&rsquo;ve photographed on {match.make} press brakes. We&rsquo;ve done many more &mdash; this is just the ones with pictures.
+            Lazer Safe retrofits we&rsquo;ve photographed on {match.make} press brakes. We&rsquo;ve done many more &mdash; this is just the pictured ones.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -93,7 +93,6 @@ export default async function MakeDetailPage(props: {
                     className="rounded-full border border-brand-grey/30 bg-white px-3 py-1 text-sm font-medium text-brand-charcoal transition-all hover:border-brand-red hover:text-brand-red"
                   >
                     {g.name}
-                    <span className="ml-1.5 text-xs text-brand-charcoal/50">{g.installs.length}</span>
                   </a>
                 ) : null,
               )}
@@ -108,13 +107,10 @@ export default async function MakeDetailPage(props: {
                 className="scroll-mt-24"
               >
                 {group.name && (
-                  <div className="mb-6 flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+                  <div className="mb-6 border-b border-brand-charcoal/15 pb-3">
                     <h2 className="text-2xl font-bold text-brand-charcoal lg:text-3xl">
                       {match.make} {group.name}
                     </h2>
-                    <span className="text-sm font-semibold text-brand-charcoal/50">
-                      {group.installs.length} pictured
-                    </span>
                   </div>
                 )}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">

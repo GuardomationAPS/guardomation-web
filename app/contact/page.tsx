@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import ContactForm from "components/contact-form";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -12,6 +13,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
+      <BackButton href="/" label="Home" />
       <section className="bg-brand-charcoal py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mb-12 max-w-3xl">

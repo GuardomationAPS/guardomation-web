@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { BackButton } from "components/layout/back-button";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllMakes, getMakesWithCounts, getMakeHeroPhoto } from "lib/brake-installs";
@@ -15,6 +16,7 @@ export default function CompatibilityPage() {
 
   return (
     <>
+      <BackButton href="/press-brake-safety" label="Press Brake Safety" />
       {/* HERO */}
       <section className="bg-brand-charcoal py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -23,10 +25,10 @@ export default function CompatibilityPage() {
             <Link href="/press-brake-safety" className="hover:underline">Press Brake Safety</Link> · Compatibility
           </p>
           <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
-            Almost every press brake brand on the market.
+            Press brakes we&rsquo;ve retrofitted.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            140+ retrofits a year across the established names (Accurpress, Amada, Trumpf) and the newer entrants (Yawei, Hurco, Adira, Coast One &mdash; all recent). The list below is every brand we&rsquo;ve worked on. Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
+            Established names (Accurpress, Amada, Trumpf) and newer entrants (Yawei, Hurco, Adira, Coast One). Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -126,7 +128,7 @@ export default function CompatibilityPage() {
                   <div className="absolute inset-x-0 bottom-0 p-4 lg:p-5">
                     <h3 className="text-lg font-bold text-white lg:text-2xl">{m.make}</h3>
                     <p className="mt-0.5 text-xs font-semibold text-brand-amber lg:text-sm">
-                      {m.count} pictured &middot; view installs <span aria-hidden>→</span>
+                      View installs <span aria-hidden>→</span>
                     </p>
                   </div>
                 </Link>
