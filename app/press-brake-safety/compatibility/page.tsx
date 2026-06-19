@@ -28,7 +28,7 @@ export default function CompatibilityPage() {
             Press brakes we&rsquo;ve retrofitted.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            Established names (Accurpress, Amada, Trumpf), newer entrants (Yawei, Hurco, Adira, CoastOne), and legacy nameplates from OEMs that no longer exist (Promecam, Pullmax, Verson). Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
+            From current production to long-discontinued plates. Pick yours below and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
