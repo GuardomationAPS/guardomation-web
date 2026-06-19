@@ -1,21 +1,21 @@
 import Footer from "components/layout/footer";
 import Image from "next/image";
 import Link from "next/link";
-import { INSTALLS, BRAKES_WITHOUT_PHOTOS, getInstallsByMake, getMakesWithCounts } from "lib/brake-installs";
+import { getAllMakes, getMakesWithCounts, getMakeHeroPhoto } from "lib/brake-installs";
 
 export const metadata = {
   title: "Press Brake Compatibility — Lazer Safe Installs",
   description:
-    "Lazer Safe retrofits we've completed on a wide range of press brake makes and models — Accurpress, Cincinnati, Diamond, Guifil, and more. Find yours.",
+    "Lazer Safe retrofits we've completed on a wide range of press brake makes and models — Accurpress, Amada, Cincinnati, Trumpf, Bystronic, and more. Find yours.",
 };
 
-// (moved to lib/brake-installs.ts)
-
-// Brake brands we've worked with but don't have install photos for yet
-
 export default function CompatibilityPage() {
+  const allMakes = getAllMakes();
+  const makesWithPhotos = getMakesWithCounts();
+
   return (
     <>
+      {/* HERO */}
       <section className="bg-brand-charcoal py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-amber">
@@ -26,7 +26,7 @@ export default function CompatibilityPage() {
             Press brakes we&rsquo;ve retrofitted.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            A sample of Lazer Safe retrofits we&rsquo;ve done across U.S. shop floors — what&rsquo;s pictured is a fraction of what we&rsquo;ve installed. If you don&rsquo;t see your exact brake, send us your make, model, and tonnage and we&rsquo;ll come back with a quote.
+            We average 140+ press brake retrofits a year. The list below is every brake brand we&rsquo;ve worked on &mdash; not every machine, just the brands. Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -46,137 +46,97 @@ export default function CompatibilityPage() {
         </div>
       </section>
 
-      {/* Sticky make-jump nav */}
-      <nav
-        aria-label="Jump to brake make"
-        className="sticky top-[57px] z-20 border-b border-brand-grey/20 bg-white/95 backdrop-blur"
-      >
+      {/* ALL MAKES OVERVIEW (chip row — pictured + not pictured) */}
+      <section className="bg-white py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex gap-2 overflow-x-auto py-3 text-sm">
-            <span className="flex-none whitespace-nowrap py-1 pr-2 text-xs font-semibold uppercase tracking-wider text-brand-charcoal/50">
-              Jump to:
-            </span>
-            {getMakesWithCounts().map((m) => (
-              <a
-                key={m.slug}
-                href={`#${m.slug}`}
-                className="flex-none whitespace-nowrap rounded-full border border-brand-grey/30 bg-brand-cream px-3 py-1 font-medium text-brand-charcoal transition-all hover:border-brand-red hover:text-brand-red"
-              >
-                {m.make}
-                <span className="ml-1.5 text-xs text-brand-charcoal/50">{m.count}</span>
-              </a>
-            ))}
+          <div className="mb-6 flex items-baseline justify-between gap-4">
+            <div>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
+                Every brand we&rsquo;ve worked on
+              </p>
+              <h2 className="text-balance text-2xl font-bold text-brand-charcoal lg:text-3xl">
+                {allMakes.length} makes &mdash; click any with a dot for installed photos.
+              </h2>
+            </div>
           </div>
+          <div className="flex flex-wrap gap-2">
+            {allMakes.map((m) =>
+              m.pictured ? (
+                <Link
+                  key={m.slug}
+                  href={`/press-brake-safety/compatibility/${m.slug}`}
+                  className="group inline-flex items-center gap-2 rounded-full border border-brand-grey/30 bg-white px-4 py-1.5 text-sm font-semibold text-brand-charcoal transition-all hover:border-brand-red hover:bg-brand-red/5 hover:text-brand-red"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-red" aria-hidden />
+                  {m.make}
+                </Link>
+              ) : (
+                <span
+                  key={m.slug}
+                  className="inline-flex items-center gap-2 rounded-full border border-brand-grey/30 bg-brand-cream px-4 py-1.5 text-sm font-medium text-brand-charcoal/70"
+                  title="We've installed Lazer Safe on this brand — photos coming soon."
+                >
+                  {m.make}
+                </span>
+              ),
+            )}
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-1.5 text-sm font-semibold text-brand-red">
+              + many more
+            </span>
+          </div>
+          <p className="mt-5 text-sm text-brand-charcoal/60">
+            More install photos coming soon. Don&rsquo;t see your brand? We&rsquo;ve probably done it &mdash;{" "}
+            <Link href="/contact?topic=press-brake-retrofit" className="font-semibold text-brand-red hover:underline">
+              send us your make and model
+            </Link>{" "}
+            or call <a href="tel:+12812652832" className="font-semibold text-brand-red hover:underline">(281) 265-2832</a>.
+          </p>
         </div>
-      </nav>
+      </section>
 
+      {/* BRAND GRID — one card per make, photo + count, click to drill in */}
       <section className="bg-brand-cream py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mb-10">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-              {INSTALLS.length} press brakes pictured · {INSTALLS.filter((i) => !i.pending).length} brand-confirmed · {getMakesWithCounts().length} makes
+              Browse by brand
             </p>
             <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
-              Find your brake.
+              See installs from your brake&rsquo;s family.
             </h2>
           </div>
-
-          {/* GROUPED BY MAKE */}
-          <div className="space-y-16">
-            {getInstallsByMake().map((group) => (
-              <div key={group.slug} id={group.slug} className="scroll-mt-32">
-                <div className="mb-6 flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
-                  <h3 className="text-2xl font-bold text-brand-charcoal lg:text-3xl">
-                    {group.make}
-                  </h3>
-                  <span className="text-sm font-semibold text-brand-charcoal/50">
-                    {group.installs.length} pictured
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-                  {group.installs.map((install, i) => (
-                    <article
-                      key={i}
-                      className="group overflow-hidden rounded-xl border border-brand-grey/30 bg-white transition-all hover:border-brand-red hover:shadow-lg"
-                    >
-                      <div className="relative aspect-[4/3] overflow-hidden bg-brand-charcoal-dark">
-                        <Image
-                          src={install.photo}
-                          alt={`${install.make ?? "Press brake"}${install.model ? ` ${install.model}` : ""} with Lazer Safe ${install.system ?? "Sentinel"} installed`}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent" />
-                        {install.system && (
-                          <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
-                            <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
-                            {install.system}
-                          </div>
-                        )}
-                        {!install.system && !install.pending && (
-                          <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
-                            <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
-                            LS Installed
-                          </div>
-                        )}
-                        {install.pending && (
-                          <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-amber/95 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal lg:right-4 lg:top-4 lg:px-3 lg:py-1 lg:text-xs">
-                            ID pending
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-3 lg:p-6">
-                        <h4 className="text-sm font-bold text-brand-charcoal lg:text-xl">
-                          {install.model || `${install.make} brake`}
-                        </h4>
-                        {install.tonnage && (
-                          <p className="mt-0.5 text-xs font-semibold text-brand-charcoal/60 lg:mt-1 lg:text-sm">{install.tonnage}</p>
-                        )}
-                        {install.caption && (
-                          <p className="mt-2 text-xs leading-snug text-brand-charcoal/70 lg:text-sm">
-                            {install.caption}
-                          </p>
-                        )}
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+            {makesWithPhotos.map((m) => {
+              const hero = getMakeHeroPhoto(m.make);
+              if (!hero) return null;
+              return (
+                <Link
+                  key={m.slug}
+                  href={`/press-brake-safety/compatibility/${m.slug}`}
+                  className="group relative aspect-square overflow-hidden rounded-xl border border-brand-grey/30 bg-brand-charcoal-dark transition-all hover:border-brand-red hover:shadow-lg"
+                >
+                  <Image
+                    src={hero}
+                    alt={`${m.make} press brake retrofitted by Guardomation`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-4 lg:p-5">
+                    <h3 className="text-lg font-bold text-white lg:text-2xl">{m.make}</h3>
+                    <p className="mt-0.5 text-xs font-semibold text-brand-amber lg:text-sm">
+                      {m.count} pictured &middot; view installs <span aria-hidden>→</span>
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Brakes-we-know-but-don't-have-photos */}
-      <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-5xl px-4 lg:px-8">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-            We&rsquo;ve also worked on
-          </p>
-          <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
-            Other brake brands in the field.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base text-brand-charcoal/70">
-            Photos coming as we add them. Don&rsquo;t see yours? Send us the make, model, and tonnage — we&rsquo;ve installed Lazer Safe on a much wider range than what&rsquo;s pictured.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {BRAKES_WITHOUT_PHOTOS.map((brand) => (
-              <span
-                key={brand}
-                className="rounded-full border border-brand-grey/30 bg-brand-cream px-4 py-1.5 text-sm font-medium text-brand-charcoal/70"
-              >
-                {brand}
-              </span>
-            ))}
-            <span className="rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-1.5 text-sm font-semibold text-brand-red">
-              + many more
-            </span>
-          </div>
-        </div>
-      </section>
-
+      {/* CTA */}
       <section className="bg-brand-charcoal-dark py-16 lg:py-20">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center lg:px-8">
           <h2 className="text-balance text-3xl font-bold text-white lg:text-4xl">

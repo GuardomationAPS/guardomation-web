@@ -557,8 +557,12 @@ export const BRAKES_WITHOUT_PHOTOS = [
   "Verson",
 ];
 
-// Helper: list of unique makes, alphabetically, with their install counts.
-// Used by the compatibility page to build the jump-nav at top.
+// Make → slug for URLs/anchors. Same algorithm everywhere.
+export function makeSlug(make: string): string {
+  return make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+// Helper: list of unique makes that HAVE photos, alphabetically, with counts.
 export function getMakesWithCounts() {
   const counts = new Map<string, number>();
   for (const i of INSTALLS) {
@@ -566,11 +570,7 @@ export function getMakesWithCounts() {
     counts.set(make, (counts.get(make) ?? 0) + 1);
   }
   return Array.from(counts.entries())
-    .map(([make, count]) => ({
-      make,
-      count,
-      slug: make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    }))
+    .map(([make, count]) => ({ make, count, slug: makeSlug(make) }))
     .sort((a, b) => a.make.localeCompare(b.make));
 }
 
@@ -583,12 +583,89 @@ export function getInstallsByMake() {
     groups.get(make)!.push(i);
   }
   return Array.from(groups.entries())
-    .map(([make, installs]) => ({
-      make,
-      installs,
-      slug: make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    }))
+    .map(([make, installs]) => ({ make, installs, slug: makeSlug(make) }))
     .sort((a, b) => a.make.localeCompare(b.make));
+}
+
+// Helper: every brake brand we've ever worked on, pictured or not, alphabetical.
+export function getAllMakes() {
+  const pictured = new Set(
+    INSTALLS.map((i) => i.make).filter((m): m is string => Boolean(m)),
+  );
+  const all = new Set<string>([...pictured, ...BRAKES_WITHOUT_PHOTOS]);
+  return Array.from(all)
+    .sort((a, b) => a.localeCompare(b))
+    .map((make) => ({
+      make,
+      slug: makeSlug(make),
+      pictured: pictured.has(make),
+    }));
+}
+
+// Family detection per make. Returns family name + slug, or null if no family
+// makes sense for this make/model combination.
+// Big brands (Accurpress, Amada) have model families that customers think in
+// terms of ("we have a 7-series", "we run RGs"). Smaller brands just show all
+// models in one list.
+function detectFamily(make: string, model: string | undefined): { name: string; slug: string } | null {
+  if (!model) return null;
+  const m = model.toLowerCase();
+  if (make === "Accurpress") {
+    if (m.includes("advantage")) return { name: "Advantage", slug: "advantage" };
+    if (m.includes("accell")) return { name: "Accell", slug: "accell" };
+    if (m.includes("edge")) return { name: "Edge", slug: "edge" };
+    if (m.includes("series 7") || m.includes("7-series") || m.startsWith("7")) return { name: "7 Series", slug: "7-series" };
+    if (m.includes("absolute")) return { name: "Absolute", slug: "absolute" };
+    if (m.includes("rockerarm") || m.includes("rocker arm")) return { name: "Rockerarm", slug: "rockerarm" };
+    if (m.includes("automatic")) return { name: "Sentinel Plus Automatic", slug: "automatic" };
+    return null;
+  }
+  if (make === "Amada") {
+    if (m.includes("hds")) return { name: "HDS", slug: "hds" };
+    if (m.includes("fbd")) return { name: "FBD", slug: "fbd" };
+    if (m.includes("rgm")) return { name: "RGM", slug: "rgm" };
+    if (m.includes("rg")) return { name: "RG", slug: "rg" }; // catches RG-35, RG-50, RG-80, RG NC9-EXII
+    if (m.includes("hfbo")) return { name: "HFBO", slug: "hfbo" };
+    if (m.includes("promecam")) return { name: "Promecam", slug: "promecam" };
+    if (m.includes("nc9")) return { name: "NC9", slug: "nc9" };
+    return null;
+  }
+  if (make === "Trumpf") {
+    return { name: "V Series", slug: "v-series" };
+  }
+  // Cincinnati, Bystronic, Ermak, Krras etc. - no family grouping (too few entries)
+  return null;
+}
+
+// Helper: installs for one make, grouped by family.
+// Returns [{ family: { name, slug } | null, installs: Install[] }] in stable order.
+export function getInstallsForMakeGroupedByFamily(make: string) {
+  const installs = INSTALLS.filter((i) => i.make === make);
+  const groups = new Map<string, { name: string | null; slug: string | null; installs: Install[] }>();
+  for (const i of installs) {
+    const fam = detectFamily(make, i.model);
+    const key = fam ? fam.slug : "__nofam__";
+    if (!groups.has(key)) {
+      groups.set(key, {
+        name: fam?.name ?? null,
+        slug: fam?.slug ?? null,
+        installs: [],
+      });
+    }
+    groups.get(key)!.installs.push(i);
+  }
+  // Sort: families alphabetically, no-family bucket last
+  return Array.from(groups.values()).sort((a, b) => {
+    if (!a.name) return 1;
+    if (!b.name) return -1;
+    return a.name.localeCompare(b.name);
+  });
+}
+
+// Helper: "hero" photo for a make = first non-pending install's photo.
+export function getMakeHeroPhoto(make: string): string | null {
+  const installs = INSTALLS.filter((i) => i.make === make && !i.pending);
+  return installs[0]?.photo ?? null;
 }
 
 // Helper: map INSTALLS → carousel photo array (just the fields the carousel needs).
