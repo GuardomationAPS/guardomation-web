@@ -21,9 +21,9 @@ export const INSTALLS: Install[] = [
   // === Original archive (5 confirmed) ===
   {
     make: "Accurpress",
-    model: "72501 (Advantage)",
+    model: "725012 (Advantage)",
     photo: "/photos/press-brake-rear-guarding.jpg",
-    tonnage: "250 ton",
+    tonnage: "250 ton · 12 ft",
     caption: "Advantage panels with Sentinel Plus + integrated rear scissor gate guarding",
   },
   {
@@ -55,17 +55,17 @@ export const INSTALLS: Install[] = [
   // === LinkedIn archive — Accurpress family ===
   {
     make: "Accurpress",
-    model: "Advantage 710010 — BEFORE",
+    model: "Advantage 710010 (legacy LZS-003-HS)",
     photo: "/photos/brake-accurpress-710010-before.jpg",
-    caption: "Original LZS-003-HS guarding system installed ~20 years ago — same brake, before the Sentinel Plus upgrade",
-    notes: "Paired with the AFTER photo — same brake, 20-year service life",
+    caption: "Original LZS-003-HS guarding system from a 20-year-old install — Lazer Safe systems we still support",
+    system: "LZS-003-HS",
   },
   {
     make: "Accurpress",
-    model: "Advantage 710010 — AFTER",
+    model: "Advantage 710010",
     photo: "/photos/brake-accurpress-710010-after.jpg",
-    caption: "Same brake upgraded with a Lazer Safe Sentinel Plus guarding system — generational refresh",
-    notes: "Lazer Safe stays current with the brake — not the other way around",
+    caption: "Sentinel Plus refresh on a 20-year Accurpress Advantage — generational Lazer Safe upgrade",
+    system: "Sentinel Plus",
   },
   {
     make: "Accurpress",
@@ -245,16 +245,9 @@ export const INSTALLS: Install[] = [
   },
   {
     make: "Accurpress",
-    model: "Advantage — BEFORE (LZS-003-HS)",
-    photo: "/photos/installs/accurpress-advantage-lzs003-before.jpg",
-    caption: "The original LZS-003-HS guarding system on an Accurpress Advantage — 20+ years of service before upgrade",
-    system: "LZS-003-HS",
-  },
-  {
-    make: "Accurpress",
-    model: "Advantage — AFTER (Sentinel Plus)",
+    model: "Advantage (Sentinel Plus refresh)",
     photo: "/photos/installs/accurpress-advantage-lzs003-after.jpg",
-    caption: "Same Advantage brake, now upgraded to Sentinel Plus — generational refresh on a 20-year-old install",
+    caption: "Accurpress Advantage upgraded from a 20-year-old LZS-003-HS to a current Sentinel Plus — generational Lazer Safe refresh",
     system: "Sentinel Plus",
   },
   {
@@ -262,13 +255,6 @@ export const INSTALLS: Install[] = [
     model: "Edge",
     photo: "/photos/installs/accurpress-edge.jpg",
     caption: "Accurpress Edge with Sentinel Plus integrated into the existing control envelope",
-    system: "Sentinel Plus",
-  },
-  {
-    make: "Accurpress",
-    model: "Edge ETS3000",
-    photo: "/photos/installs/accurpress-edge-ets3000.jpg",
-    caption: "Accurpress Edge ETS3000 — Sentinel Plus with full operator-interface tie-in",
     system: "Sentinel Plus",
   },
   {
@@ -353,15 +339,9 @@ export const INSTALLS: Install[] = [
   },
   {
     make: "Bystronic",
-    model: "Xpert 150 — BEFORE",
-    photo: "/photos/installs/bystronic-xpert-150-before.jpg",
-    caption: "Bystronic Xpert 150 before retrofit — original guarding configuration",
-  },
-  {
-    make: "Bystronic",
-    model: "Xpert 150 — AFTER",
+    model: "Xpert 150",
     photo: "/photos/installs/bystronic-xpert-150-after.jpg",
-    caption: "Same Xpert 150 with Sentinel Plus and PGS-3 interface — a clean Bystronic retrofit",
+    caption: "Bystronic Xpert 150 retrofitted with Sentinel Plus and PGS-3 interface",
     system: "Sentinel Plus",
   },
   {
@@ -393,16 +373,9 @@ export const INSTALLS: Install[] = [
   },
   {
     make: "KRRAS",
-    model: "Sentinel Plus build",
-    photo: "/photos/installs/krras-sentinel-plus.jpg",
-    caption: "KRRAS press brake with Sentinel Plus — cleaner build than the earlier Sentinel install",
-    system: "Sentinel Plus",
-  },
-  {
-    make: "KRRAS",
     model: "FCNC",
     photo: "/photos/installs/krras-fcnc.jpg",
-    caption: "KRRAS FCNC variant — Sentinel Plus with custom interface routing",
+    caption: "KRRAS FCNC variant with Sentinel Plus",
     system: "Sentinel Plus",
   },
   {
@@ -569,14 +542,15 @@ export const INSTALLS: Install[] = [
 
 ];
 
+// Brake brands we've worked on but don't have install photos for yet.
+// Niagara is covered by Clearing Niagara above; Cincinnati Inc. is the same
+// brand as Cincinnati (AutoForm/FMII), already pictured.
 export const BRAKES_WITHOUT_PHOTOS = [
   "Allied",
-  "Cincinnati Incorporated",
   "Durma",
   "HACO",
   "JMT",
   "LVD",
-  "Niagara",
   "Piranha",
   "Standard Industrial",
   "US Industrial Machinery",

@@ -26,7 +26,7 @@ export default function CompatibilityPage() {
             Press brakes we&rsquo;ve retrofitted.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            A growing gallery of Lazer Safe Sentinel and Sentinel Plus installs across U.S. shop floors. If you don&rsquo;t see your brake here, it doesn&rsquo;t mean we can&rsquo;t do it — send us your make, model, and tonnage and we&rsquo;ll come back with a quote.
+            A sample of Lazer Safe retrofits we&rsquo;ve done across U.S. shop floors — what&rsquo;s pictured is a fraction of what we&rsquo;ve installed. If you don&rsquo;t see your exact brake, send us your make, model, and tonnage and we&rsquo;ll come back with a quote.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -90,7 +90,7 @@ export default function CompatibilityPage() {
                     {group.make}
                   </h3>
                   <span className="text-sm font-semibold text-brand-charcoal/50">
-                    {group.installs.length} install{group.installs.length === 1 ? "" : "s"}
+                    {group.installs.length} pictured
                   </span>
                 </div>
 
