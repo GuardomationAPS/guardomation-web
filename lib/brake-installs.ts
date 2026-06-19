@@ -183,11 +183,11 @@ export const INSTALLS: Install[] = [
     caption: "Heavier Ermak CNC HAP with Sentinel HMI mounted on the ram face",
   },
   {
-    make: "Clearing Niagara",
-    model: "HBM-100-8-10",
+    make: "Niagara",
+    model: "HBM-100-8-10 (Clearing Niagara)",
     photo: "/photos/brake-clearing-niagara-hbm100.jpg",
     tonnage: "100 ton · 8 ft",
-    caption: "Clearing Niagara HBM-100-8-10 retrofit — Sentinel sensors on both sides of the ram",
+    caption: "Niagara HBM-100-8-10 retrofit — Sentinel sensors on both sides of the ram",
   },
   {
     make: "KRRAS",
@@ -543,33 +543,57 @@ export const INSTALLS: Install[] = [
 ];
 
 // Brake brands we've worked on but don't have install photos for yet.
-// Niagara is covered by Clearing Niagara above; Cincinnati Inc. is the same
-// brand as Cincinnati (AutoForm/FMII), already pictured.
-// Ermaksan is the parent of Ermak — listed once as "Ermak" (US distribution name).
+// Curated against the 2026 industry-brand reference doc:
+// - Cincinnati Inc. and "Niagara" alone are merged with their primary tiles
+//   (Cincinnati / Niagara) — same brand, different nameplate spellings.
+// - Ermaksan is the parent of Ermak — listed once as "Ermak" (US name).
+// - Promecam, SafanDarley, Hämmerle, Beyeler, Edwards Pearson, Pullmax,
+//   Ursviken, Komatsu, Di-Acro, Schiavi, Mecos, JFY added as common
+//   nameplates with significant in-field retrofit populations.
 export const BRAKES_WITHOUT_PHOTOS = [
   "Adira",
   "Allied",
   "AMOB",
   "Baykal",
-  "Coast One",
+  "Beyeler",
+  "Boschert",
+  "CoastOne",
   "Codatto",
+  "Dreis & Krump",
+  "Di-Acro",
   "Durma",
+  "Edwards Pearson",
   "EHT",
+  "Finn-Power",
   "Gasparini",
   "HACO",
+  "Hämmerle",
   "Hindustan Hydraulics",
   "Hurco",
+  "JFY",
   "JMT",
   "Knuth",
+  "Komatsu",
   "LVD",
+  "Mecos",
   "MetalMaster",
+  "MVD İnan",
+  "Nargesa",
   "OMERA",
   "Piranha",
   "Prima Power",
+  "Promecam",
+  "Pullmax",
+  "SafanDarley",
   "Salvagnini",
+  "Schiavi",
+  "Shenchong",
   "Standard Industrial",
+  "Ursviken",
   "US Industrial Machinery",
   "Verson",
+  "Vimercati",
+  "Warcom",
   "Yangli",
   "Yawei",
 ];
