@@ -55,7 +55,7 @@ export default function CompatibilityPage() {
                 Every brand we&rsquo;ve worked on
               </p>
               <h2 className="text-balance text-2xl font-bold text-brand-charcoal lg:text-3xl">
-                {allMakes.length} brands &mdash; and counting. Click any with a dot for installed photos.
+                We&rsquo;ve worked with almost every brand on the market. Click any with a red dot for installed photos &mdash; more coming soon.
               </h2>
             </div>
           </div>
