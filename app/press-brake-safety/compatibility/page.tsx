@@ -1,7 +1,7 @@
 import Footer from "components/layout/footer";
 import Image from "next/image";
 import Link from "next/link";
-import { INSTALLS, BRAKES_WITHOUT_PHOTOS, type Install } from "lib/brake-installs";
+import { INSTALLS, BRAKES_WITHOUT_PHOTOS, getInstallsByMake, getMakesWithCounts } from "lib/brake-installs";
 
 export const metadata = {
   title: "Press Brake Compatibility — Lazer Safe Installs",
@@ -46,56 +46,104 @@ export default function CompatibilityPage() {
         </div>
       </section>
 
+      {/* Sticky make-jump nav */}
+      <nav
+        aria-label="Jump to brake make"
+        className="sticky top-[57px] z-20 border-b border-brand-grey/20 bg-white/95 backdrop-blur"
+      >
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="flex gap-2 overflow-x-auto py-3 text-sm">
+            <span className="flex-none whitespace-nowrap py-1 pr-2 text-xs font-semibold uppercase tracking-wider text-brand-charcoal/50">
+              Jump to:
+            </span>
+            {getMakesWithCounts().map((m) => (
+              <a
+                key={m.slug}
+                href={`#${m.slug}`}
+                className="flex-none whitespace-nowrap rounded-full border border-brand-grey/30 bg-brand-cream px-3 py-1 font-medium text-brand-charcoal transition-all hover:border-brand-red hover:text-brand-red"
+              >
+                {m.make}
+                <span className="ml-1.5 text-xs text-brand-charcoal/50">{m.count}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
       <section className="bg-brand-cream py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="mb-10 flex items-end justify-between gap-4">
-            <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
-                {INSTALLS.length} press brakes pictured · {INSTALLS.filter((i) => !i.pending).length} brand-confirmed
-              </p>
-              <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
-                Find your brake.
-              </h2>
-            </div>
+          <div className="mb-10">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-red">
+              {INSTALLS.length} press brakes pictured · {INSTALLS.filter((i) => !i.pending).length} brand-confirmed · {getMakesWithCounts().length} makes
+            </p>
+            <h2 className="text-balance text-3xl font-bold text-brand-charcoal lg:text-4xl">
+              Find your brake.
+            </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {INSTALLS.map((install, i) => (
-              <article
-                key={i}
-                className="group overflow-hidden rounded-xl border border-brand-grey/30 bg-white transition-all hover:border-brand-red hover:shadow-lg"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden bg-brand-charcoal-dark">
-                  <Image
-                    src={install.photo}
-                    alt={`${install.make ?? "Press brake"}${install.model ? ` ${install.model}` : ""} with Lazer Safe Sentinel installed`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent" />
-                  <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
-                    <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
-                    LS Installed
-                  </div>
-                  {install.pending && (
-                    <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-amber/95 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal lg:right-4 lg:top-4 lg:px-3 lg:py-1 lg:text-xs">
-                      ID pending
-                    </div>
-                  )}
+          {/* GROUPED BY MAKE */}
+          <div className="space-y-16">
+            {getInstallsByMake().map((group) => (
+              <div key={group.slug} id={group.slug} className="scroll-mt-32">
+                <div className="mb-6 flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+                  <h3 className="text-2xl font-bold text-brand-charcoal lg:text-3xl">
+                    {group.make}
+                  </h3>
+                  <span className="text-sm font-semibold text-brand-charcoal/50">
+                    {group.installs.length} install{group.installs.length === 1 ? "" : "s"}
+                  </span>
                 </div>
-                <div className="p-3 lg:p-6">
-                  {install.make ? (
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-red lg:text-xs lg:tracking-[0.2em]">{install.make}</p>
-                  ) : (
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-charcoal/40 lg:text-xs lg:tracking-[0.2em]">Make to confirm</p>
-                  )}
-                  <h3 className="mt-0.5 text-sm font-bold text-brand-charcoal lg:mt-1 lg:text-xl">{install.model || "Hydraulic press brake"}</h3>
-                  {install.tonnage && (
-                    <p className="mt-0.5 text-xs font-semibold text-brand-charcoal/60 lg:mt-1 lg:text-sm">{install.tonnage}</p>
-                  )}
+
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                  {group.installs.map((install, i) => (
+                    <article
+                      key={i}
+                      className="group overflow-hidden rounded-xl border border-brand-grey/30 bg-white transition-all hover:border-brand-red hover:shadow-lg"
+                    >
+                      <div className="relative aspect-[4/3] overflow-hidden bg-brand-charcoal-dark">
+                        <Image
+                          src={install.photo}
+                          alt={`${install.make ?? "Press brake"}${install.model ? ` ${install.model}` : ""} with Lazer Safe ${install.system ?? "Sentinel"} installed`}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent" />
+                        {install.system && (
+                          <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
+                            <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
+                            {install.system}
+                          </div>
+                        )}
+                        {!install.system && !install.pending && (
+                          <div className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-red px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white lg:left-4 lg:top-4 lg:gap-2 lg:px-3 lg:py-1 lg:text-xs">
+                            <span className="h-1 w-1 rounded-full bg-brand-amber lg:h-1.5 lg:w-1.5" />
+                            LS Installed
+                          </div>
+                        )}
+                        {install.pending && (
+                          <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-brand-amber/95 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal lg:right-4 lg:top-4 lg:px-3 lg:py-1 lg:text-xs">
+                            ID pending
+                          </div>
+                        )}
+                      </div>
+                      <div className="p-3 lg:p-6">
+                        <h4 className="text-sm font-bold text-brand-charcoal lg:text-xl">
+                          {install.model || `${install.make} brake`}
+                        </h4>
+                        {install.tonnage && (
+                          <p className="mt-0.5 text-xs font-semibold text-brand-charcoal/60 lg:mt-1 lg:text-sm">{install.tonnage}</p>
+                        )}
+                        {install.caption && (
+                          <p className="mt-2 text-xs leading-snug text-brand-charcoal/70 lg:text-sm">
+                            {install.caption}
+                          </p>
+                        )}
+                      </div>
+                    </article>
+                  ))}
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
