@@ -545,16 +545,33 @@ export const INSTALLS: Install[] = [
 // Brake brands we've worked on but don't have install photos for yet.
 // Niagara is covered by Clearing Niagara above; Cincinnati Inc. is the same
 // brand as Cincinnati (AutoForm/FMII), already pictured.
+// Ermaksan is the parent of Ermak — listed once as "Ermak" (US distribution name).
 export const BRAKES_WITHOUT_PHOTOS = [
+  "Adira",
   "Allied",
+  "AMOB",
+  "Baykal",
+  "Coast One",
+  "Codatto",
   "Durma",
+  "EHT",
+  "Gasparini",
   "HACO",
+  "Hindustan Hydraulics",
+  "Hurco",
   "JMT",
+  "Knuth",
   "LVD",
+  "MetalMaster",
+  "OMERA",
   "Piranha",
+  "Prima Power",
+  "Salvagnini",
   "Standard Industrial",
   "US Industrial Machinery",
   "Verson",
+  "Yangli",
+  "Yawei",
 ];
 
 // Make → slug for URLs/anchors. Same algorithm everywhere.

@@ -23,10 +23,10 @@ export default function CompatibilityPage() {
             <Link href="/press-brake-safety" className="hover:underline">Press Brake Safety</Link> · Compatibility
           </p>
           <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
-            Press brakes we&rsquo;ve retrofitted.
+            Almost every press brake brand on the market.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            We average 140+ press brake retrofits a year. The list below is every brake brand we&rsquo;ve worked on &mdash; not every machine, just the brands. Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
+            140+ retrofits a year across the established names (Accurpress, Amada, Trumpf) and the newer entrants (Yawei, Hurco, Adira, Coast One &mdash; all recent). The list below is every brand we&rsquo;ve worked on. Pick yours and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -55,7 +55,7 @@ export default function CompatibilityPage() {
                 Every brand we&rsquo;ve worked on
               </p>
               <h2 className="text-balance text-2xl font-bold text-brand-charcoal lg:text-3xl">
-                {allMakes.length} makes &mdash; click any with a dot for installed photos.
+                {allMakes.length} brands &mdash; and counting. Click any with a dot for installed photos.
               </h2>
             </div>
           </div>
