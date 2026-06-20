@@ -57,7 +57,7 @@ export default async function MakeDetailPage(props: {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact?topic=press-brake-retrofit"
+              href="/press-brake-safety/quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
               Ask about your {match.make}
@@ -179,7 +179,7 @@ export default async function MakeDetailPage(props: {
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact?topic=press-brake-retrofit"
+              href="/press-brake-safety/quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
               Request a quote

@@ -130,7 +130,7 @@ export default function SentinelPlusPage() {
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact?topic=press-brake-retrofit"
+              href="/press-brake-safety/quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
               Request a quote

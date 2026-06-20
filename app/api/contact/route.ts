@@ -12,6 +12,38 @@ const TOPIC_LABELS: Record<string, string> = {
   "other": "Something else",
 };
 
+// Optional brake-specific + logistics fields. Rendered as additional rows in
+// the email when the press-brake quote form populates them.
+const EXTRA_FIELD_LABELS: Record<string, string> = {
+  location: "Location",
+  urgency: "Urgency",
+  brake_make: "Brake make",
+  brake_model: "Brake model",
+  brake_year: "Year",
+  brake_tonnage: "Tonnage",
+  brake_length: "Bed length",
+  brake_serial: "Serial #",
+  existing_safety: "Existing safety system",
+  app_offend: "Forming past ends",
+  app_multiheight: "Multi-height dies",
+  app_tallpunch: 'Tallest die > 11"',
+  app_nonv: "Non-V tooling",
+};
+
+const EXISTING_SAFETY_LABELS: Record<string, string> = {
+  none: "No safety system installed",
+  "lazer-safe-legacy": "Older Lazer Safe (LZS-003 / IRIS / etc.)",
+  fiessler: "Fiessler",
+  other: "Other manufacturer",
+  unknown: "Not sure",
+};
+
+const URGENCY_LABELS: Record<string, string> = {
+  researching: "Just researching",
+  active: "Active project, planning ahead",
+  urgent: "Need this scoped now",
+};
+
 export async function POST(req: NextRequest) {
   try {
     const data = await req.formData();
@@ -22,6 +54,19 @@ export async function POST(req: NextRequest) {
     const machine = String(data.get("machine") || "").trim();
     const topic = String(data.get("topic") || "other").trim();
     const message = String(data.get("message") || "").trim();
+    const formSource = String(data.get("form_source") || "").trim();
+
+    // Render any extra fields the brake quote form sends.
+    const extraRows: { label: string; value: string }[] = [];
+    for (const [key, label] of Object.entries(EXTRA_FIELD_LABELS)) {
+      const raw = String(data.get(key) || "").trim();
+      if (!raw) continue;
+      let value = raw;
+      if (key === "existing_safety") value = EXISTING_SAFETY_LABELS[raw] || raw;
+      else if (key === "urgency") value = URGENCY_LABELS[raw] || raw;
+      else if (raw === "yes") value = "Yes";
+      extraRows.push({ label, value });
+    }
 
     // Basic validation
     if (!name || !company || !email) {
@@ -53,8 +98,9 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(apiKey);
     const topicLabel = TOPIC_LABELS[topic] || topic;
-
-    const subject = `[Quote Request] ${topicLabel} — ${company}`;
+    const subjectPrefix =
+      formSource === "press-brake-quote" ? "[Brake Quote]" : "[Quote Request]";
+    const subject = `${subjectPrefix} ${topicLabel} — ${company}`;
 
     const html = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #25282A; max-width: 640px; margin: 0 auto; padding: 32px;">
@@ -86,8 +132,18 @@ export async function POST(req: NextRequest) {
           </tr>` : ""}
         </table>
 
+        ${extraRows.length ? `<div style="border-top: 1px solid #eee; padding-top: 16px; margin-bottom: 16px;">
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: #A7A8AA; margin-bottom: 8px;">Brake &amp; project details</div>
+          <table style="width: 100%; border-collapse: collapse;">
+            ${extraRows.map((r) => `<tr>
+              <td style="padding: 6px 0; width: 160px; color: #A7A8AA; font-size: 13px; vertical-align: top;">${escapeHtml(r.label)}</td>
+              <td style="padding: 6px 0; font-weight: 500;">${escapeHtml(r.value)}</td>
+            </tr>`).join("")}
+          </table>
+        </div>` : ""}
+
         ${message ? `<div style="border-top: 1px solid #eee; padding-top: 16px;">
-          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: #A7A8AA; margin-bottom: 8px;">Message</div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: #A7A8AA; margin-bottom: 8px;">Notes</div>
           <div style="white-space: pre-wrap; line-height: 1.6;">${escapeHtml(message)}</div>
         </div>` : ""}
 

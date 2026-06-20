@@ -107,7 +107,7 @@ export default function Hero() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Link
-                  href="/contact?topic=press-brake-retrofit"
+                  href="/press-brake-safety/quote"
                   className="inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red-dark hover:shadow-brand-red/50"
                 >
                   Get a Lazer Safe quote

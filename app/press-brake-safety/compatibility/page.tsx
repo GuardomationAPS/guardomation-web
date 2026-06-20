@@ -28,14 +28,14 @@ export default function CompatibilityPage() {
             Press brakes we&rsquo;ve retrofitted.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-grey">
-            From current production to long-discontinued plates. Pick yours below and we&rsquo;ll show you the installs we&rsquo;ve got photographed.
+            Two decades of Lazer Safe retrofits on press brakes &mdash; we&rsquo;ve worked on most machines in the industry. Find yours below, or send us the details and we&rsquo;ll come back with an assessment and quote.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact?topic=press-brake-retrofit"
+              href="/press-brake-safety/quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
-              Ask about your brake
+              Request an assessment + quote
               <span aria-hidden>→</span>
             </Link>
             <a
@@ -88,7 +88,7 @@ export default function CompatibilityPage() {
           </div>
           <p className="mt-5 text-sm text-brand-charcoal/60">
             More install photos coming soon. Don&rsquo;t see your brand? We&rsquo;ve probably done it &mdash;{" "}
-            <Link href="/contact?topic=press-brake-retrofit" className="font-semibold text-brand-red hover:underline">
+            <Link href="/press-brake-safety/quote" className="font-semibold text-brand-red hover:underline">
               send us your make and model
             </Link>{" "}
             or call <a href="tel:+12812652832" className="font-semibold text-brand-red hover:underline">(281) 265-2832</a>.
@@ -149,7 +149,7 @@ export default function CompatibilityPage() {
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/contact?topic=press-brake-retrofit"
+              href="/press-brake-safety/quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-red px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-red-dark"
             >
               Request a quote
