@@ -433,6 +433,11 @@ export const INSTALLS: Install[] = [
     caption: "Wysong MTH retrofitted with Sentinel Plus",
     system: "Sentinel Plus",
   },
+  {
+    make: "Ursviken",
+    photo: "/photos/installs/ursviken.jpg",
+    caption: "Heavy long-bed Ursviken press brake retrofitted with Lazer Safe — a big older machine brought up to current guarding standards",
+  },
 
   // === Sentinel Plus AUTOMATIC (motorised bracket systems) ===
   {
@@ -548,7 +553,7 @@ export const INSTALLS: Install[] = [
 //   (Cincinnati / Niagara) — same brand, different nameplate spellings.
 // - Ermaksan is the parent of Ermak — listed once as "Ermak" (US name).
 // - Promecam, SafanDarley, Hämmerle, Beyeler, Edwards Pearson, Pullmax,
-//   Ursviken, Komatsu, Di-Acro, Schiavi, Mecos, JFY added as common
+//   Komatsu, Di-Acro, Schiavi, Mecos, JFY added as common
 //   nameplates with significant in-field retrofit populations.
 export const BRAKES_WITHOUT_PHOTOS = [
   "Adira",
@@ -589,7 +594,6 @@ export const BRAKES_WITHOUT_PHOTOS = [
   "Schiavi",
   "Shenchong",
   "Standard Industrial",
-  "Ursviken",
   "US Industrial Machinery",
   "Verson",
   "Vimercati",
