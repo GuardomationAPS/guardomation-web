@@ -17,10 +17,10 @@ const PARTNERS = [
   { name: "Triad", focus: "Press automation and safety controls", url: "https://www.triadcontrols.com" },
   { name: "Pressroom Electronics", focus: "Light curtains and press controls", url: "https://www.pressroomelectronics.com" },
   { name: "Ferndale", focus: "Safety mats and presence-sensing devices", url: "https://www.ferndalesafety.com" },
-  { name: "HERION", focus: "Safety valves and pneumatic controls", url: "https://www.herion-systemtechnik.com" },
+  { name: "HERION", focus: "Safety valves and pneumatic controls" },
   { name: "EUCHNER", focus: "Safety switches and access systems", url: "https://www.euchner.com" },
   { name: "Nolatron", focus: "Anti-restart and motor control", url: "https://www.nolatron.com" },
-  { name: "Toledo", focus: "Press components and safety", url: "https://www.toledointegratedsystems.com" },
+  { name: "Toledo", focus: "Press components and safety", url: "http://www.toledointegratedsystems.com" },
   { name: "GEMCO", focus: "Stop-time meters and machine instruments", url: "https://www.ametekapt.com" },
   { name: "KAMCO", focus: "Light curtains and press safety", url: "https://www.kamcosafety.com" },
   { name: "ROSS", focus: "Safety-rated pneumatic valves", url: "https://www.rosscontrols.com" },
@@ -29,7 +29,7 @@ const PARTNERS = [
   { name: "FLEXBAR", focus: "Machine guards (lathe, drill press, band saw)", url: "https://www.flexbar.com" },
   { name: "DANRAY", focus: "Drill press guards and accessories", url: "https://www.danrayproducts.com" },
   { name: "WIRECRAFTERS", focus: "Custom mesh enclosures and fencing", url: "https://www.wirecrafters.com" },
-  { name: "Metal Form", focus: "Press tooling and accessories", url: "https://www.metalformsafety.com" },
+  { name: "Metal Form", focus: "Press tooling and accessories" },
   { name: "NASP", focus: "Press safety controls", url: "https://www.naspinc.com" },
   { name: "ATS Safety", focus: "Drill press guards (DPG series)", url: "https://www.atssafety.com" },
   { name: "MAKESAFE", focus: "Lockout/tagout equipment", url: "https://www.makesafetools.com" },
@@ -37,7 +37,7 @@ const PARTNERS = [
   { name: "Pilz", focus: "Safety relays and controllers", url: "https://www.pilz.com" },
   { name: "Schmersal", focus: "Safety switches and interlocks", url: "https://www.schmersal.com" },
   { name: "Allen-Bradley", focus: "Safety PLCs and controls", url: "https://www.rockwellautomation.com" },
-  { name: "Odiz Safety", focus: "Machine safety controls and accessories", url: "https://www.odizsafety.com" },
+  { name: "Odiz Safety", focus: "Machine safety controls and accessories" },
   { name: "Cascade Coil", focus: "Coiled safety barriers and woven mesh", url: "https://www.cascadecoil.com" },
 ];
 
@@ -101,21 +101,33 @@ export default function LineCardsPage() {
             Distributor partners
           </p>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {PARTNERS.filter((p) => !p.featured).map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-sm"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
-                  <span className="text-xs text-brand-charcoal/40 group-hover:text-brand-red" aria-hidden>↗</span>
+            {PARTNERS.filter((p) => !p.featured).map((p) =>
+              p.url ? (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-lg border border-brand-grey/30 bg-white p-5 transition-all hover:border-brand-red hover:shadow-sm"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
+                    <span className="text-xs text-brand-charcoal/40 group-hover:text-brand-red" aria-hidden>↗</span>
+                  </div>
+                  <p className="mt-1 text-sm text-brand-charcoal/60">{p.focus}</p>
+                </a>
+              ) : (
+                <div
+                  key={p.name}
+                  className="rounded-lg border border-brand-grey/30 bg-white p-5"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="font-display text-base font-semibold text-brand-charcoal">{p.name}</h3>
+                  </div>
+                  <p className="mt-1 text-sm text-brand-charcoal/60">{p.focus}</p>
                 </div>
-                <p className="mt-1 text-sm text-brand-charcoal/60">{p.focus}</p>
-              </a>
-            ))}
+              ),
+            )}
           </div>
 
           <p className="mt-6 text-xs text-brand-charcoal/50">
